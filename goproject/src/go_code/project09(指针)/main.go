@@ -6,8 +6,14 @@ import (
 
 type abc int;
 
+// 通 & 来 取变量值
+
+// 通 * 通过指针间接访问目标对象
+
 func main() {
+	//定义 int a
 	a := 200
+	// var b *int =&a;//定义int型指针  并将a的内存地址复制给他
 	b := &a
 	*b++
 	fmt.Println(a)
@@ -29,7 +35,7 @@ func point1() {
 	*p = 21
 	fmt.Println(i) //通过指针的值来设定i的值
 
-	p = &j      //p等于j的内存地址
+	p = &j       //p等于j的内存地址
 	*p = *p / 37 //通过指针对j进行除法运算
 	fmt.Println(j)
 

@@ -9,4 +9,8 @@ func main() {
 	var s1 []int
 	fmt.Println(s1)
 
+	a := []byte{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'}
+	sa := a[2:5]
+	fmt.Println(string(sa))
+
 }

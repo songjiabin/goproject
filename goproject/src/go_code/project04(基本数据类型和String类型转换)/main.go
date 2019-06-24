@@ -3,22 +3,21 @@ package main
 import(
 	"fmt"
 	"strconv"
-	"math/rand"
-	"math"
+
 )
 
 //基本数量类型和String的转换
 // fmt 包下面的%t/d/f/c 通過   https://studygolang.com/pkgdoc
 func main()  {
 	//方式一：
-	// method_1()
+	  method_1()
 	//方式二：
-	method_2()
+	//method_2()
 
 
 
-    fmt.Println("My ...",rand.Intn(10))
-	fmt.Println("My ...",math.Pi)
+	//fmt.Println("My ...",rand.Intn(10))
+	//fmt.Println("My ...",math.Pi)
 
 }
 

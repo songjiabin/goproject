@@ -36,4 +36,44 @@ func main() {
 	*p = 20
 	fmt.Println(*p)
 
+	//定义整形e
+	e := 23
+	//取出整形e的我内存地址赋值于w
+	w := &e
+	fmt.Println(w)
+	*w = 233
+	fmt.Println(*w, e)
+
+	fmt.Println("--------------------------")
+
+	//new 一个新的的内存地地址
+	q := new(int)
+
+	var ss int = 22
+	*q = ss
+	fmt.Println(q, *q, ss)
+
+	qq := new(int)
+	*qq = 55
+	fmt.Println(*qq)
+
+	//通过函数交互 aa，bb的值
+	aa, bb := 1, 2
+	example(&aa, &bb)
+	fmt.Println(aa, bb)
+}
+
+//将a,b的地址传递过来
+func example(a, b *int) {
+
+	fmt.Println("*********************")
+
+	//reala:=*a
+	//realb:=*b
+	//
+	//*a=realb
+	//*b=reala
+
+	*a, *b = *b, *a
+
 }

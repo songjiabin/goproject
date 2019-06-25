@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5abcf44e-2eaf-455c-aef2-769bc85bd1f5" name="Default Changelist" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/07(递归)/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/08(函数类型)/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/09(回调函数)/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/10(获取命令行参数)/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/11(工程管理)/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/11(工程管理)/test.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/src/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/14(数组)/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/15(随机数)/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/16(冒泡排序)/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/17(数组指针做函数参数)/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/18(切片)/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/19(切片做函数的参数)/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/20(猜数字)/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/21(map)/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/21(结构体)/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/22(函数参数为结构体)/main.go" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/go_code/project04(基本数据类型和String类型转换)/main.go" afterPath="$PROJECT_DIR$/goproject/src/go_code/project04(基本数据类型和String类型转换)/main.go" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/go_code/project08(defer)/main.go" afterPath="$PROJECT_DIR$/goproject/src/go_code/project08(defer)/main.go" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/go_code_book/13(指针)/main.go" afterPath="$PROJECT_DIR$/goproject/src/go_code_book/13(指针)/main.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,13 +27,15 @@
     <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/src/main.go">
+        <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/22(函数参数为结构体)/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="380">
+              <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+              <folding>
+                <element signature="e#14#30#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,6 +93,17 @@
         <option value="$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/src/main.go" />
         <option value="$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/main.go" />
         <option value="$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/test/test.go" />
+        <option value="$PROJECT_DIR$/goproject/src/go_code_book/13(指针)/main.go" />
+        <option value="$PROJECT_DIR$/goproject/src/go_code_book/14(数组)/main.go" />
+        <option value="$PROJECT_DIR$/goproject/src/go_code_book/15(随机数)/main.go" />
+        <option value="$PROJECT_DIR$/goproject/src/go_code_book/16(冒泡排序)/main.go" />
+        <option value="$PROJECT_DIR$/goproject/src/go_code_book/17(数组指针做函数参数)/main.go" />
+        <option value="$PROJECT_DIR$/goproject/src/go_code_book/18(切片)/main.go" />
+        <option value="$PROJECT_DIR$/goproject/src/go_code_book/19(切片做函数的参数)/main.go" />
+        <option value="$PROJECT_DIR$/goproject/src/go_code_book/20(猜数字)/main.go" />
+        <option value="$PROJECT_DIR$/goproject/src/go_code_book/21(map)/main.go" />
+        <option value="$PROJECT_DIR$/goproject/src/go_code_book/21(结构体)/main.go" />
+        <option value="$PROJECT_DIR$/goproject/src/go_code_book/22(函数参数为结构体)/main.go" />
       </list>
     </option>
   </component>
@@ -109,7 +124,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="-3" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -129,10 +144,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,16 +179,7 @@
               <item name="goproject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="go_code_book" type="462c0819:PsiDirectoryNode" />
-              <item name="12(工程管理、不同目录)" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goproject" type="462c0819:PsiDirectoryNode" />
-              <item name="goproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="go_code_book" type="462c0819:PsiDirectoryNode" />
-              <item name="12(工程管理、不同目录)" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="22(函数参数为结构体)" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -194,14 +200,14 @@
     <property name="DefaultGoTemplateProperty" value="Go File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\gocode\goproject\goproject\src\go_code_book\12(工程管理、不同目录)\src" />
+      <recent name="E:\gocode\goproject\goproject" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\gocode\goproject\goproject\src\go_code_book" />
       <recent name="E:\gocode\goproject\goproject\src\go_code_unknow" />
       <recent name="E:\gocode\goproject\goproject\src\go_code" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\gocode\goproject\goproject\src\go_code_book\12(工程管理、不同目录)\src" />
-      <recent name="E:\gocode\goproject\goproject" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -216,13 +222,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
+  <component name="RunManager" selected="Go Build.go build main.go (1)">
     <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="goproject" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/main.go" />
+      <filePath value="$PROJECT_DIR$/goproject/src/go_code_book/22(函数参数为结构体)/main.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <configuration name="go build main.go (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
@@ -230,7 +236,15 @@
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/goproject/src/go_code_book/11(工程管理)/main.go" />
+      <filePath value="$PROJECT_DIR$/goproject/src/go_code_book/21(结构体)/main.go" />
+      <directory value="$PROJECT_DIR$/" />
+    </configuration>
+    <configuration name="go build main.go (3)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="goproject" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/goproject/src/go_code_book/19(切片做函数的参数)/main.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <configuration name="go build main.go (4)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
@@ -238,7 +252,7 @@
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/goproject/src/go_code_book/10(获取命令行参数)/main.go" />
+      <filePath value="$PROJECT_DIR$/goproject/src/go_code_book/21(map)/main.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <configuration name="go build main.go (5)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
@@ -246,31 +260,23 @@
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/goproject/src/go_code/project08(defer)/main.go" />
-      <directory value="$PROJECT_DIR$/" />
-    </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
-      <module name="goproject" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/src/main.go" />
+      <filePath value="$PROJECT_DIR$/goproject/src/go_code_book/20(猜数字)/main.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go (5)" />
-      <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go (4)" />
-      <item index="2" class="java.lang.String" itemvalue="Go Build.go build main.go (2)" />
-      <item index="3" class="java.lang.String" itemvalue="Go Build.go build main.go" />
+      <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go (3)" />
+      <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go (5)" />
+      <item index="2" class="java.lang.String" itemvalue="Go Build.go build main.go (4)" />
+      <item index="3" class="java.lang.String" itemvalue="Go Build.go build main.go (2)" />
       <item index="4" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go" />
-        <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Go Build.go build main.go (2)" />
-        <item index="3" class="java.lang.String" itemvalue="Go Build.go build main.go (4)" />
-        <item index="4" class="java.lang.String" itemvalue="Go Build.go build main.go (5)" />
+        <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go (2)" />
+        <item index="2" class="java.lang.String" itemvalue="Go Build.go build main.go (4)" />
+        <item index="3" class="java.lang.String" itemvalue="Go Build.go build main.go (5)" />
+        <item index="4" class="java.lang.String" itemvalue="Go Build.go build main.go (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -294,15 +300,17 @@
       <workItem from="1561079899051" duration="20497000" />
       <workItem from="1561107496199" duration="2567000" />
       <workItem from="1561338816069" duration="15167000" />
-      <workItem from="1561363197188" duration="6385000" />
+      <workItem from="1561363197188" duration="6710000" />
+      <workItem from="1561424193022" duration="29008000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74534000" />
+    <option name="totallyTimeSpent" value="103867000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -311,19 +319,19 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23293608" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49404117" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2892741" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1787649" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49404117" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20628998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20842217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -399,17 +407,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_unknow/project03(字符串)/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/goproject/src/go_code_unknow/project05(切片)/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -463,13 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="197" column="5" lean-forward="false" selection-start-line="197" selection-start-column="5" selection-end-line="197" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/go1.12.6.windows-386/go/src/builtin/builtin.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -635,21 +631,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/src/calc/calc.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/src/calc/calc.go" />
     <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/11(工程管理)/test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#26#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -657,33 +643,140 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/test/test.go" />
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/main.go" />
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/src/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/go1.12.6.windows-386/go/src/builtin/builtin.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="193" column="5" lean-forward="false" selection-start-line="193" selection-start-column="5" selection-end-line="193" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/14(数组)/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding>
             <element signature="e#14#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/test/test.go">
+    <entry file="file://E:/go1.12.6.windows-386/go/src/time/time.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="241">
+          <caret line="1144" column="28" lean-forward="true" selection-start-line="1144" selection-start-column="28" selection-end-line="1144" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/main.go">
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/15(随机数)/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="361">
+          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding>
+            <element signature="e#14#52#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/16(冒泡排序)/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="e#14#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/13(指针)/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/12(工程管理、不同目录)/src/main.go">
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/17(数组指针做函数参数)/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="171">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/18(切片)/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/19(切片做函数的参数)/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="18" />
+          <folding>
+            <element signature="e#14#53#0" expanded="false" />
+            <element signature="n#!!block;n#initData#0" expanded="false" />
+            <element signature="n#!!block;n#sort#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/20(猜数字)/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+          <folding>
+            <element signature="e#14#52#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/21(map)/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="e#14#31#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/21(结构体)/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+          <folding>
+            <element signature="e#14#31#0" expanded="true" />
+            <element signature="n#!!block;n#func2#0" expanded="false" />
+            <element signature="n#!!block;n#func1#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/22(函数参数为结构体)/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding>
+            <element signature="e#14#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

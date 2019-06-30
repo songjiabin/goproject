@@ -1,16 +1,18 @@
 package main
 
 import (
-	"os"
+	"bufio"
 	"fmt"
 	"io"
+	"os"
 )
 
 func main() {
 
 	path := "./demo.txt" //当前路径下的demo.txt
 	//writeFile(path)
-	readFile(path)
+	 readFile(path)
+	//readLine(path)
 }
 
 //写文件
@@ -61,4 +63,35 @@ func readFile(path string) {
 
 	fmt.Println(n)
 	defer file.Close()
+}
+
+//一行一行的读取
+func readLine(path string) {
+	//打开文件
+	file, error := os.Open(path)
+	if error != nil {
+		fmt.Println(error)
+		return
+	}
+
+	//文件操作
+	//1、新建一个缓冲区，把内容放到缓冲区去
+	r := bufio.NewReader(file)
+
+	for {
+		//遇到\n结束读取
+		byte, error := r.ReadBytes('\n') //以换行符来读
+		if error != nil {
+			if error == io.EOF {
+				//文件已经结束
+				break;
+			}
+			fmt.Println(error)
+		}
+		fmt.Println(string(byte))
+	}
+
+	//关闭文件流
+	defer file.Close()
+
 }

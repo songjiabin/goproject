@@ -13,4 +13,11 @@ ABC:
 	}
 
 	fmt.Println("-------")
+
+
+
+	b:=[]byte("are you ok ")
+	fmt.Println(b)
+
+
 }

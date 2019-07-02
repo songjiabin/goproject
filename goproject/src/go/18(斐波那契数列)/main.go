@@ -40,6 +40,7 @@ func producter(ch chan<- int, quit <-chan bool) {
 			fmt.Println("x,y", x, y)
 		case flag := <-quit:
 			fmt.Println(flag)
+			//主协成结束 那么所有的函数都结束
 			return
 		}
 	}

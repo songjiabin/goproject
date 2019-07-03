@@ -18,6 +18,9 @@ func main() {
 		return
 	}
 
-	fmt.Println(fileInfo)
+	//找到路径下的名字
+	fmt.Println(fileInfo.Name())
+	//文件的大小
+	fmt.Println(fileInfo.Size())
 
 }

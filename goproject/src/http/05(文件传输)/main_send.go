@@ -23,7 +23,7 @@ func main() {
 	}
 
 	//主动连接服务器
-	conn, error1 := net.Dial("tcp", "192.168.177.1:1111")
+	conn, error1 := net.Dial("tcp", "192.168.2.133:2222")
 	if error1 != nil {
 		fmt.Println(error1)
 		return
@@ -69,11 +69,12 @@ func sendFile(path string, conn net.Conn) {
 	//读取里面的内容
 	buf := make([]byte, 1024)
 	for {
+		//循环的发送
 		n, error1 := file.Read(buf)
 		if error1 != nil {
 			if error1 == io.EOF {
 				//说明文件读完了
-				fmt.Println("文件读取完毕")
+				fmt.Println("文件发送完毕")
 			} else {
 				fmt.Println(error1)
 			}

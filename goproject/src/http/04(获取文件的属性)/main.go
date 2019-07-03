@@ -20,6 +20,4 @@ func main() {
 
 	fmt.Println(fileInfo)
 
-
-
 }

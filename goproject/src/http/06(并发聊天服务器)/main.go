@@ -3,7 +3,7 @@ package main
 import (
 	"net"
 	"fmt"
-	"time"
+
 )
 
 //用户类
@@ -21,7 +21,7 @@ var message = make(chan string)
 
 func main() {
 
-	listener, error := net.Listen("tcp", "192.168.177.1:2222");
+	listener, error := net.Listen("tcp", "192.168.56.1:2222");
 	if error != nil {
 		fmt.Println(error)
 		return
@@ -61,11 +61,48 @@ func handlerConn(conn net.Conn) {
 	onlineMap[addr] = cli
 
 	//新建一个协成  专门给当前的客户发送信息
-	go writeInfoToClient(cli, conn)
+	//go  writeInfoToClient(cli, conn)
 
-	message <- "...." + cli.Address
+	message <- "...." + cli.Address + ":login"
 
-	time.Sleep(200000000 * time.Second)
+	//是否主动退出
+	quit := make(chan bool)
+
+	//接受每个用户的信息
+	go func() {
+		buf := make([]byte, 1024)
+		for {
+			n, error := conn.Read(buf)
+			if n == 0 {
+				fmt.Println(error)
+				quit <- true
+				return
+			}
+
+			//将这个消息转发给每个客户端
+			msg := buf[:n-1]
+
+			if len(string(msg)) == 3 && string(msg) == "who" {
+				conn.Write([]byte("user list:\n"))
+				for _, value := range onlineMap {
+					conn.Write([]byte(value.Address + "\n"))
+				}
+			} else {
+				message <- string(msg)
+			}
+		}
+	}()
+
+	//用户中的每个管道接受信息
+	for {
+		select {
+		case msg := <-cli.C:
+			conn.Write([]byte(msg + "\n"))
+		case <-quit:
+			delete(onlineMap, addr)
+			message <- cli.Address + string("quit")
+		}
+	}
 
 	defer fmt.Println("结束")
 

@@ -59,7 +59,7 @@ func goStartNet(i int, page chan<- int) {
 		return
 	}
 	//将内容写入到本地的一个文件
-	fileName := "./goproject/src/http/11(百度贴吧爬虫)/" + strconv.Itoa(i) + ".html"
+	fileName := "./goproject/src/http/12(并发百度贴吧爬虫)/" + strconv.Itoa(i) + ".html"
 	f, errorFile := os.Create(fileName)
 	if errorFile != nil {
 		fmt.Println(errorFile)

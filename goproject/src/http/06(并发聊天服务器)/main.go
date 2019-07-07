@@ -42,7 +42,6 @@ func main() {
 		//来一个协成处理一个用户
 		go handlerConn(con)
 	}
-
 }
 
 //处理连接

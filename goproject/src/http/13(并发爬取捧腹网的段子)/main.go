@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 	"net/http"
 	"os"
 	"regexp"
+	"strconv"
+	"strings"
 )
 
 //并发爬取 经典笑话 的段子
@@ -60,8 +61,8 @@ func goStartNet(i int, page chan<- int) {
 	}
 
 	//将结果写入到文件中去
-	fileName := strconv.Itoa(i) + ".html"
-	_, e := os.Create("./goproject/src/http/13(并发爬取捧腹网的段子)/" + fileName)
+	fileName := strconv.Itoa(i) + ".txt"
+	file, e := os.Create(fileName)
 	if e != nil {
 		fmt.Println(e)
 		return
@@ -89,7 +90,9 @@ func goStartNet(i int, page chan<- int) {
 			fmt.Println(errs)
 			continue
 		}
-		fmt.Println(title, con)
+
+		//将数据写入到文件中去
+		file.WriteString(title + "\n" + con)
 	}
 
 	page <- i
@@ -140,8 +143,34 @@ func spiderOneJoy(onePath string) (title, con string, err error) {
 		}
 		con += string(buf[:n])
 	}
-	title = "宋佳宾"
 
+	t := regexp.MustCompile(`</a></div><h1>(.*)</h1></div>`)
+	content := t.FindAllStringSubmatch(con, -1)
+
+	//fmt.Println(content)
+
+	c := regexp.MustCompile(`</script></div><div class="ads_jc_r"></div>(.*)</div>`)
+	con_con := c.FindAllStringSubmatch(con, -1)
+
+	con = con_con[0][1]
+	title = content[0][1]
+
+	con = strings.Replace(con, "\t", "", -1)
+	con = strings.Replace(con, "\n", "", -1)
+	con = strings.Replace(con, "\r", "", -1)
+	con = strings.Replace(con, "<br />", "", -1)
+
+	title = strings.Replace(title, "\t", "", -1)
+	title = strings.Replace(title, "\n", "", -1)
+	title = strings.Replace(title, "\r", "", -1)
+	title = strings.Replace(title, "<br />", "", -1)
 	return
 
+
+
+
 }
+
+
+
+

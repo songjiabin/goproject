@@ -97,3 +97,13 @@ GROUP BY CityID
 ORDER BY cities DESC
 limit 10;
 
+-- 查询中国区县做多的10哥城市 并显示城市
+select * from T_City
+where CityID in
+(
+    SELECT temb.CityId from
+        (select CityId,  COUNT(ID) as cities from T_District
+        GROUP BY CityID
+        ORDER BY cities DESC
+        limit 10)temb
+)

@@ -106,6 +106,66 @@ JOIN T_Province tp ON tcp.ProID=tp.ProID
 WHERE tp.ProRemark !="直辖市" ;
 
 
+-- 内联系
+select ProName,CityName from
+(
+    T_Province tp join T_City tc on tp.ProID=tc.ProID
+);
+
+
+-- 插入数据 到省表  独有的部分
+insert into  T_Province(ProName) values ("日本省");
+
+
+
+-- 插入市独有的数据
+insert into T_City (CityName) values ("洛杉矶市");
+
+
+
+
+
+-- 左联 将省表中特有的数据 也进行显示了
+select ProName,CityName from
+(
+    T_Province tp left join T_City tc on tp.ProID=tc.ProID
+);
+
+
+
+-- 右联 将市中特有的数据 也进行了显示
+select ProName,CityName from
+(
+ T_Province tp right join T_City tc on tp.ProID=tc.ProID
+)
+
+
+
+
+
+-- 2019 宜居城市： ("青岛","昆明","大连","威海","苏州","珠海","厦门","重庆","深圳")
+-- 求各省分别拥有的宜居城市，各有几个  降序，省名、宜居城市数量、
+-- 因为要数量，所以要进行分组
+
+select ProName, count(tc.ProID) ct from
+(
+select ProID ,CityName  from T_City where CityName in ("青岛市","昆明市","大连市","威海市","苏州市","珠海市","厦门市","重庆市","深圳市")
+)tc join T_Province tp on tc.ProID=tp.ProID
+group by tc.ProID
+order by ct desc ;
+
+
+
+
+
+
+
+
+-- 你家乡所在的省个拥有哪些宜居城市？
+
+
+
+
 
 
 

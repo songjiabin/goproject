@@ -74,3 +74,6 @@ UPDATE person SET  name ="张大侠" WHERE  name="张三丰";
 
 
 
+-- 删除一列
+-- 删除T_city中的CitySrot列
+ALTER  TABLE T_city DROP CitySort;

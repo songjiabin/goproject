@@ -161,7 +161,96 @@ order by ct desc ;
 
 
 
--- 你家乡所在的省个拥有哪些宜居城市？
+-- 哪个城市拥有最多的旗  取前十名
+
+select tc.CityName,td.DisName ,COUNT(*) 数量 from
+(
+  T_City tc JOIN T_District td ON tc.CityID=td.CityID
+)
+WHERE DisName LIKE "%旗"
+GROUP BY td.CityID
+ORDER BY 数量 DESC
+
+
+
+-- 查询省级行政区有哪几种？
+select DISTINCT ProRemark , COUNT(*)  from T_Province
+-- 因为有日本省 所以要过滤掉
+WHERE ProRemark is not NULL
+GROUP BY ProRemark;
+
+
+-- 查询全国有多少个县级市
+SELECT COUNT(DisName) FROM  T_District
+WHERE DisName LIKE "%市";
+
+
+-- 安徽的县级市数量
+SELECT DisName FROM
+(
+  T_City tc JOIN T_District td ON tc.CityID=td.CityID
+) WHERE   DisName LIKE "%市" AND ProID =
+(
+  SELECT ProID FROM T_Province WHERE ProName="安徽省"
+);
+
+
+-- 哪个省的县级市最多了
+SELECT ProName ,temp.TCI FROM
+(
+  SELECT ProID ,COUNT(td.DisName) TCI FROM
+    (
+       T_City tc JOIN T_District td ON tc.CityID=td.CityID
+    )
+  GROUP BY  ProID
+)temp JOIN T_Province tp on temp.ProID=tp.ProID
+ ORDER BY temp.TCI DESC
+
+
+
+
+
+
+--- 求每个省份中最大的城市 ID ,名称
+
+SELECT ProID, max(CityId) mc FROM t_city
+GROUP BY ProID;
+
+
+-- 将名称也查出来
+SELECT CityName, CityID FROM t_city
+WHERE CityID IN
+(
+  SELECT  max(CityId) mc FROM t_city
+  GROUP BY ProID
+)  ;
+
+
+-- 使用join查询
+
+SELECT ProID, CityName ,temp.mc  FROM
+(
+  SELECT  max(CityId) mc FROM t_city
+  GROUP BY ProID
+)temp JOIN t_city tc ON temp.mc =tc.CityID
+ORDER BY temp.mc DESC
+
+
+-- 继续输出省名
+
+
+SELECT  ProName,CityName ,temp2.mx FROM
+(
+  SELECT ProID, CityName ,temp.mc mx  FROM
+  (
+    SELECT  max(CityId) mc FROM t_city
+    GROUP BY ProID
+  )temp JOIN t_city tc ON temp.mc =tc.CityID
+)temp2 JOIN T_Province tp ON temp2.ProID=tp.ProID ;
+
+
+
+
 
 
 

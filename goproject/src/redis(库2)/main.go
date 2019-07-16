@@ -4,6 +4,7 @@ import (
 	"github.com/gomodule/redigo/redis"
 	"fmt"
 	"os"
+	"encoding/json"
 )
 
 func main() {
@@ -39,8 +40,66 @@ func main() {
 	fmt.Println(result)
 
 	//删除key
-	isDel,_:=redis.Bool(con.Do("del", "name"))
-	fmt.Println("是否删除成功",isDel)
+	isDel, _ := redis.Bool(con.Do("del", "name"))
+	fmt.Println("是否删除成功", isDel)
+
+	//读取josn到redis
+	handlerJson(con)
+
+	//将json读取
+	jsonToBean(con)
+
+	//列表操作
+	redisList(con)
+}
+
+//操作json
+func handlerJson(con redis.Conn) {
+	m := make(map[string]string, 10)
+	m["usename"] = "666"
+	m["phoneNum"] = "8888"
+	j, _ := json.Marshal(m)
+
+	//将json存到redis中去
+	// setnx 当可以存在时啥也不做 当不存在的时候 操作
+	n, _ := con.Do("setnx", "myJson", j)
+	if n == int64(1) {
+		fmt.Println("存储json成功")
+	}
+
+	//得到刚才的json
+	result, error := redis.String(con.Do("get", "myJson"))
+	errCheck(error)
+	fmt.Println(result)
+}
+
+//将读取到的json转为bean
+func jsonToBean(con redis.Conn) {
+	m := make(map[string]interface{})
+	b, e := redis.Bytes(con.Do("get", "myJson"))
+	errCheck(e)
+	merr := json.Unmarshal(b, &m)
+	errCheck(merr)
+
+	fmt.Println(m)
+}
+
+//redis 操作 List
+func redisList(con redis.Conn) {
+
+	//插入数据
+	//_, e := con.Do("lpush", "listDemo", 100)
+	//errCheck(e)
+
+	v, _ := redis.Values(con.Do("lrange", "listDemo", "0", "-1"))
+
+	for _, value := range v {
+		//类型断言
+		x, ok := value.([]byte)
+		if ok {
+			fmt.Println(string(x))
+		}
+	}
 
 }
 

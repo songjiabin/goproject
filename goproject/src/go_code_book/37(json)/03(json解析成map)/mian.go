@@ -22,6 +22,8 @@ func main() {
 	fmt.Println(m)
 
 	s := m["isok"]
+	su:=m["subjects"]
+	fmt.Println(su)
 	fmt.Println(s)
 
 }

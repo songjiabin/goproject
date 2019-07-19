@@ -15,5 +15,5 @@ var MySqlConfig = map[string]string{
 	"password":  "123456",
 	"type":      "tcp",
 	"host":      "3306",
-	"allconfig": "root:123456@tcp(localhost:3306)/mydb",
+	"allconfig": "root:123456@tcp(localhost:3306)/mydb?charset=utf8",
 }

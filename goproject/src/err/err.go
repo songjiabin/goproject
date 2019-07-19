@@ -12,3 +12,7 @@ func PrintErr(err error) {
 		return
 	}
 }
+
+func Test()  {
+	fmt.Println("Test a good person")
+}

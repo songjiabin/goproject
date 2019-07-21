@@ -10,6 +10,7 @@ func init() {
 	demoRouter()
 	registerRouter()
 	loginRouter()
+	indexRouter()
 }
 
 //案例的小demo 增删改查
@@ -28,9 +29,20 @@ func registerRouter() {
 	beego.Router("/register", &controllers.RegisterController{})
 }
 
+//登录的路由
 func loginRouter() {
 	// get get方法
 	// ShowLogin 路由中对应的方法
 	// HandleLogin 路由
 	beego.Router("/login", &controllers.LoginController{}, "get:ShowLogin;post:HandleLogin")
 }
+
+//index(首页的路由)
+func indexRouter()  {
+	beego.Router("/index",&controllers.IndexController{},"get:ShowIndex")
+}
+
+
+
+
+

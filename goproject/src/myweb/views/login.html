@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/main.css">
 </head>
 <body>
-
-<h1>登录界面</h1>
-
-
-<form method="post" action="/login">
-    登录：<input type="text" name="userName">
-    密码：<input type="password" name="userPsw">
-    <input type="submit" value="登录">
-</form>
-
-
+    <div class="login_logo">
+        <img src="/static/img/logo.png" alt="">
+    </div>  
+    <form  class="login_form"  name = "login"  method = "post" action="/login">
+        <h1 class="login_title">用户登录</h1>
+        <input type="text"  class="input_txt" name = "userName">
+        <input type="password" name = "password"  class="input_txt">
+        <div class="remember"><input type="checkbox" name="remember" ><label>记住用户名</label></div>
+        <input type="submit" value="登 录" class="input_sub">
+    </form>
+    <div class="login_bg"></div>
 </body>
 </html>

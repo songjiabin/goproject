@@ -63,7 +63,7 @@
                 <th width="10%">文章类型</th>
             </tr>
 
-        {{range .articles}}
+            {{range .articles}}
             <tr>
                 <td>{{.Aname}}</td>
                 <td><a href="/content?id={{.Id}}">查看详情</a></td>
@@ -73,14 +73,15 @@
                 <td><a href="/update?id={{.Id}}">编辑</a></td>
                 <td>财经新闻</td>
             </tr>
-        {{end}}
+            {{end}}
         </table>
 
         <ul class="pagenation">
-            <a href="javascript:;">上一页 </a> </li>
+            <li><a href="/index?pageIndex=1">首页</a></li>
+            <li><a href="javascript:;">上一页 </a> </li>
             <li><a href="javascript:;">下一页</a></li>
-            <li><a href="#">末页</a></li>
-            <li>共{{.count}}条记录/共{{.totalPage}}页/当前1页</li>
+            <li><a href="/index?pageIndex={{.totalPage}}">末页</a></li>
+            <li>共{{.count}}条记录/共{{.totalPage}}页/当前{{.pageIndex}}页</li>
         </ul>
     </div>
 </div>

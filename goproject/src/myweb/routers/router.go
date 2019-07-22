@@ -10,6 +10,11 @@ func init() {
 	demoRouter()
 	registerRouter()
 	loginRouter()
+	indexRouter()
+	addArticleRouter()
+	contentArticleRouter()
+	updateArticleRouter()
+	deleteArticleRouter()
 }
 
 //案例的小demo 增删改查
@@ -21,6 +26,7 @@ func demoRouter() {
 	beego.Router("/selectUser", &controllers.OrmSelectController{})
 	beego.Router("/updateUser", &controllers.UpdateController{})
 	beego.Router("/deleteUser", &controllers.DeleteController{})
+
 }
 
 //注册的路由
@@ -28,9 +34,35 @@ func registerRouter() {
 	beego.Router("/register", &controllers.RegisterController{})
 }
 
+//登录的路由
 func loginRouter() {
 	// get get方法
 	// ShowLogin 路由中对应的方法
 	// HandleLogin 路由
 	beego.Router("/login", &controllers.LoginController{}, "get:ShowLogin;post:HandleLogin")
+}
+
+//index(首页的路由)
+func indexRouter() {
+	beego.Router("/index", &controllers.IndexController{}, "get:ShowIndex")
+}
+
+// 添加文章
+func addArticleRouter() {
+	beego.Router("/addArticle", &controllers.AddController{}, "get:ShowAddArticle;post:AddArticle")
+}
+
+//文章内容
+func contentArticleRouter() {
+	beego.Router("/content", &controllers.ContentController{}, "get:ShowArticle")
+}
+
+//编辑
+func updateArticleRouter() {
+	beego.Router("/update", &controllers.UpdateControllerss{}, "get:UpdateArticle;post:HandlerUpdateArticle")
+}
+
+//删除
+func deleteArticleRouter() {
+	beego.Router("/delete",&controllers.DeleteArticleController{},"get:DeleteActicle")
 }

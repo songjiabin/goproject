@@ -17,9 +17,9 @@ func main() {
 	fmt.Println(datenow)
 
 	//格式化时间
-	//年月日 时分秒
-	s1 := t.Format("2006年1月2日 15:04:05") //注意规定是这个时间
-	fmt.Println(s1)
+	//年月日 时分秒  2006-01-02-13-04-05   2006年1月2日 15:04:05
+	s1 := t.Format("2006-01-02-13-04-05") //注意规定是这个时间
+	fmt.Println("s1-->" + s1)
 
 	//年月日
 	s2 := t.Format("2006/1/2")
@@ -53,11 +53,9 @@ func main() {
 	//时间间隔
 	fmt.Println(t.Add(time.Minute)) //比你设定的时间 多一分钟
 
-	fmt.Println(t.AddDate(1, 0, 0))//比设定的时间多一年
-
+	fmt.Println(t.AddDate(1, 0, 0)) //比设定的时间多一年
 
 	//计算时间 当前的时间 - 当前的时间+1分钟
 	fmt.Println(t.Sub(t.Add(time.Minute))) //结果是；-1m0s 一分钟
-
 
 }

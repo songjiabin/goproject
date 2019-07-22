@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"path"
+)
 
 //常量：
 const name bool = true
@@ -21,5 +24,11 @@ func main() {
 
 	x3 := [2]int{2, 4}
 	fmt.Println(x3)
+
+
+
+	db:="/c:/abc"
+	fmt.Println(path.Ext(db))
+
 
 }

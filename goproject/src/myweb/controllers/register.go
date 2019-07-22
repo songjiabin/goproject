@@ -18,7 +18,7 @@ func (c *RegisterController) Get() {
 //当点击提交表单的时候
 func (c *RegisterController) Post() {
 	userName := c.GetString("userName")
-	userPsw := c.GetString("userPsw")
+	userPsw := c.GetString("password")
 
 	//得到账号和密码
 

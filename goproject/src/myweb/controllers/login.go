@@ -23,11 +23,10 @@ func (c *LoginController) ShowLogin() {
 //出来post登录接口
 func (c *LoginController) HandleLogin() {
 
-
 	c.TplName = "login.html"
-	
+
 	userName := c.GetString("userName")
-	userPsw := c.GetString("userPsw")
+	userPsw := c.GetString("password")
 	//非空判断
 	if userName == "" || userPsw == "" {
 		c.Redirect("/login", 302)
@@ -37,12 +36,15 @@ func (c *LoginController) HandleLogin() {
 	//查数据中
 	if isHaveData := findUser(userName, userPsw); !isHaveData {
 		beego.Info("查不到此数据")
-		return 
+		return
 	}
 
 	beego.Info(userName, userPsw)
-	c.Ctx.WriteString("登录成功")
-	
+	//c.Ctx.WriteString("登录成功")
+
+	//当登录成功后要进入index.html的界面
+	c.Redirect("/index", 302)
+
 }
 
 func findUser(userName, userPsw string) (isHave bool) {

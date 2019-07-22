@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5abcf44e-2eaf-455c-aef2-769bc85bd1f5" name="Default Changelist" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/file/08(bufio读).go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/file/09(bufio写).go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/file/10(ioutils).go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/.idea/myweb.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/login.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/register.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/models/myFirstGoModel.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/myconf/conf.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/login.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/register.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/user.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/northwind/01(...)/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/northwind/readme.txt" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/b.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/config/config.go" afterPath="$PROJECT_DIR$/goproject/src/config/config.go" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/err/err.go" afterPath="$PROJECT_DIR$/goproject/src/err/err.go" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/file/.idea/workspace.xml" afterPath="$PROJECT_DIR$/goproject/src/file/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/.idea/workspace.xml" afterPath="$PROJECT_DIR$/goproject/src/myweb/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/controllers/login.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/login.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,9 +36,10 @@
       <file leaf-file-name="07(mysql操作).go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/goproject/src/mysql/07(mysql操作).go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="38" />
+            <state relative-caret-position="400">
+              <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="22" />
               <folding>
+                <element signature="e#14#110#0" expanded="true" />
                 <marker date="1563173321174" expanded="true" signature="566:633" ph="INSERT INTO person... " />
                 <marker date="1563173321174" expanded="true" signature="933:973" ph="delete from person... " />
                 <marker date="1563173321174" expanded="true" signature="1070:1109" ph="UPDATE person... " />
@@ -190,8 +173,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -222,6 +205,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,28 +227,10 @@
               <item name="goproject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="goproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goproject" type="462c0819:PsiDirectoryNode" />
-              <item name="goproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goproject" type="462c0819:PsiDirectoryNode" />
-              <item name="goproject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -420,15 +389,16 @@
       <workItem from="1563357540122" duration="585000" />
       <workItem from="1563410805973" duration="10125000" />
       <workItem from="1563440575849" duration="6792000" />
-      <workItem from="1563518283315" duration="599000" />
+      <workItem from="1563518283315" duration="607000" />
+      <workItem from="1563757144185" duration="126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="394029000" />
+    <option name="totallyTimeSpent" value="394163000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -443,7 +413,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29577464" sideWeight="0.4936034" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21108742" sideWeight="0.6984993" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21321961" sideWeight="0.6984993" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15938166" sideWeight="0.30150068" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -916,17 +886,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#92#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/goproject/src/mysql/07(mysql操作).go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="38" />
+        <state relative-caret-position="400">
+          <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="22" />
           <folding>
+            <element signature="e#14#110#0" expanded="true" />
             <marker date="1563173321174" expanded="true" signature="566:633" ph="INSERT INTO person... " />
             <marker date="1563173321174" expanded="true" signature="933:973" ph="delete from person... " />
             <marker date="1563173321174" expanded="true" signature="1070:1109" ph="UPDATE person... " />

@@ -38,7 +38,7 @@ func (c *LoginController) HandleLogin() {
 	if isHaveData := findUser(userName, userPsw); !isHaveData {
 		beego.Info("查不到此数据")
 		return 
-	} 
+	}
 
 	beego.Info(userName, userPsw)
 	c.Ctx.WriteString("登录成功")

@@ -9,5 +9,5 @@ var MySqlConfig = map[string]string{
 	"password":  "123456",
 	"type":      "tcp",
 	"host":      "3306",
-	"allconfig": "root:@tcp(localhost:3306)/beegodb?charset=utf8",
+	"allconfig": "root:123456@tcp(localhost:3306)/beegodb?charset=utf8",
 }

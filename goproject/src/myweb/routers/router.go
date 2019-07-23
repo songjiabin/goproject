@@ -15,6 +15,7 @@ func init() {
 	contentArticleRouter()
 	updateArticleRouter()
 	deleteArticleRouter()
+	addArticleTypeRouter()
 }
 
 //案例的小demo 增删改查
@@ -44,7 +45,7 @@ func loginRouter() {
 
 //index(首页的路由)
 func indexRouter() {
-	beego.Router("/index", &controllers.IndexController{}, "get:ShowIndex")
+	beego.Router("/index", &controllers.IndexController{}, "get:ShowIndex;post:SelectArtcileType")
 }
 
 // 添加文章
@@ -65,4 +66,8 @@ func updateArticleRouter() {
 //删除
 func deleteArticleRouter() {
 	beego.Router("/delete",&controllers.DeleteArticleController{},"get:DeleteActicle")
+}
+
+func addArticleTypeRouter()  {
+	beego.Router("/addType",&controllers.AddTypeController{},"get:AddType;post:HandleAddType")
 }

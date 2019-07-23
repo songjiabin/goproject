@@ -2,95 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5abcf44e-2eaf-455c-aef2-769bc85bd1f5" name="Default Changelist" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/.idea/goproject.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/bin/bee.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/bin/myweb.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/pkg/windows_386/github.com/astaxie/beego.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/pkg/windows_386/github.com/astaxie/beego/orm.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/pkg/windows_386/github.com/garyburd/redigo/redis.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/pkg/windows_386/github.com/go-redis/redis.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/pkg/windows_386/github.com/gomodule/redigo/redis.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/pkg/windows_386/github.com/jmoiron/sqlx.a" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/github.com/garyburd/redigo" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/l_package/.idea/l_package.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/l_package/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/l_package/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/l_package/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/l_package/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/math/main.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/addArticle.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/content.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/deleteArticle.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/index.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/updateArticle.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/models/ArticleModel.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/myweb.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/add.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/addType.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/content.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/css/main.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/css/reset.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-29 16_42_09.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-29 17_40_07.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-29 17_40_50.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-29 18_08_09.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-29 20_33_34.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-29 20_34_08.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-29 20_34_22.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-30 10_52_30.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-30 10_52_49.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-30 10_53_57.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-31 12_00_19.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-31 12_12_12.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-31 13_09_58.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-31 13_10_13.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-08-31 13_10_28.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-29-16-16-46-80.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-7-08-151727.8888888.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-7-22-050413.8888888.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-7-22-050626.8888888.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-7-22-050652.8888888.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-7-22-050851.8888888.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-7-22-050942.8888888.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-7-22-051124.8888888.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-7-22-052010.8888888.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-7-22-052024.8888888.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/2018-7-22-052312.8888888.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/icons.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/login-bg.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/logo.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/img/person.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/index.tpl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/js/jquery-1.12.4.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/login.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/register.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/static/update.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/add.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/content.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/update.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/addArticleType.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/models/ActicleTypeModel.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/addType.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/goproject/pkg/windows_amd64/err.a" afterPath="$PROJECT_DIR$/goproject/pkg/windows_amd64/err.a" />
       <change beforePath="$PROJECT_DIR$/goproject/src/github.com/go-redis/redis" afterPath="$PROJECT_DIR$/goproject/src/github.com/go-redis/redis" />
       <change beforePath="$PROJECT_DIR$/goproject/src/myweb/.idea/workspace.xml" afterPath="$PROJECT_DIR$/goproject/src/myweb/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/controllers/login.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/login.go" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/controllers/register.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/register.go" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/models/myFirstGoModel.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/models/myFirstGoModel.go" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/controllers/addArticle.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/addArticle.go" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/controllers/index.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/index.go" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/main.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/main.go" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/models/ArticleModel.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/models/ArticleModel.go" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/models/myFirstGoModel.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/models/UserModel.go" />
       <change beforePath="$PROJECT_DIR$/goproject/src/myweb/myconf/conf.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/myconf/conf.go" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/myweb.exe" afterPath="$PROJECT_DIR$/goproject/src/myweb/myweb.exe" />
       <change beforePath="$PROJECT_DIR$/goproject/src/myweb/routers/router.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/routers/router.go" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/static/js/reload.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/views/login.html" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/login.html" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/views/register.html" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/register.html" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/northwind/01(...)/main.go" afterPath="$PROJECT_DIR$/goproject/src/northwind/01(...)/main.go" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/time/main.go" afterPath="$PROJECT_DIR$/goproject/src/time/main.go" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/views/add.html" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/add.html" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/views/index.html" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -118,20 +45,7 @@
     <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/goproject/src/math/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-              <folding>
-                <element signature="e#15#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -186,7 +100,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/goproject/src/http/10(http客户端)/main.go" />
         <option value="$PROJECT_DIR$/goproject/src/http/11(百度贴吧爬虫)/main.go" />
         <option value="$PROJECT_DIR$/goproject/src/http/12(并发百度贴吧爬虫)/main.go" />
         <option value="$PROJECT_DIR$/goproject/src/dmeo/main.go" />
@@ -237,6 +150,7 @@
         <option value="$PROJECT_DIR$/goproject/src/northwind/01(...)/main.go" />
         <option value="$PROJECT_DIR$/goproject/src/time/main.go" />
         <option value="$PROJECT_DIR$/goproject/src/math/main.go" />
+        <option value="$PROJECT_DIR$/goproject/src/myweb/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -256,8 +170,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-5" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -288,10 +202,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -314,6 +227,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -324,7 +238,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/goproject/src/myweb" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/gocode/goproject/goproject/src/myweb/controllers/addArticle.go&#10;const&#9;null&#9;null" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -363,7 +277,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go (4)">
+  <component name="RunManager" selected="Go Build.go build 02(文件的操作).go">
     <configuration name="go build 02(文件的操作).go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="goproject" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -413,19 +327,18 @@
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go" />
-      <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Go Build.go build main.go (2)" />
-      <item index="3" class="java.lang.String" itemvalue="Go Build.go build main.go (3)" />
-      <item index="4" class="java.lang.String" itemvalue="Go Build.go build main.go (4)" />
+      <item index="0" class="java.lang.String" itemvalue="Go Build.go build 02(文件的操作).go" />
+      <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go" />
+      <item index="2" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Go Build.go build main.go (2)" />
+      <item index="4" class="java.lang.String" itemvalue="Go Build.go build main.go (3)" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go (4)" />
-        <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go (3)" />
-        <item index="2" class="java.lang.String" itemvalue="Go Build.go build main.go (2)" />
-        <item index="3" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Go Build.go build main.go" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Go Build.go build main.go (3)" />
+        <item index="1" class="java.lang.String" itemvalue="Go Build.go build main.go (2)" />
+        <item index="2" class="java.lang.String" itemvalue="Go Build.go build main.go (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
   </component>
@@ -474,14 +387,15 @@
       <workItem from="1563440575849" duration="6792000" />
       <workItem from="1563518283315" duration="607000" />
       <workItem from="1563757144185" duration="126000" />
+      <workItem from="1563843895007" duration="1909000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="400694000" />
+    <option name="totallyTimeSpent" value="402943000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -489,16 +403,15 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27410617" sideWeight="0.50852877" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28277355" sideWeight="0.5021322" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.031419285" sideWeight="0.4936034" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20260021" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.111592636" sideWeight="0.4914712" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24702059" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29577464" sideWeight="0.4936034" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21321961" sideWeight="0.6984993" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2153518" sideWeight="0.6984993" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49573562" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15938166" sideWeight="0.30150068" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -507,33 +420,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.036836404" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28277355" sideWeight="0.5021322" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15938166" sideWeight="0.30150068" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.036836404" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24702059" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29577464" sideWeight="0.4936034" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21321961" sideWeight="0.6984993" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49573562" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -659,20 +553,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/goproject/src/github.com/gomodule/redigo/redis/pool.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="186" column="15" lean-forward="false" selection-start-line="186" selection-start-column="15" selection-end-line="186" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goproject/src/go_code_book/37(json)/01(生成json)/mian.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="45" column="1" lean-forward="false" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/goproject/src/redis(库2)/连接池/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -884,13 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="22" />
-          <folding>
-            <element signature="e#14#110#0" expanded="false" />
-            <marker date="1563173321174" expanded="true" signature="566:633" ph="INSERT INTO person... " />
-            <marker date="1563173321174" expanded="true" signature="933:973" ph="delete from person... " />
-            <marker date="1563173321174" expanded="true" signature="1070:1109" ph="UPDATE person... " />
-            <marker date="1563173321174" expanded="true" signature="1506:1526" ph="select * fro... person" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -924,7 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -932,7 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" column="7" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,7 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -987,7 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -995,7 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1003,17 +871,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goproject/src/myweb/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="207" column="34" lean-forward="true" selection-start-line="207" selection-start-column="34" selection-end-line="207" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/goproject/src/math/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        <state relative-caret-position="209">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding>
-            <element signature="e#15#40#0" expanded="true" />
+            <element signature="e#15#40#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goproject/src/mysql/01(基本增删改查).sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="68" column="37" lean-forward="true" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>

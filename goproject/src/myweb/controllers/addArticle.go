@@ -17,6 +17,18 @@ type AddController struct {
 func (c *AddController) ShowAddArticle() {
 
 	//进入添加文章的界面
+
+	//展示所有的文章类型
+	newOrm := orm.NewOrm()
+	var arctcileType []models.ArticleType
+	_, errOfArticleType := newOrm.QueryTable("ArticleType").All(&arctcileType)
+	if errOfArticleType != nil {
+		beego.Info("获取文章类型错误", errOfArticleType)
+		return
+	}
+
+	c.Data["arctcileType"] = arctcileType
+
 	c.TplName = "add.html"
 
 }
@@ -54,7 +66,7 @@ func (c *AddController) AddArticle() {
 	//用时间进行重命名
 	fileName := time.Now().Format("2006-01-02-13-04-05")
 
-	fmt.Println("时间是：",fileName)
+	fmt.Println("时间是：", fileName)
 
 	if e != nil {
 		beego.Info("上传图片失败了...")
@@ -66,6 +78,19 @@ func (c *AddController) AddArticle() {
 		beego.Info(fileName + ext)
 	}
 
+	//获取文章的类型
+	typeName := c.GetString("select")
+	if typeName == "" {
+		beego.Info("文章类型不能为空！")
+		return
+	}
+
+	//根据名字查到 ArticleType 对象
+	var articleType models.ArticleType
+
+	articleTypeOrm := orm.NewOrm()
+	articleType.TypeName = typeName
+	articleTypeOrm.Read(&articleType, "TypeName")
 
 	//插入数据到数据库中去
 	newOrm := orm.NewOrm()
@@ -74,8 +99,10 @@ func (c *AddController) AddArticle() {
 	acticle.Aname = acticleName
 	acticle.Acontent = articleContent
 	acticle.Aimg = "/static/img/" + fileName + ext
-
-	_, e2 := newOrm.Insert(&acticle)
+	//插入类型
+	acticle.AType = &articleType
+	_, e2 :=
+		newOrm.Insert(&acticle)
 	if e2 != nil {
 		beego.Info("插入数据出错了哦...", e2)
 		return

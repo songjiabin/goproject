@@ -27,7 +27,7 @@ func (c *IndexController) ShowIndex() {
 	var acticles []models.Acticle
 
 	//查询数据的条数
-	count, queryError := newOrm.QueryTable("Acticle").Count()
+	count, queryError := newOrm.QueryTable("Acticle").RelatedSel("ArticleType").Count()
 	if queryError != nil {
 		beego.Info("查询数量错误", queryError)
 		return
@@ -42,7 +42,7 @@ func (c *IndexController) ShowIndex() {
 	//Limit 截取
 	//pageSize 一页显示多少
 	//start 从哪里开始查
-	_, e := newOrm.QueryTable("Acticle").Limit(pageSize, start).All(&acticles)
+	_, e := newOrm.QueryTable("Acticle").Limit(pageSize, start).RelatedSel("ArticleType").All(&acticles)
 
 	if e != nil {
 		beego.Info("查询数据失败了")
@@ -100,7 +100,7 @@ func (c *IndexController) SelectArtcileType() {
 	// Acticle表中存在ArticleType的外键
 	//所以ArticleType__表示去ArticleType表中去查
 	//RelatedSel 建立连接
-	_, e := newOrm.QueryTable("Acticle").RelatedSel().Filter("ArticleType__TypeName",typeName).All(&acticles)
+	_, e := newOrm.QueryTable("Acticle").RelatedSel("ArticleType").Filter("ArticleType__TypeName",typeName).All(&acticles)
 	if e != nil {
 		beego.Info("查询错误", e)
 		return

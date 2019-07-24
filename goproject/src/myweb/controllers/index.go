@@ -95,12 +95,12 @@ func (c *IndexController) SelectArtcileType() {
 
 	//得到了下拉菜单的数据
 	newOrm := orm.NewOrm()
-	var acticles []*models.Acticle
+	var acticles [] models.Acticle
 	//因为是多表联查
 	// Acticle表中存在ArticleType的外键
 	//所以ArticleType__表示去ArticleType表中去查
 	//RelatedSel 建立连接
-	_, e := newOrm.QueryTable("Acticle").Filter("ArticleType__TypeName", typeName).All(&acticles)
+	_, e := newOrm.QueryTable("Acticle").RelatedSel().Filter("ArticleType__TypeName",typeName).All(&acticles)
 	if e != nil {
 		beego.Info("查询错误", e)
 		return

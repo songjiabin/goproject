@@ -100,7 +100,7 @@ func (c *AddController) AddArticle() {
 	acticle.Acontent = articleContent
 	acticle.Aimg = "/static/img/" + fileName + ext
 	//插入类型
-	acticle.AType = &articleType
+	acticle.ArticleType = &articleType
 	_, e2 :=
 		newOrm.Insert(&acticle)
 	if e2 != nil {

@@ -5,5 +5,5 @@ package models
 type ArticleType struct {
 	Id       int        `orm:"pk;auto"`
 	TypeName string     `orm:"size(20);unique"`
-	Acticles []*Acticle `orm:"reverse(many)"` //所对应的文章
+	Acticle  []*Acticle `orm:"reverse(many)"` //所对应的文章
 }

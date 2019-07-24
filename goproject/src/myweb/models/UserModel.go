@@ -18,7 +18,7 @@ func init() {
 	orm.RegisterDataBase("default", "mysql", myconf.MySqlConfig["allconfig"])
 
 	// 02 映射model 数据
-	orm.RegisterModel(new(User), new(Acticle), new(ArticleType))
+	orm.RegisterModel(new(User), new(Acticle), new(ArticleType),new(PersonName),new(Person))
 
 	// 03 生成表
 	/**

@@ -6,6 +6,7 @@ import (
 
 	"github.com/astaxie/beego"
 	"github.com/beego/samples/todo/models"
+	"github.com/astaxie/beego/logs"
 )
 
 type TaskController struct {
@@ -20,6 +21,13 @@ type TaskController struct {
 //          {"ID": 2, "Title": "Buy bread", "Done": true}
 //        ]}
 func (this *TaskController) ListTasks() {
+
+	 this.Ctx.SetCookie("myCook","宋佳宾ssss",1000,"/")
+
+	s := this.Ctx.GetCookie("myCook")
+	logs.Debug("cookies-->",s)
+	this.Ctx.WriteString(s)
+
 	res := struct{ Tasks []*models.Task }{models.DefaultTaskList.All()}
 	this.Data["json"] = res
 	this.ServeJSON()

@@ -36,6 +36,10 @@ type DeleteController struct {
 }
 
 func (c *MainController) Get() {
+
+	c.Ctx.SetCookie("usermy","宋佳宾",100,"/")
+	beego.Info("苦KEY--->",c.Ctx.GetCookie("usermy"))
+
 	c.Data["Website"] = "beego.me"
 	c.Data["Email"] = "astaxie@gmail.com"
 	c.TplName = "index.tpl"

@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10545556-6157-4ac4-bcde-963eb6a805c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/myweb/models/mysql.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/myweb.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/myweb.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/github.com/go-redis/redis" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/go-redis/redis" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mysql/07(mysql操作).go" beforeDir="false" afterPath="$PROJECT_DIR$/src/mysql/07(mysql操作).go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/myweb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/myweb/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myweb/controllers/index.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/myweb/controllers/index.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myweb/myconf/conf.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/myweb/myconf/conf.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/myweb/models/UserModel.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/myweb/models/UserModel.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/myweb/myweb.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/myweb/myweb.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/myweb/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/myweb/views/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,12 +21,24 @@
     <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mysql/01(基本增删改查).sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="645">
+              <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mysql/07(mysql操作).go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
+              <folding>
+                <element signature="e#14#110#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,21 +49,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.idea/goproject.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/src/mysql/07(mysql操作).go" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="10" />
-    <option name="y" value="228" />
-    <option name="width" value="1460" />
-    <option name="height" value="920" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -123,16 +131,18 @@
       <workItem from="1563546269880" duration="2119000" />
       <workItem from="1563714598590" duration="1104000" />
       <workItem from="1563975100606" duration="679000" />
+      <workItem from="1564062416538" duration="2348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4396000" />
+    <option name="totallyTimeSpent" value="6744000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18911175" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19197708" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -149,7 +159,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.671159" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.041778974" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -166,16 +176,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mysql/07(mysql操作).go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding>
-            <element signature="e#14#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/redis(库1)/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -232,8 +232,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mysql/01(基本增删改查).sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="645">
+          <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mysql/07(mysql操作).go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+          <folding>
+            <element signature="e#14#110#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

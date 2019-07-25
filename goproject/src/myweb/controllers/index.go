@@ -13,7 +13,7 @@ type IndexController struct {
 }
 
 //每页多少条数据
-const pageSize = 2
+const pageSize = 10
 
 //当前的页数
 var pageIndex = 1
@@ -21,32 +21,49 @@ var pageIndex = 1
 //展示index
 func (c *IndexController) ShowIndex() {
 
-	//查询内容
-	newOrm := orm.NewOrm()
-
-	var acticles []models.Acticle
-
-	//查询数据的条数
-	count, queryError := newOrm.QueryTable("Acticle").RelatedSel("ArticleType").Count()
-	if queryError != nil {
-		beego.Info("查询数量错误", queryError)
+	//盘点session
+	session := c.GetSession("userName")
+	beego.Debug(session)
+	if session == nil {
+		c.Redirect("/login", 302)
 		return
 	}
 
-	pageIndex, es := strconv.Atoi(c.GetString("pageIndex"))
-	if es != nil {
-		pageIndex = 1
-	}
-
-	start := pageSize * (pageIndex - 1) //开始的位置
 	//Limit 截取
 	//pageSize 一页显示多少
 	//start 从哪里开始查
-	_, e := newOrm.QueryTable("Acticle").Limit(pageSize, start).RelatedSel("ArticleType").All(&acticles)
 
-	if e != nil {
-		beego.Info("查询数据失败了")
+	newOrm := orm.NewOrm()
+	start := pageSize * (pageIndex - 1) //开始的位置
+
+	//获取数据类型
+	var arctcileType []models.ArticleType
+	_, errOfArticleType := newOrm.QueryTable("ArticleType").All(&arctcileType)
+	if errOfArticleType != nil {
+		beego.Info("获取文章类型错误", errOfArticleType)
 		return
+	}
+
+	//查询内容
+	var acticles []models.Acticle
+	typeName := c.GetString("select")
+	c.Data["TypeName"] = typeName
+	var count int64
+	if typeName == "" {
+		//查询所有的类型的数据
+		count, _ = newOrm.QueryTable("Acticle").RelatedSel("ArticleType").Count()
+		newOrm.QueryTable("Acticle").Limit(pageSize, start).RelatedSel("ArticleType").All(&acticles)
+	} else {
+		//查询指定类型的所有数据
+		count, _ = newOrm.QueryTable("Acticle").RelatedSel("ArticleType").Filter("ArticleType__TypeName", typeName).Count()
+		newOrm.QueryTable("Acticle").Limit(pageSize, start).RelatedSel("ArticleType").Filter("ArticleType__TypeName", typeName).All(&acticles)
+	}
+	c.TplName = "index.html"
+
+	//点击下一页，上一页的时候的时候
+	pageIndex, es := strconv.Atoi(c.GetString("pageIndex"))
+	if es != nil {
+		pageIndex = 1
 	}
 
 	isFirstPage := false //是否为第一页
@@ -71,14 +88,6 @@ func (c *IndexController) ShowIndex() {
 
 	c.Data["isEndPage"] = isEndPage
 
-	//获取数据类型
-	var arctcileType []models.ArticleType
-	_, errOfArticleType := newOrm.QueryTable("ArticleType").All(&arctcileType)
-	if errOfArticleType != nil {
-		beego.Info("获取文章类型错误", errOfArticleType)
-		return
-	}
-
 	c.Data["arctcileType"] = arctcileType
 
 	c.TplName = "index.html"
@@ -100,11 +109,11 @@ func (c *IndexController) SelectArtcileType() {
 	// Acticle表中存在ArticleType的外键
 	//所以ArticleType__表示去ArticleType表中去查
 	//RelatedSel 建立连接
-	_, e := newOrm.QueryTable("Acticle").RelatedSel("ArticleType").Filter("ArticleType__TypeName",typeName).All(&acticles)
+	_, e := newOrm.QueryTable("Acticle").RelatedSel("ArticleType").Filter("ArticleType__TypeName", typeName).All(&acticles)
 	if e != nil {
 		beego.Info("查询错误", e)
 		return
 	}
 	beego.Info("根据下拉菜单选择数据：-》", acticles)
-	//c.Redirect("/index", 302)
+	c.Redirect("/index", 302)
 }

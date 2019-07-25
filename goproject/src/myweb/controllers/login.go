@@ -4,6 +4,7 @@ import (
 	"github.com/astaxie/beego"
 	"myweb/models"
 	"github.com/astaxie/beego/orm"
+	"time"
 )
 
 type LoginController struct {
@@ -17,6 +18,11 @@ func (c *LoginController) Get() {
 
 //登录界面
 func (c *LoginController) ShowLogin() {
+
+	userName := c.Ctx.GetCookie("userName")
+	//说明找到了userName
+	c.Data["userName"] = userName
+
 	c.TplName = "login.html"
 }
 
@@ -35,16 +41,27 @@ func (c *LoginController) HandleLogin() {
 
 	//查数据中
 	if isHaveData := findUser(userName, userPsw); !isHaveData {
-		beego.Info("查不到此数据")
 		return
 	}
 
-	beego.Info(userName, userPsw)
+	//是否记住密码
+	isRmberName := c.GetString("remember")
+	if isRmberName == "on" {
+		//记住用户名字了要
+		//设置cookie 时间为1小时
+		c.Ctx.SetCookie("userName", userName, time.Second*1000, "/");
+	} else {
+		//否则消除cookie
+		c.Ctx.SetCookie("userName", "", -1, "/");
+	}
+
+	//存入session
+	c.SetSession("userName", userName)
+
 	//c.Ctx.WriteString("登录成功")
 
 	//当登录成功后要进入index.html的界面
 	c.Redirect("/index", 302)
-
 }
 
 func findUser(userName, userPsw string) (isHave bool) {

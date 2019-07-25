@@ -16,6 +16,7 @@ func init() {
 	updateArticleRouter()
 	deleteArticleRouter()
 	addArticleTypeRouter()
+	loginOutRouter()
 }
 
 //案例的小demo 增删改查
@@ -68,6 +69,11 @@ func deleteArticleRouter() {
 	beego.Router("/delete", &controllers.DeleteArticleController{}, "get:DeleteActicle")
 }
 
+//添加文章的类型
 func addArticleTypeRouter() {
 	beego.Router("/addType", &controllers.AddTypeController{}, "get:AddType;post:HandleAddType")
+}
+
+func loginOutRouter()  {
+	beego.Router("/loginout",&controllers.LoginOutController{},"get:LoginOut")
 }

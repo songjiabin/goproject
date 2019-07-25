@@ -26,7 +26,7 @@
 
 <div class="header">
     <a href="#" class="logo fl"><img src="/static/img/logo.png" alt="logo"></a>
-    <a href="#" class="logout fr">退 出</a>
+    <a href="/loginout" class="logout fr">退 出</a>
 </div>
 
 <div class="side_bar">
@@ -52,7 +52,7 @@
     <div class="pannel">
         <span class="sel_label">请选择文章分类：</span>
 
-        <form id="form" method="post" action="/index">
+        <form id="form" method="get" action="/index">
             <select name="select" id="select" class="sel_opt">
             {{/*下拉框*/}}
             {{range .arctcileType}}
@@ -80,7 +80,7 @@
                 <td>{{$val.Acount}}</td>
                 <td><a href="/delete?id={{$val.Id}}" class="dels">删除</a></td>
                 <td><a href="/update?id={{$val.Id}}">编辑</a></td>
-                {{/*<td>{{$val.ArticleType.TypeName}}</td>*/}}
+                <td>{{$val.ArticleType.TypeName}}</td>
             </tr>
         {{end}}
         </table>

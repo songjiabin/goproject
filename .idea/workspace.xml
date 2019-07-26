@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5abcf44e-2eaf-455c-aef2-769bc85bd1f5" name="Default Changelist" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/loginOut.go" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/controllers/task.go" afterPath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/controllers/task.go" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/go-redis/redis" afterPath="$PROJECT_DIR$/goproject/src/github.com/go-redis/redis" />
       <change beforePath="$PROJECT_DIR$/goproject/src/myweb/.idea/workspace.xml" afterPath="$PROJECT_DIR$/goproject/src/myweb/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/conf/app.conf" afterPath="$PROJECT_DIR$/goproject/src/myweb/conf/app.conf" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/controllers/default.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/default.go" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/controllers/index.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/index.go" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/controllers/login.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/login.go" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/myconf/conf.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/myconf/conf.go" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/myweb.exe" afterPath="$PROJECT_DIR$/goproject/src/myweb/myweb.exe" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/routers/router.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/routers/router.go" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/views/index.html" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/index.html" />
-      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/views/login.html" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/login.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />

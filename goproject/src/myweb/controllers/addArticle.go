@@ -64,7 +64,7 @@ func (c *AddController) AddArticle() {
 
 	//3、需要对文件重命名，防止文件重复
 	//用时间进行重命名
-	fileName := time.Now().Format("2006-01-02-13-04-05")
+	fileName := time.Now().Format("2006-01-02-15-04-05")
 
 	fmt.Println("时间是：", fileName)
 

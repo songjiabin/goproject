@@ -37,8 +37,8 @@ type DeleteController struct {
 
 func (c *MainController) Get() {
 
-	c.Ctx.SetCookie("usermy","宋佳宾",100,"/")
-	beego.Info("苦KEY--->",c.Ctx.GetCookie("usermy"))
+	c.Ctx.SetCookie("usermy", "宋佳宾", 100, "/")
+	beego.Info("苦KEY--->", c.Ctx.GetCookie("usermy"))
 
 	c.Data["Website"] = "beego.me"
 	c.Data["Email"] = "astaxie@gmail.com"
@@ -175,4 +175,14 @@ func (c *DeleteController) Get() {
 
 func (c *MainController) showLogin() {
 	c.TplName = "login.html"
+}
+
+func (this *MainController) Demo() {
+	this.Data["errMsg"] = ""
+	this.Data["errMsg2"] = ""
+	this.TplName = "demo.html"
+}
+func (this *MainController) Layout() {
+
+	this.TplName = "layout.html"
 }

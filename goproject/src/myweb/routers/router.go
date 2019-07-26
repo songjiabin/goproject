@@ -29,6 +29,8 @@ func demoRouter() {
 	beego.Router("/updateUser", &controllers.UpdateController{})
 	beego.Router("/deleteUser", &controllers.DeleteController{})
 	beego.Router("/one2one", &controllers.OneToOneController{})
+	beego.Router("/demo", &controllers.MainController{}, "get:Demo")
+	beego.Router("/layout", &controllers.MainController{}, "get:Layout")
 }
 
 //注册的路由
@@ -74,6 +76,6 @@ func addArticleTypeRouter() {
 	beego.Router("/addType", &controllers.AddTypeController{}, "get:AddType;post:HandleAddType")
 }
 
-func loginOutRouter()  {
-	beego.Router("/loginout",&controllers.LoginOutController{},"get:LoginOut")
+func loginOutRouter() {
+	beego.Router("/loginout", &controllers.LoginOutController{}, "get:LoginOut")
 }

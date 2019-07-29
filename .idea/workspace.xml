@@ -2,7 +2,233 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5abcf44e-2eaf-455c-aef2-769bc85bd1f5" name="Default Changelist" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/bin/liteblog.exe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/l_package/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/conf/app.conf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/controllers/base.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/controllers/error.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/controllers/index.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/lastupdate.tmp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/liteblog.exe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/main.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/models/core.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/myconf/config.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/routers/commentsRouter_controllers.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/routers/router.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/css/mian.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/images/info-img.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/images/item.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/images/logo-text.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/images/logo.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/js/blog.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/js/reload.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/css/layui.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/css/layui.mobile.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/css/modules/code.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/css/modules/laydate/default/laydate.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/css/modules/layer/default/icon-ext.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/css/modules/layer/default/icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/css/modules/layer/default/layer.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/css/modules/layer/default/loading-0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/css/modules/layer/default/loading-1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/css/modules/layer/default/loading-2.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/font/iconfont.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/font/iconfont.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/font/iconfont.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/font/iconfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/10.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/11.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/12.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/13.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/14.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/15.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/16.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/17.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/18.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/19.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/2.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/20.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/21.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/22.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/23.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/24.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/25.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/26.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/27.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/28.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/29.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/3.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/30.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/31.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/32.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/33.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/34.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/35.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/36.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/37.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/38.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/39.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/4.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/40.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/41.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/42.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/43.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/44.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/45.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/46.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/47.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/48.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/49.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/5.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/50.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/51.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/52.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/53.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/54.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/55.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/56.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/57.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/58.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/59.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/6.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/60.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/61.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/62.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/63.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/64.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/65.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/66.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/67.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/68.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/69.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/7.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/70.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/71.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/8.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/images/face/9.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/carousel.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/code.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/element.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/flow.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/form.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/jquery.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/laydate.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/layedit.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/layer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/laypage.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/laytpl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/mobile.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/table.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/tree.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/upload.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/lay/modules/util.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/layui.all.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/static/layui/layui.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/syserror/error.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/syserror/unknow.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/tests/default_test.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/views/about.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/views/comm/footer.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/views/comm/header.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/views/comm/link.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/views/comment.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/views/details.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/views/error/404.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/views/error/500.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/views/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/views/index.tpl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/liteblog/views/message.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/controllers/student.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/routers/studentRouter.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/addStudent.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/goproject/.idea/vcs.xml" afterPath="$PROJECT_DIR$/goproject/.idea/vcs.xml" />
+      <change beforePath="$PROJECT_DIR$/goproject/.idea/workspace.xml" afterPath="$PROJECT_DIR$/goproject/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/goproject/bin/bee.exe" afterPath="$PROJECT_DIR$/goproject/bin/bee.exe" />
+      <change beforePath="$PROJECT_DIR$/goproject/pkg/windows_386/github.com/astaxie/beego.a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/pkg/windows_386/github.com/astaxie/beego/orm.a" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/pkg/windows_amd64/github.com/go-redis/redis.a" afterPath="$PROJECT_DIR$/goproject/pkg/windows_amd64/github.com/go-redis/redis.a" />
+      <change beforePath="$PROJECT_DIR$/goproject/pkg/windows_amd64/github.com/gomodule/redigo/redis.a" afterPath="$PROJECT_DIR$/goproject/pkg/windows_amd64/github.com/gomodule/redigo/redis.a" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/astaxie/beego" afterPath="$PROJECT_DIR$/goproject/src/github.com/astaxie/beego" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/README_ZH.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebDAV/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebDAV/WebDAV.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebDAV/_testdata/test.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebDAV/conf/app.conf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebDAV/controllers/controllers.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/README_ZH.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/WebIM.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/bee.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/conf/app.conf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/conf/locale_en-US.ini" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/conf/locale_zh-CN.ini" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/controllers/app.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/controllers/chatroom.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/controllers/longpolling.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/controllers/websocket.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/models/archive.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/routers/router.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/static/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/static/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/static/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/static/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/static/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/static/img/favicon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/static/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/static/js/jquery-1.10.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/static/js/jquery-1.10.1.min.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/static/js/longpolling.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/static/js/websocket.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/views/base/base.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/views/base/footer.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/views/base/head.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/views/base/navbar.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/views/longpolling.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/views/websocket.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/WebIM/views/welcome.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/shorturl/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/shorturl/README_ZH.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/shorturl/conf/app.conf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/shorturl/controllers/default.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/shorturl/controllers/expand.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/shorturl/controllers/short.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/shorturl/main.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/shorturl/models/model.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/shorturl/tests/default_test.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/README_ZH.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/conf/app.conf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/controllers/default.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/controllers/task.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/main.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/models/task.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/models/task_test.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/static/css/todo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/static/img/spinner.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/static/js/angular.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/static/js/todo.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/beego/samples/todo/views/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/garyburd/redigo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/go-redis/redis" afterPath="$PROJECT_DIR$/goproject/src/github.com/go-redis/redis" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/github.com/gomodule/redigo" afterPath="$PROJECT_DIR$/goproject/src/github.com/gomodule/redigo" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/l_package/.idea/l_package.iml" afterPath="$PROJECT_DIR$/goproject/src/liteblog/.idea/liteblog.iml" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/l_package/.idea/misc.xml" afterPath="$PROJECT_DIR$/goproject/src/liteblog/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/l_package/.idea/modules.xml" afterPath="$PROJECT_DIR$/goproject/src/liteblog/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/l_package/.idea/vcs.xml" afterPath="$PROJECT_DIR$/goproject/src/liteblog/.idea/vcs.xml" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/l_package/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/.idea/workspace.xml" afterPath="$PROJECT_DIR$/goproject/src/myweb/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/main.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/main.go" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/myconf/conf.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/myconf/conf.go" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/myweb.exe" afterPath="$PROJECT_DIR$/goproject/bin/myweb.exe" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/routers/router.go" afterPath="$PROJECT_DIR$/goproject/src/myweb/routers/router.go" />
+      <change beforePath="$PROJECT_DIR$/goproject/src/myweb/views/layout.html" afterPath="$PROJECT_DIR$/goproject/src/myweb/views/layout.html" />
     </list>
     <list id="f63252ed-5cde-4ba8-8b4d-83aa44bca467" name="New changelist" comment="忽略文件" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,18 +257,7 @@
     <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="config.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/goproject/src/config/config.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -176,8 +391,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -223,19 +438,6 @@
               <item name="goproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="goproject" type="462c0819:PsiDirectoryNode" />
               <item name="goproject" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goproject" type="462c0819:PsiDirectoryNode" />
-              <item name="goproject" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="windows_386" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goproject" type="462c0819:PsiDirectoryNode" />
-              <item name="goproject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -243,7 +445,7 @@
               <item name="goproject" type="462c0819:PsiDirectoryNode" />
               <item name="goproject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="mysql" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -409,12 +611,12 @@
       <workItem from="1564017364991" duration="2277000" />
       <workItem from="1564028382969" duration="3512000" />
       <workItem from="1564363244410" duration="261000" />
-      <workItem from="1564363538375" duration="418000" />
+      <workItem from="1564363538375" duration="2246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="417566000" />
+    <option name="totallyTimeSpent" value="419394000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -425,14 +627,14 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30985916" sideWeight="0.5053305" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5053305" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.115926325" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30985916" sideWeight="0.4946695" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.4946695" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04112554" sideWeight="0.4936034" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17857143" sideWeight="0.6984993" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17857143" sideWeight="0.6984993" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15938166" sideWeight="0.30150068" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -604,13 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goproject/src/mysql/07(mysql操作).go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/goproject/src/myweb/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -718,6 +913,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="100" column="4" lean-forward="false" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -903,10 +1099,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/goproject/src/mysql/07(mysql操作).go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="e#14#110#0" expanded="false" />
+            <marker date="1563173321174" expanded="true" signature="566:633" ph="INSERT INTO person... " />
+            <marker date="1563173321174" expanded="true" signature="933:973" ph="delete from person... " />
+            <marker date="1563173321174" expanded="true" signature="1070:1109" ph="UPDATE person... " />
+            <marker date="1563173321174" expanded="true" signature="1506:1526" ph="select * fro... person" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/goproject/src/config/config.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="285">
+          <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding />
         </state>
       </provider>

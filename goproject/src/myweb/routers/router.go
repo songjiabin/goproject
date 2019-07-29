@@ -1,11 +1,19 @@
 package routers
 
 import (
+	"github.com/astaxie/beego/context"
 	"myweb/controllers"
 	"github.com/astaxie/beego"
 )
 
 func init() {
+
+	//过滤器 进行过滤
+	// "/*" 匹配的路径
+	// beego.BeforeRouter 匹配的位置 BeforeRouter 在进行匹配之前
+	// filterFunc 匹配到做的操作
+	beego.InsertFilter("/a/*", beego.BeforeRouter, filterFunc)
+
 	//路由 进行匹配 分发
 	demoRouter()
 	registerRouter()
@@ -17,6 +25,14 @@ func init() {
 	deleteArticleRouter()
 	addArticleTypeRouter()
 	loginOutRouter()
+}
+
+//进行匹配
+var filterFunc = func(ctx *context.Context) {
+	userName := ctx.Input.Session("userName")
+	if userName == nil {
+		ctx.Redirect(302, "/login")
+	}
 }
 
 //案例的小demo 增删改查

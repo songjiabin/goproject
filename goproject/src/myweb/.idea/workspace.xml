@@ -2,124 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91623d02-192e-422f-94fe-54abc3f4dc9c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layout.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/css/layui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/css/layui.mobile.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/css/modules/code.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/css/modules/laydate/default/laydate.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/css/modules/layer/default/icon-ext.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/css/modules/layer/default/icon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/css/modules/layer/default/layer.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/css/modules/layer/default/loading-0.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/css/modules/layer/default/loading-1.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/css/modules/layer/default/loading-2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/font/iconfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/font/iconfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/font/iconfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/font/iconfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/font/iconfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/0.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/1.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/10.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/11.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/12.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/13.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/14.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/15.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/16.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/17.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/18.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/19.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/20.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/21.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/22.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/23.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/24.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/25.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/26.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/27.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/28.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/29.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/3.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/30.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/31.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/32.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/33.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/34.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/35.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/36.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/37.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/38.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/39.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/4.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/40.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/41.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/42.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/43.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/44.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/45.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/46.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/47.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/48.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/49.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/5.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/50.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/51.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/52.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/53.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/54.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/55.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/56.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/57.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/58.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/59.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/6.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/60.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/61.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/62.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/63.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/64.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/65.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/66.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/67.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/68.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/69.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/7.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/70.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/71.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/8.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/images/face/9.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/carousel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/code.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/colorpicker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/element.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/flow.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/form.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/jquery.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/laydate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/layedit.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/layer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/laypage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/laytpl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/mobile.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/rate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/slider.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/table.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/transfer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/tree.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/upload.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/lay/modules/util.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/layui.all.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/layui/layui.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/demo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/views/layout.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../../../.idea/.gitignore" />
       <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controllers/addArticle.go" afterPath="$PROJECT_DIR$/controllers/addArticle.go" />
-      <change beforePath="$PROJECT_DIR$/controllers/default.go" afterPath="$PROJECT_DIR$/controllers/default.go" />
-      <change beforePath="$PROJECT_DIR$/myweb.exe" afterPath="$PROJECT_DIR$/myweb.exe" />
-      <change beforePath="$PROJECT_DIR$/routers/router.go" afterPath="$PROJECT_DIR$/routers/router.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -147,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="default.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/default.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="163" column="25" lean-forward="true" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
+            <state relative-caret-position="3135">
+              <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,12 +45,9 @@
       <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="82" column="36" lean-forward="false" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
-              <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="1064">
+              <caret line="56" column="13" lean-forward="false" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -173,8 +55,18 @@
       <file leaf-file-name="router.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routers/router.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
+            <state relative-caret-position="551">
               <caret line="32" column="70" lean-forward="false" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -303,7 +195,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -311,33 +202,14 @@
               <item name="myweb" type="b2602c69:ProjectViewProjectNode" />
               <item name="myweb" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="myweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myweb" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myweb" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myweb" type="462c0819:PsiDirectoryNode" />
-              <item name="routers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myweb" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -524,7 +396,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110675000" />
+    <option name="totallyTimeSpent" value="110760000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -537,7 +409,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -548,12 +419,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12784399" sideWeight="0.49928367" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31527627" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.49498567" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.49498567" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23027718" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23294243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14734562" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -561,11 +431,32 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2884097" sideWeight="0.5050143" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12784399" sideWeight="0.49928367" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31527627" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.49498567" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23027718" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14734562" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -880,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -906,7 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -914,7 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -922,24 +809,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
           <caret line="77" column="33" lean-forward="false" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="82" column="36" lean-forward="false" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1064">
+          <caret line="56" column="13" lean-forward="false" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routers/router.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
+        <state relative-caret-position="551">
           <caret line="32" column="70" lean-forward="false" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
           <folding />
         </state>
@@ -947,8 +830,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/default.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="163" column="25" lean-forward="true" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
+        <state relative-caret-position="3135">
+          <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
           <folding />
         </state>
       </provider>

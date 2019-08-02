@@ -225,19 +225,19 @@ layui.define(['element', 'form', 'laypage', 'jquery', 'laytpl', 'sysn'], functio
 
 
     //登陆
-    form.on('submit(login)', function (fromdata) {
-        sysn.post("/login", fromdata.field)
-        // .setTimeout(5000)
-            .success(function (data) {
-                layer.msg(data.msg);
-                if (data.action) {
-                    setTimeout(function () {
-                        window.location.href = data.action;
-                    }, 300)
-                }
-            }).run();
-        return false;
-    });
+    // form.on('submit(login)', function (fromdata) {
+    //     sysn.post("/login", fromdata.field)
+    //     // .setTimeout(5000)
+    //         .success(function (data) {
+    //             layer.msg(data.msg);
+    //             if (data.action) {
+    //                 setTimeout(function () {
+    //                     window.location.href = data.action;
+    //                 }, 300)
+    //             }
+    //         }).run();
+    //     return false;
+    // });
 
     //注册
     form.on('submit(reg)', function (fromdata) {

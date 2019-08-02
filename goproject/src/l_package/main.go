@@ -17,6 +17,13 @@ func main() {
 		fmt.Print("....",err)
 		return
 	}
-	fmt.Print("创建成功")
+	fmt.Println("创建成功")
+
+
+	title:="我是标题"
+	sprintf := fmt.Sprintf("%%%s%%", title)
+	fmt.Println(sprintf)
 
 }
+
+

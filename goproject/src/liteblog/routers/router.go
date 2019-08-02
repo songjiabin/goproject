@@ -13,4 +13,7 @@ func init() {
 	//登录路由
 	beego.Include(&controllers.UserController{})
 
+	//给所有的note模块前面加上一个/note
+	beego.AddNamespace(beego.NewNamespace("note", beego.NSInclude(&controllers.NoteController{})))
+
 }

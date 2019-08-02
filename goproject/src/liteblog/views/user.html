@@ -19,7 +19,6 @@
                 margin: 0 0 10px 80px;
             }
         }
-
     </style>
 </head>
 <body class="lay-blog">
@@ -27,38 +26,12 @@
 <div class="container-wrap">
     <div class="container">
         <div class="contar-wrap">
-        {{if .IsLogin}}
-            <h4 class="item-title">
-                <p><i class="layui-icon layui-icon-speaker"></i>
-                {{.User.Name}},您已经登陆,是否<a href="/logout"><span>登出</span></a>？
-                </p>
-            </h4>
-        {{if eq .User.Role 0}}
-        {{/*<h4 class="item-title">*/}}
-        {{/*<p>*/}}
-        {{/*<a id="changPwd" href="javacript:void(0);"><i*/}}
-        {{/*class="layui-icon layui-icon-edit">&#xe642;</i><span>修改密码</span></a>*/}}
-        {{/*</p>*/}}
-        {{/*</h4>*/}}
-            <h4 class="item-title">
-                <p>
-                    <a href="/note/new"><i class="layui-icon layui-icon-add-1">&#xe654;</i><span>新增文章</span></a>
-                </p>
-            </h4>
-            <h4 class="item-title">
-                <p>
-                    <label style="width: 120px;">文章编辑器 :</label>
-
-                    <input type="radio" name="editor" value="default"
-                           {{if eq .User.Editor "default"}}checked{{end}}  title="富文本">
-                    <span>富文本</span>
-                    <input type="radio" name="editor" value="markdown"
-                           {{if eq .User.Editor "markdown"}}checked{{end}} title="Markdown">
-                    <span>Markdown</span>
-            </h4>
-        {{end}}
-        {{else}}
             <div class="item">
+            {{if .IsLogin}}
+                <h4 class="item-title">
+                    <p><i class="layui-icon layui-icon-speaker"></i>{{.user.Name}}正在处于登录状态，点击<a href="/logout" style="color:#01AAED;">退出</a></p>
+                </h4>
+            {{else}}
                 <div class="item-box">
                     <form class="layui-form" action="">
                         <div class="layui-form-item">
@@ -80,67 +53,53 @@
                         <div class="layui-form-item">
                             <div class="layui-input-block">
                                 <button class="layui-btn" lay-submit lay-filter="login">登陆</button>
-                                <a href="/reg" class="layui-btn layui-btn-primary">注册用户</a>
+                                <a href="/register" class="layui-btn layui-btn-primary">注册用户</a>
                             </div>
                         </div>
                     </form>
 
                 </div>
-
+            {{end}}
             </div>
-        {{end}}
         </div>
     </div>
 </div>
 
 {{template "comm/footer.html" .}}
+
 <script src="/static/layui/layui.js"></script>
 <script src="/static/js/jquery.min.js"></script>
-
 <script>
-    // layui.use(['form', 'jquery', 'layer', 'sysn'], function () {
-    //     var form = layui.form,
-    //             sysn = layui.sysn,
-    //             $ = layui.jquery,
-    //             layer = layui.layer;
-    //     $("input[name='editor']").change(function () {
-    //         changeEditor()
-    //     });
-    //     function changeEditor(){
-    //         var editor = $("input[name='editor']:checked").val();
-    //         sysn.post("/setting/editor", {editor: editor})
-    //                 .success(function (data) {
-    //                     layer.msg(data.msg);
-    //                     $(":radio[name='editor'][value='" + data.editor + "']").prop("checked", "checked");
-    //                 }).run();
-    //     }
-    //
-    // });
-
     layui.use('form', function () {
         var form = layui.form
-        //监听监测
+                , layer = layui.layer
+                , layedit = layui.layedit
+                , laydate = layui.laydate;
+
+        //监听提交
         form.on('submit(login)', function (data) {
-            $.post("/login", data.field, function (result) {
-                if (result.code == 0) {
-                    layui.msg("登录成功")
-                    //跳转界面
-                    if (result.action) {
+            $.ajax({
+                //几个参数需要注意一下
+                type: "POST",//方法类型
+                dataType: "json",//预期服务器返回的数据类型
+                url: "/login",//url
+                data: data.field,
+                success: function (result) {
+                    if (result.code == 0) {
                         setTimeout(function () {
                             window.location.href = result.action
                         }, 300)
+                    } else {
+                        layer.msg(result.msg)
                     }
-                } else {
-                    layui.msg("登录失败")
+                },
+                error: function () {
+                    layer.msg("网络异常")
                 }
-            }, "json").error(function () {
-                layui.msg("网络异常")
             });
-        })
-
-        return false
+            return false;
+        });
     })
-
 </script>
 </body>
 </html>

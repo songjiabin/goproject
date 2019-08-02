@@ -32,4 +32,4 @@ func main() {
 
 	writer.Flush()// 将缓冲区的数据push到磁盘中
 
-}
+	}

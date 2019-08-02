@@ -5,6 +5,9 @@ import (
 	"liteblog/models"
 	"errors"
 	"liteblog/json"
+	"github.com/astaxie/beego/logs"
+	"liteblog/syserror"
+	"github.com/satori/go.uuid"
 )
 
 //定义session中的key值
@@ -16,6 +19,10 @@ type BaseController struct {
 	User    models.User //登录的有用户
 }
 
+type NestPreparer interface {
+	NextPreparse()
+}
+
 //所有的路由都会继承此方法
 //首先执行的方法
 func (this *BaseController) Prepare() {
@@ -24,6 +31,7 @@ func (this *BaseController) Prepare() {
 
 	this.IsLogin = false
 	session := this.GetSession(SESSION_USER_KEY)
+	logs.Info("session--->", session)
 	if session != nil {
 		//session是否为User对象
 		if u, ok := session.(models.User); ok {
@@ -33,10 +41,18 @@ func (this *BaseController) Prepare() {
 		}
 	}
 
+	logs.Info("是否登录过呢", this.IsLogin)
+
 	this.Data["IsLogin"] = this.IsLogin
 
 	//请求的url
 	this.Data["path"] = this.Ctx.Request.RequestURI
+
+	//如果实现了此方法后
+	if preparer, ok := this.AppController.(NestPreparer); ok {
+		preparer.NextPreparse()
+	}
+
 }
 
 //判断是否非空
@@ -66,4 +82,19 @@ func (this *BaseController) Abort500(err error) {
 	//请求的url
 	this.Data["error"] = err
 	this.Abort("500")
+}
+
+//是否登录过
+func (ctx *BaseController) MustLogin() {
+	if !ctx.IsLogin {
+		ctx.Abort500(syserror.NoUserError{})
+	}
+}
+
+func (this *BaseController) UUID() string {
+	uuids, e := uuid.NewV4()
+	if e != nil {
+		this.Abort500(syserror.NewError("系统错误", e))
+	}
+	return uuids.String()
 }

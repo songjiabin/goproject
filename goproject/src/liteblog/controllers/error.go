@@ -11,15 +11,16 @@ type ErrorController struct {
 
 //处理404的错误
 func (c *ErrorController) Error404() {
-
-	if c.IsAjax() {
-		c.jsonerror(syserror.Error404{})
-	}
-
 	c.TplName = "error/404.html"
+	if (c.IsAjax()) {
+		c.jsonerror(syserror.Error404{})
+	} else {
+		c.Data["content"] = "非法访问"
+	}
 }
 
 func (c *ErrorController) Error500() {
+
 	c.TplName = "error/500.html"
 	err, ok := c.Data["error"].(error)
 	if !ok {
@@ -38,10 +39,10 @@ func (c *ErrorController) Error500() {
 	}
 
 	if c.IsAjax() {
+		logs.Info("IsAjax")
 		c.jsonerror(serr)
 	} else {
 		c.Data["content"] = serr.Error()
-
 	}
 }
 

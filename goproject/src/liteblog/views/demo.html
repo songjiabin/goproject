@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <title>layui</title>
+            <meta name="renderer" content="webkit">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        {{template "comm/link.html"}}
+            <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+        </head>
+<body>
+
+
+<script src="/static/layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+    layui.use(['util', 'laydate', 'layer'], function () {
+        var util = layui.util
+                , laydate = layui.laydate
+                , layer = layui.layer;
+        //固定块
+        util.fixbar({
+            bar1: "&#xe654;"
+            , bar2: "&#xe604;"
+            , css: {right: 50, bottom: 100}
+            , bgcolor: '#393D49'
+            , click: function (type) {
+                if (type === 'bar1') {
+                    layer.msg('icon是可以随便换的')
+                } else if (type === 'bar2') {
+                    layer.msg('两个bar都可以设定是否开启')
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

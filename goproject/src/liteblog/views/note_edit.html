@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闲言轻博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/static/lib/wangEditor.min.css">
+
+{{template "comm/link.html"}}
+    <style>
+        .lay-blog ul.pop-nav {
+            z-index: 2000;
+        }
+
+        .container {
+            margin: 0 auto !important;
+        }
+
+        .w-e-toolbar {
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+<body class="lay-blog">
+{{template "comm/header.html".}}
+<div class="container-wrap">
+    <div class="container">
+        <div class="contar-wrap">
+            <div class="container-panel">
+                <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                    <ul class="layui-tab-title">
+                        <li class="layui-this">编辑文章</li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <form class="layui-form layui-form-pane" action="">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">标题</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" required=""
+                                           value="{{.note.Title}}"
+                                           lay-verify="required" placeholder="请输入标题"
+                                           autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+
+                            <div class="layui-form-item layui-form-text">
+                                <div class="layui-input-block">
+                                    <div id="edit"
+                                         style="background: #fff;">{{if .note }}{{str2html .note.Content}}{{end}}</div>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <button class="layui-btn" lay-submit="" lay-filter="save">提交
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{template "comm/footer.html" .}}
+
+<script src="/static/layui/layui.js"></script>
+<script src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/lib/wangEditor.min.js"></script>
+<script type="text/javascript">
+
+
+    layui.use('form', function () {
+        var form = layui.form
+                , layer = layui.layer
+                , layedit = layui.layedit
+                , laydate = layui.laydate;
+
+        var E = window.wangEditor
+        var editor = new E('#edit')
+        editor.customConfig.pasteFilterStyle = false //手动关闭掉粘贴样式的过滤。
+        editor.customConfig.zIndex = 100000 // 编辑区域的z-index默认为10000，可自定义修改，代码配置如下。需改之后，编辑区域和菜单的z-index会同时生效。
+        editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
+        // 或者 var editor = new E( document.getElementById('editor') )
+        editor.create()
+
+
+        form.on('submit(save)', function (data) {
+            data.field.content = editor.txt.html();
+
+            $.ajax({
+                //几个参数需要注意一下
+                type: "POST",//方法类型
+                dataType: "json",//预期服务器返回的数据类型
+                url: "/note/editSave/{{.key}}",//url
+                data: data.field,
+                success: function (result) {
+
+                    if (result.code == 0) {
+                        layer.msg("保存成功")
+                        if (result.action) {
+                            setTimeout(function () {
+                               window.location.href = result.action
+                            }, 300)
+                        }
+                    } else {
+                        layer.msg("保存失败")
+                    }
+                },
+                error: function () {
+                    layer.msg("网络异常")
+                }
+            });
+            return false;
+
+        })
+    })
+</script>
+</body>
+</html>

@@ -60,6 +60,13 @@ func (this *IndexController) IndexAbout() {
 
 // @router /message  [get]
 func (this *IndexController) IndexMessage() {
+
+	messages, err := models.QueryLMessage()
+	if err != nil {
+		this.Abort500(syserror.NewError("查询留言失败", err))
+	}
+
+	this.Data["lmessages"] = messages
 	this.TplName = "message.html"
 }
 
@@ -86,6 +93,11 @@ func (this *IndexController) GetDetails() {
 		this.Abort500(syserror.NewError("文章不存在", err))
 	}
 
+	//查询具体的评论
+	messages, _ := models.QueryMessage(key)
+	this.Data["messages"] = messages
+
+
 	//将文章信息给界面
 	this.Data["note"] = note
 	this.TplName = "details.html"
@@ -94,4 +106,21 @@ func (this *IndexController) GetDetails() {
 // @router /demo  [get]
 func (this *IndexController) Demo() {
 	this.TplName = "demo.html"
+}
+
+//文章的评论功能
+
+// @router /comment/:key [get]
+func (this *IndexController) Comment() {
+	key := this.Ctx.Input.Param(":key")
+	//根据key类查询文章
+	note, err := models.QueryNoteByKey(key)
+
+	if err != nil {
+		this.Abort500(syserror.NewError("文章不存在", err))
+	}
+
+	this.Data["note"] = note
+	this.TplName = "comment.html"
+
 }

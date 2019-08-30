@@ -9,13 +9,14 @@ import (
 
 type Note struct {
 	Id      int
-	Key     string `orm:"unique"`
-	User    *User  `orm:"rel(fk)"` //当前的文章属于哪个用户
-	Title   string `orm:"size(200)"`
-	Summary string `orm:"size(800)"`             //摘要
-	Content string `orm:"size(2000)"`            //内容
-	Visist  int    `orm:"size(2000);default(0)"` //浏览次数
-	Praise  int    `orm:"size(2000)"`            //点赞的次数
+	Key     string     `orm:"unique" json:"key"`
+	User    *User      `orm:"rel(fk)" json:"user"` //当前的文章属于哪个用户
+	Title   string     `orm:"size(200)" json:"title"`
+	Summary string     `orm:"size(800)" json:"summary"`            //摘要
+	Content string     `orm:"size(2000)" json:"content"`           //内容
+	Visist  int        `orm:"size(2000);default(0)" json:"visist"` //浏览次数
+	Praise  int        `orm:"size(2000)" json:"praise"`            //点赞的次数
+	Message []*Message `orm:"reverse(many)" json:"message"`        //
 }
 
 //根据 key 查询是否有这个数据
@@ -69,7 +70,6 @@ func QueryNoteByPage(page, limit int, title string) (notes []Note, err error) {
 		_, err = newOrm.QueryTable("Note").Filter("Title__contains", title).Limit(limit, (page-1)*limit).All(&notes)
 	}
 
-	logs.Info("结果是：", notes)
 
 	return
 }
@@ -105,7 +105,7 @@ func UpdateNoteByKey(note Note) (err error) {
 func DeleteNoteByKey(key string) error {
 	newOrm := orm.NewOrm()
 	note := Note{Key: key}
-	i, e := newOrm.Delete(&note,"Key")
-	logs.Info("删除了。。。。。",i,e)
+	i, e := newOrm.Delete(&note, "Key")
+	logs.Info("删除了。。。。。",key, i, e)
 	return e
 }

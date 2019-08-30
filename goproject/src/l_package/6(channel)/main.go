@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	//不适用缓冲区
+	c := make(chan int)
+	go send(c)
+	go recv(c)
+	time.Sleep(3*time.Second)
+	close(c)
+}
+
+//只能向chan里send数据
+func send(c chan<- int) {
+	for i := 0; i < 10; i++ {
+		c <- i
+	}
+}
+
+//接收chan数据
+func recv(c <-chan int) {
+	for i := range c {
+		fmt.Println(i)
+	}
+}

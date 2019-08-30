@@ -16,4 +16,7 @@ func init() {
 	//给所有的note模块前面加上一个/note
 	beego.AddNamespace(beego.NewNamespace("note", beego.NSInclude(&controllers.NoteController{})))
 
+
+
+	beego.AddNamespace(beego.NewNamespace("message", beego.NSInclude(&controllers.MessageController{})))
 }

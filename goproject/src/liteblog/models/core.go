@@ -5,8 +5,6 @@ import (
 	"liteblog/myconf"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/astaxie/beego/logs"
-
-
 )
 
 func init() {
@@ -16,7 +14,7 @@ func init() {
 	//orm.RegisterDataBase("default", "mysql", myconf.MySqlConfig["allconfig"])
 	orm.RegisterDataBase("default", "mysql", myconf.MySqlConfig["allconfig"], maxIdll, maxConn)
 	// 02 映射model 数据
-	orm.RegisterModel(new(User), new(Note))
+	orm.RegisterModel(new(User), new(Note), new(Message),new(LMessage))
 	orm.RunSyncdb("default", false, true)
 
 	//在程序启动的时候插入admin用户
@@ -42,4 +40,3 @@ func init() {
 	}
 
 }
-

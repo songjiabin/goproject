@@ -27,6 +27,15 @@ func init() {
 
     beego.GlobalControllerRouter["liteblog/controllers:IndexController"] = append(beego.GlobalControllerRouter["liteblog/controllers:IndexController"],
         beego.ControllerComments{
+            Method: "Comment",
+            Router: `/comment/:key`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["liteblog/controllers:IndexController"] = append(beego.GlobalControllerRouter["liteblog/controllers:IndexController"],
+        beego.ControllerComments{
             Method: "Demo",
             Router: `/demo`,
             AllowHTTPMethods: []string{"get"},
@@ -66,6 +75,24 @@ func init() {
             Method: "Register",
             Router: `/register`,
             AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["liteblog/controllers:MessageController"] = append(beego.GlobalControllerRouter["liteblog/controllers:MessageController"],
+        beego.ControllerComments{
+            Method: "NewLMessage",
+            Router: `/lnew`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["liteblog/controllers:MessageController"] = append(beego.GlobalControllerRouter["liteblog/controllers:MessageController"],
+        beego.ControllerComments{
+            Method: "NewMessage",
+            Router: `/new/:key`,
+            AllowHTTPMethods: []string{"post"},
             MethodParams: param.Make(),
             Filters: nil,
             Params: nil})

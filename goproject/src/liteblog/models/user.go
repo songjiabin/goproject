@@ -5,13 +5,14 @@ import (
 )
 
 type User struct {
-	Id     int     `orm:"pk;auto" json:"Id"`
-	Name   string  `orm:"unique" json:"name"	`
-	Email  string  `orm:"unique" json:"email"	`
-	Pwd    string  `json:"-"`
-	Avatar string  `json:"avatar"`                //头像
-	Role   int     `orm:"default(1)" json:"role"` //角色  0：管理员，1：正常用户
-	Note   []*Note `orm:"reverse(many)"`          //一个用户下可以有多个文章
+	Id      int         `orm:"pk;auto" json:"Id"`
+	Name    string      `orm:"unique" json:"name"`
+	Email   string      `orm:"unique" json:"email"`
+	Pwd     string      `json:"-"`
+	Avatar  string      `json:"avatar"`                      //头像
+	Role    int         `orm:"default(1)" json:"role"`       //角色  0：管理员，1：正常用户
+	Note    [] *Note    `orm:"reverse(many)" json:"note"`    //一个用户下可以有多个文章
+	Message [] *Message `orm:"reverse(many)" json:"message"` //一个用户有过个评论
 }
 
 //根据用户名和密码查询
@@ -67,5 +68,3 @@ func RegeisterUser(user *User) (err error) {
 	}
 	return nil
 }
-
-

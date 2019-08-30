@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>留言-闲言轻博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{template "comm/link.html"}}
+{{template "comm/link.html"}}
 
 </head>
 <body class="lay-blog">
@@ -16,28 +16,38 @@
         <div class="contar-wrap" id="contar-wrap">
             <form class="layui-form" action="">
                 <div class="layui-form-item layui-form-text">
-                    <textarea class="layui-textarea" id="LAY-msg-content" style="resize:none"></textarea>
+                    <textarea class="layui-textarea" name="content" style="resize:none"></textarea>
+                </div>
+
+                <div class="item-btn">
+                    <button lay-submit class="layui-btn layui-btn-normal" lay-filter="comment">提交</button>
                 </div>
             </form>
-            <div class="item-btn">
-                <button class="layui-btn layui-btn-normal" id="item-btn">提交</button>
-            </div>
 
+
+
+
+        {{range .lmessages}}
             <div id="LAY-msg-box">
                 <div class="info-box">
                     <div class="info-item">
                         <img class="info-img" src="/static/images/info-img.png" alt="">
                         <div class="info-text">
                             <p class="title count">
-                                <span class="name">一片空白</span>
-                                <span class="info-img like"><i class="layui-icon layui-icon-praise"></i>5.8万</span>
+                                <span class="name">{{.User.Name}}</span>
+                                <span class="info-img like"><i
+                                        class="layui-icon layui-icon-praise"></i>{{.Praise}}</span>
                             </p>
                             <p class="info-intr">
-                                父爱如山，不善表达。回想十多年前，总记得父亲有个宽厚的肩膀，小小的自己跨坐在上面，越过人山人海去看更广阔的天空，那个时候期望自己有一双翅膀，能够像鸟儿一样飞得高，看得远。虽然父亲有时会和自己开玩笑，但在做错事的时候会受到严厉的训斥。父亲有双粗糙的大手掌。</p>
+                            {{.Content}}
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+        {{end}}
+
+
 
             <div id="test1" class="paging"></div>
         </div>
@@ -52,34 +62,46 @@
     <p><span>人生就是一场修行</span></p>
 </div>
 </div>
-<script src="/static/layui/layui.js">
-
-</script>
+<script src="/static/layui/layui.js"></script>
+<script src="/static/js/jquery.min.js"></script>
 <script>
-    layui.config({
-        base: '/static/js/'
-    }).use('blog');
+
+
+    layui.use(['util', 'laydate', 'layer', "form"], function () {
+
+        var util = layui.util
+                , laydate = layui.laydate
+                , layer = layui.layer
+                , form = layui.form;
+
+        form.on('submit(comment)', function (data) {
+            //我们假定评论新增路由的路径为 "/message/new/:key" key是文章的key
+            $.ajax({
+                //几个参数需要注意一下
+                type: "POST",//方法类型
+                dataType: "json",//预期服务器返回的数据类型
+                url: "/message/lnew",
+                data: data.field,
+                content: data.field.content,
+                success: function (result) {
+                    if (result.code == 0) {
+                        layer.msg("留言成功！");
+                        setTimeout(function () {
+                            window.location.href = result.action
+                        }, 300)
+                    } else {
+                        layer.msg(result.msg)
+                    }
+                },
+                error: function () {
+                    layer.msg("网络异常")
+                }
+            });
+            return false;
+        })
+
+    })
+
+
 </script>
-
-
-<script id="LAY-msg-tpl" type="text/html">
-    <div class="info-box">
-        <div class="info-item">
-            <img class="info-img" src="{{  .avatar }}" alt="">
-            <div class="info-text">
-                <p class="title">
-                    <span class="name">{{  .username }}</span>
-                    <span class="info-img">
-					  	<i class="layui-icon layui-icon-praise"></i>
-					  	{{  .praise }}
-					 	</span>
-                </p>
-                <p class="info-intr">
-                    {{ .content }}
-                </p>
-            </div>
-        </div>
-    </div>
-</script>
-
 </body>

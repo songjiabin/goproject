@@ -19,6 +19,11 @@ type NumController struct {
 	beego.Controller
 }
 
+type UserNameController struct {
+	beego.Controller
+}
+
+
 func (c *MainController) Get() {
 	c.Data["Website"] = "main---get"
 	c.TplName = "1.html"
@@ -49,6 +54,12 @@ func (c *ApiController) GetApi() {
 }
 
 func (c *NumController) GetNum() {
+	s := c.GetString(":id")
+	beego.Info(s)
+	c.TplName = "1.html"
+}
+
+func (c *UserNameController) GetUserName() {
 	s := c.GetString(":id")
 	beego.Info(s)
 	c.TplName = "1.html"

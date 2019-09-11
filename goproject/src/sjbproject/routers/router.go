@@ -14,4 +14,6 @@ func init() {
 
 	beego.Router("/num/?:id([0-9]+)", &controllers.NumController{}, "get:GetNum")
 
+	beego.Router("/user/?:id([\\w]+)", &controllers.UserNameController{}, "get:GetUserName")
+
 }

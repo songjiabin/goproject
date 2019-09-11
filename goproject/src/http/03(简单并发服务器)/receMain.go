@@ -1,8 +1,8 @@
 package main
 
 import (
-	"net"
 	"fmt"
+	"net"
 	"strings"
 )
 
@@ -46,6 +46,10 @@ func handleCon(con net.Conn) {
 		//开始读取发送过来的信息
 		buf := make([]byte, 2048)
 		n, error := con.Read(buf)
+		if n == 0 {
+			fmt.Println("断开连接了")
+			return
+		}
 		if error != nil {
 			fmt.Println(error)
 			return

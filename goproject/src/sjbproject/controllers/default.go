@@ -23,6 +23,14 @@ type UserNameController struct {
 	beego.Controller
 }
 
+type DownLoadController struct {
+	beego.Controller
+}
+
+type AllController struct {
+	beego.Controller
+}
+
 
 func (c *MainController) Get() {
 	c.Data["Website"] = "main---get"
@@ -61,6 +69,19 @@ func (c *NumController) GetNum() {
 
 func (c *UserNameController) GetUserName() {
 	s := c.GetString(":id")
+	beego.Info(s)
+	c.TplName = "1.html"
+}
+
+func (c *DownLoadController) DownLoadFile() {
+	s := c.GetString(":path")
+	s2 := c.GetString(":ext")
+	beego.Info(s,s2)
+	c.TplName = "1.html"
+ }
+
+func (c *AllController) All()  {
+	s := c.GetString(":splat")
 	beego.Info(s)
 	c.TplName = "1.html"
 }

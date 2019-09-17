@@ -10,6 +10,6 @@ func init() {
 	beego.Router("/register", &controllers.RegisterController{}, "get:ShowRegister;post:HandleReg")
 	beego.Router("/login", &controllers.LoginController{}, "get:ShowLogin;post:HandleLogin")
 	beego.Router("/showArticle", &controllers.ArticleController{}, "get:ShowArticle;post:HandleArticle")
-	beego.Router("/AddArticle",&controllers.ArticleController{},"get:ShowAddArticle")
+	beego.Router("/addArticle", &controllers.ArticleController{}, "get:ShowAddArticle;post:HandleAddArticle")
 
 }

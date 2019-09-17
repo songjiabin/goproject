@@ -77,6 +77,7 @@ func (this *LoginController) HandleLogin() {
 		return
 	}
 
-	this.Ctx.WriteString("登录成功")
+	this.Redirect("/showArticle", 302)
+	//this.Ctx.WriteString("登录成功")
 
 }

@@ -6,30 +6,20 @@
     <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
     <script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
-
+    <script>
+        window.onload = function () {
+            $(".dels").click(function () {
+                if (!confirm("是否删除？")) {
+                    //取消的时候 就不执行了
+                    return false
+                }
+            })
+        }
+    </script>
 </head>
 <body>
 
-<div class="header">
-    <a href="#" class="logo fl"><img src="/static/img/logo.png" alt="logo"></a>
-    <a href="#" class="logout fr">退 出</a>
-</div>
-
-<div class="side_bar">
-    <div class="user_info">
-        <img src="/static/img/person.png" alt="张大山">
-        <p>欢迎你 <em>李雷</em></p>
-    </div>
-
-    <div class="menu_con">
-        <div class="first_menu active"><a href="javascript:;" class="icon02">文章管理</a></div>
-        <ul class="sub_menu show">
-            <li><a href="#" class="icon031">文章列表</a></li>
-            <li><a href="/addArticle" class="icon032">添加文章</a></li>
-            <li><a href="#" class="icon034">添加分类</a></li>
-        </ul>
-    </div>
-</div>
+{{template "comm/header.html" .}}
 
 <div class="main_body" id="main_body">
     <div class="breadcrub">
@@ -58,11 +48,11 @@
             {{range .articles}}
                 <tr>
                     <td>{{.Title}}</td>
-                    <td><a href="#">查看详情</a></td>
-                    <td> {{.Time}}</td>
+                    <td><a href="/articleContent?id={{.Id}}">查看详情</a></td>
+                    <td> {{.Time.Format "2006-01-02 15:04:05"}}</td>
                     <td>{{.Count}}</td>
-                    <td><a href="#" class="dels">删除</a></td>
-                    <td><a href="#">编辑</a></td>
+                    <td><a href="/deleteArticle?id={{.Id}}" class="dels">删除</a></td>
+                    <td><a href="/updateArticle?id={{.Id}}">编辑</a></td>
                     <td>财经新闻</td>
                 </tr>
             {{end}}
@@ -70,18 +60,30 @@
         </table>
 
 
-        {{range $index ,$val:=.articles}}
-            <a>{{$index}}</a>
-            <a>{{$val}}</a>
-        {{end}}
-
-
         <ul class="pagenation">
-            <li><a href="#">首页</a></li>
-            <li><a href="javascript:;">上一页 </a></li>
-            <li><a href="javascript:;">下一页</a></li>
-            <li><a href="#">末页</a></li>
-            <li>共5条记录/共5页/当前1页</li>
+
+            {{if  eq .pageIndex 1 }}
+                <li><a href="/showArticle?pageIndex=1">首页</a></li>
+            {{end}}
+
+
+            {{if gt .pageIndex 1}}
+                <li><a href="showArticle?pageIndex={{.pageIndex | showPrePage }}">上一页 </a></li>
+            {{else}}
+                <li><a href="#">上一页 </a></li>
+            {{end}}
+
+            {{if lt .pageIndex .totalPage }}
+                <li><a href="showArticle?pageIndex={{.pageIndex | showNextPage }}">下一页</a></li>
+            {{else}}
+                <li><a href="#">下一页</a></li>
+            {{end}}
+
+            {{if ne .pageIndex .totalPage}}
+                <li><a href="/showArticle?pageIndex={{.totalPage}}">末页</a></li>
+            {{end}}
+
+            <li>共{{.count}}条记录/共{{.totalPage}}页/当前{{.pageIndex}}页</li>
         </ul>
     </div>
 </div>

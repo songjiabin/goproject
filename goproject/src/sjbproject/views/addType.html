@@ -5,6 +5,16 @@
     <title>编辑文章类型</title>
     <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <script src="/static/js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $(".edit").click(function () {
+                if (!confirm("是否删除")) {
+                    return false
+                }
+            })
+        })
+    </script>
 </head>
 <body>
 

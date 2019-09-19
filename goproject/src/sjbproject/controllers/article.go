@@ -16,18 +16,27 @@ type ArticleController struct {
 	beego.Controller
 }
 
-const pageSize int = 2 //每个页多少条数据
-var pageIndex = 1      //当前的页数
-var totalPage float64  //一共要显示的页数
+const pageSize int = 1 //每个页多少条数据
+var pageIndex = 1       //当前的页数
+var totalPage float64   //一共要显示的页数
 
 //展示文章信息
 func (this *ArticleController) ShowArticle() {
 	this.TplName = "index.html"
+
 	articles := []models.Article{};
 	newOrm := orm.NewOrm()
 
+
+	se := this.GetString("select")
+	if se == "" {
+		logs.Info("下拉框获取数据失败")
+		return
+	}
+
+
 	//查询所有的数目
-	count, _ := newOrm.QueryTable("article").Count()
+	count, _ := newOrm.QueryTable("Article").RelatedSel("ArticleType").Count()
 	totalPage = float64(count) / float64(pageSize)
 	ceil := math.Ceil(totalPage) //向上取整  1.1 -- > 2
 
@@ -42,7 +51,7 @@ func (this *ArticleController) ShowArticle() {
 
 	//分页
 	start := pageSize * (pageIndex - 1) //开始的位置
-	newOrm.QueryTable("article").Limit(pageSize, start).All(&articles)
+	newOrm.QueryTable("Article").RelatedSel("ArticleType").Limit(pageSize, start).All(&articles)
 
 	//一共显示的页数
 	this.Data["count"] = count
@@ -51,15 +60,84 @@ func (this *ArticleController) ShowArticle() {
 	this.Data["totalPage"] = int(ceil) //一共多少页
 	this.Data["pageIndex"] = pageIndex //当前的页码数
 	this.Data["articles"] = articles
+
+
+
+	//查询所有的文章类型
+	articleTypes := []models.ArticleType{}
+	_, e := newOrm.QueryTable("ArticleType").All(&articleTypes)
+	if e != nil {
+		logs.Info("查询文章类型失败...")
+		return
+	}
+	this.Data["articleTypes"] = articleTypes
+
 }
 
-//处理文章列表
+//处理文章列表 从index.html发送过来的数据
 func (this *ArticleController) HandleArticle() {
+
 	this.TplName = "index.html"
+
+	se := this.GetString("select")
+	if se == "" {
+		logs.Info("下拉框获取数据失败")
+		return
+	}
+
+	articles := []models.Article{}
+	newOrm := orm.NewOrm()
+
+	//查询所有的数目
+	count, _ := newOrm.QueryTable("Article").RelatedSel("ArticleType").Count()
+	totalPage = float64(count) / float64(pageSize)
+	ceil := math.Ceil(totalPage) //向上取整  1.1 -- > 2
+
+	//获取界面传来的pageIndex（要求跳转到哪一页）
+	pageIndex, _ = this.GetInt("pageIndex")
+	if float64(pageIndex) >= ceil {
+		pageIndex = int(ceil)
+	}
+	if pageIndex == 0 {
+		pageIndex = 1
+	}
+
+	//分页
+	start := pageSize * (pageIndex - 1) //开始的位置
+	//多表联查 	//更新文章的类型来筛选文章
+	newOrm.QueryTable("Article").RelatedSel("ArticleType").Filter("ArticleType__TypeName", se).
+		Limit(pageSize, start).All(&articles)
+
+	//一共显示的页数
+	this.Data["count"] = count
+	//一共显示多少条记录
+
+	this.Data["totalPage"] = int(ceil) //一共多少页
+	this.Data["pageIndex"] = pageIndex //当前的页码数
+	this.Data["articles"] = articles
+
+	//查询所有的文章类型
+	articleTypes := []models.ArticleType{}
+	_, e := newOrm.QueryTable("ArticleType").All(&articleTypes)
+	if e != nil {
+		logs.Info("查询文章类型失败...")
+		return
+	}
+	this.Data["articleTypes"] = articleTypes
+	this.Data["CurrentTypeName"] = se
 }
 
 //展示添加文章列表的界面
 func (this *ArticleController) ShowAddArticle() {
+	//查询所有的文章类型
+	articleTypes := []models.ArticleType{}
+	newOrm := orm.NewOrm()
+	_, e := newOrm.QueryTable("ArticleType").All(&articleTypes)
+	if e != nil {
+		logs.Info("查询文章类型失败...")
+		return
+	}
+	this.Data["articleTypes"] = articleTypes
 	this.TplName = "add.html"
 }
 
@@ -76,6 +154,7 @@ func (this *ArticleController) HandleAddArticle() {
 		logs.Debug("得到文件失败", e)
 		return
 	}
+
 	//获取文件的格式类型
 	ext := path.Ext(header.Filename)
 	if ext != ".png" && ext != ".jpeg" && ext != ".jpg" {
@@ -99,9 +178,24 @@ func (this *ArticleController) HandleAddArticle() {
 		return
 	}
 
-	//插入数据
 	newOrm := orm.NewOrm()
+
+	//获取文件的类型
+	sel := this.GetString("select")
+	if sel == "" {
+		logs.Info("获取文章类型为空")
+		return
+	}
+	articleType := models.ArticleType{TypeName: sel}
+	e = newOrm.Read(&articleType, "TypeName")
+	if e != nil {
+		logs.Info("查询对应的文章类型失败", e)
+		return
+	}
+
+	//插入数据
 	article := models.Article{Content: content, Title: articleName, Img: imgPath}
+	article.ArticleType = &articleType
 	_, e = newOrm.Insert(&article)
 	logs.Debug(len(imgPath))
 	utils.HandleError("插入article错误", e)
@@ -118,8 +212,9 @@ func (this *ArticleController) ShowArticleContent() {
 	//查询数据库对应的数据
 	newOrm := orm.NewOrm()
 	idInt, _ := strconv.Atoi(id)
-	article := models.Article{Id: idInt}
-	e := newOrm.Read(&article, "Id")
+	article := models.Article{}
+	//e := newOrm.Read(&article, "Id")
+	e := newOrm.QueryTable("Article").Filter("Id", idInt).RelatedSel("ArticleType").One(&article)
 	if e != nil {
 		logs.Debug("查询文章详情错误", e)
 		return
@@ -239,6 +334,11 @@ func (this *ArticleController) ShowArticleType() {
 //处理添加类型
 func (this *ArticleController) HandleArticleType() {
 	typeName := this.GetString("typeName")
+	if typeName == "" {
+		logs.Info("插入文章类型不能为空")
+		this.TplName = "addType.html"
+		return
+	}
 	//上传到服务器
 	articleType := models.ArticleType{TypeName: typeName}
 	newOrm := orm.NewOrm()

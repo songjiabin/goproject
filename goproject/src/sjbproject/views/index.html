@@ -14,6 +14,12 @@
                     return false
                 }
             })
+            //select 当选择的时候
+            $("#select").change(function () {
+                //当提交的时候
+                $("#select_submit").submit()
+
+            })
         }
     </script>
 </head>
@@ -27,11 +33,20 @@
     </div>
     <div class="pannel">
         <span class="sel_label">请选择文章分类：</span>
-        <select name="select" id="select" class="sel_opt">
-            <option selected="true">财经新闻</option>
-            <option>体育新闻</option>
-            <option>科技新闻</option>
-        </select>
+
+        <form method="get" action="/showArticle" id="select_submit">
+            <select name="select" id="select" class="sel_opt">
+                {{range  .articleTypes}}
+                    {{if compare .TypeName $.CurrentTypeName}}
+                        <option selected="true">{{.TypeName}}</option>
+                    {{else}}
+                        <option>{{.TypeName}}</option>
+                    {{end}}
+                {{end}}
+            </select>
+            <input type="submit" hidden="hidden">
+        </form>
+
 
         <table class="common_table">
             <tr>
@@ -53,7 +68,7 @@
                     <td>{{.Count}}</td>
                     <td><a href="/deleteArticle?id={{.Id}}" class="dels">删除</a></td>
                     <td><a href="/updateArticle?id={{.Id}}">编辑</a></td>
-                    <td>财经新闻</td>
+                    <td>{{.ArticleType.TypeName}}</td>
                 </tr>
             {{end}}
 

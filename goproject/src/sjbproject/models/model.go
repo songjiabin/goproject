@@ -30,7 +30,7 @@ type Article struct {
 //类型表   一个文章只属于一个类型 ，但是一个类型中有多个文章
 type ArticleType struct {
 	Id       int        `orm:"pk;auto"`
-	TypeName string     `orm:"size(20)"`
+	TypeName string     `orm:"size(20);unique"`
 	Article  []*Article `orm:"reverse(many)"` //一对多的反向关系
 }
 

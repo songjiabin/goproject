@@ -22,4 +22,5 @@ func init() {
 
 
 	beego.Router("/showArticleOther", &controllers.ShowArticleController{}, "get:ShowArticle")
+	beego.Router("/logout",&controllers.LogoutControllers{},"get:Logout")
 }

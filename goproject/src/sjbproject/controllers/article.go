@@ -16,13 +16,13 @@ type ArticleController struct {
 	beego.Controller
 }
 
-const pageSize int = 1 //每个页多少条数据
+const pageSize int = 2 //每个页多少条数据
 var pageIndex = 1       //当前的页数
 var totalPage float64   //一共要显示的页数
 
 //展示文章信息
 func (this *ArticleController) ShowArticle() {
-	this.TplName = "index.html"
+	this.TplName = "indexOther.html"
 
 	articles := []models.Article{};
 	newOrm := orm.NewOrm()
@@ -74,10 +74,10 @@ func (this *ArticleController) ShowArticle() {
 
 }
 
-//处理文章列表 从index.html发送过来的数据
+//处理文章列表 从indexOther.html发送过来的数据
 func (this *ArticleController) HandleArticle() {
 
-	this.TplName = "index.html"
+	this.TplName = "indexOther.html"
 
 	se := this.GetString("select")
 	if se == "" {
@@ -165,6 +165,7 @@ func (this *ArticleController) HandleAddArticle() {
 	//判断文件的大小
 	if header.Size > 1024*100 {
 		logs.Debug("文件太大了，不允许上传")
+		this.Redirect("/addArticle",302)
 		return
 	}
 	//将图片的名字修改下  不能重名
@@ -201,7 +202,7 @@ func (this *ArticleController) HandleAddArticle() {
 	utils.HandleError("插入article错误", e)
 
 	logs.Debug("插入成功")
-	this.Redirect("/showArticle", 302)
+	this.Redirect("/showArticleOther", 302)
 
 }
 
@@ -226,7 +227,7 @@ func (this *ArticleController) ShowArticleContent() {
 
 //删除文章
 func (this *ArticleController) DeleteArticle() {
-	this.TplName = "index.html"
+	this.TplName = "indexOther.html"
 	id := this.GetString("id")
 	newOrm := orm.NewOrm()
 	idInt, _ := strconv.Atoi(id)
@@ -236,7 +237,7 @@ func (this *ArticleController) DeleteArticle() {
 		logs.Debug("删除失败", e)
 		return
 	}
-	this.Redirect("/showArticle", 302)
+	this.Redirect("/showArticleOther", 302)
 }
 
 //更新文章
@@ -315,7 +316,7 @@ func (this *ArticleController) HandleUpdateArticle() {
 		return
 	}
 	logs.Debug("更新文章成功")
-	this.Redirect("/showArticle", 302)
+	this.Redirect("/showArticleOther", 302)
 }
 
 //处理文章类型=

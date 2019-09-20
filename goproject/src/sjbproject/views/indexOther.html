@@ -7,6 +7,20 @@
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
     <script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
 
+    <script>
+        $(function () {
+            $("#select").change(function () {
+                $("#select").submit()
+            })
+            $(".dels").click(function () {
+                if (!confirm("是否删除？")) {
+                    //取消的时候 就不执行了
+                    return false
+                }
+            })
+        })
+    </script>
+
 </head>
 <body>
 
@@ -18,12 +32,18 @@
     </div>
     <div class="pannel">
         <span class="sel_label">请选择文章分类：</span>
+        <form method="get" action="/showArticleOther" id="select">
+            <select name="select" id="select" class="sel_opt">
+                {{range .articleTypes}}
+                    {{if compare .TypeName $.currentTypeName}}
+                        <option selected="true">{{.TypeName}}</option>
+                    {{else}}
+                        <option>{{.TypeName}}</option>
+                    {{end}}
+                {{end}}
+            </select>
+        </form>
 
-        <select name="select" id="select" class="sel_opt">
-            {{range .articleTypes}}
-                <option>{{.TypeName}}</option>
-            {{end}}
-        </select>
 
         <table class="common_table">
             <tr>
@@ -36,24 +56,42 @@
                 <th width="10%">文章类型</th>
             </tr>
 
-
-            <tr>
-                <td>国足进球了</td>
-                <td><a href="#">查看详情</a></td>
-                <td> 2006-7-02 15:04:05</td>
-                <td>3</td>
-                <td><a href="#" class="dels">删除</a></td>
-                <td><a href="#">编辑</a></td>
-                <td>财经新闻</td>
-            </tr>
+            {{range .articles}}
+                <tr>
+                    <td>{{.Title}}</td>
+                    <td><a href="/articleContent?id={{.Id}}">查看详情</a></td>
+                    <td>{{.Time.Format "2006-01-02 15:04:05"}}</td>
+                    <td>{{.Count}}</td>
+                    <td><a href="/deleteArticle?id={{.Id}}" class="dels">删除</a></td>
+                    <td><a href="/updateArticle?id={{.Id}}">编辑</a></td>
+                    <td>{{.ArticleType.TypeName}}</td>
+                </tr>
+            {{end}}
         </table>
 
         <ul class="pagenation">
-            <li><a href="#">首页</a></li>
-            <li><a href="javascript:;">上一页 </a></li>
-            <li><a href="javascript:;">下一页</a></li>
-            <li><a href="#">末页</a></li>
-            <li>共5条记录/共5页/当前1页</li>
+            <li><a href="/showArticleOther?pageIndex=1&currentTypeName={{.currentTypeName}}">首页</a></li>
+
+            {{if gt .pageIndex 1}}
+                <li>
+                    <a href="/showArticleOther?pageIndex={{.pageIndex | showPrePage }}&currentTypeName={{.currentTypeName}}">上一页 </a>
+                </li>
+            {{else}}
+                <li><a href="#">上一页 </a></li>
+            {{end}}
+
+
+            {{if lt .pageIndex .totalPage }}
+                <li>
+                    <a href="/showArticleOther?pageIndex={{.pageIndex | showNextPage }}&currentTypeName={{.currentTypeName}}">下一页</a>
+                </li>
+            {{else}}
+                <li><a href="#">下一页</a></li>
+            {{end}}
+
+
+            <li><a href="/showArticleOther?pageIndex={{.totalPage}}&currentTypeName={{.currentTypeName}}">末页</a></li>
+            <li>共{{.count}}条记录/共{{.totalPage}}页/当前{{.pageIndex}}页</li>
         </ul>
     </div>
 </div>

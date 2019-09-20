@@ -5,6 +5,7 @@ import (
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
 	"sjbproject/models"
+	"time"
 )
 
 type RegisterController struct {
@@ -49,6 +50,11 @@ func (this *RegisterController) HandleReg() {
 
 //展示登录界面
 func (this *LoginController) ShowLogin() {
+	cookie := this.Ctx.GetCookie("userName")
+	logs.Info("cookie---->", cookie)
+	if cookie != "" {
+		this.Data["userName"] = cookie
+	}
 	this.TplName = "login.html"
 }
 
@@ -77,7 +83,17 @@ func (this *LoginController) HandleLogin() {
 		return
 	}
 
-	this.Redirect("/showArticle", 302)
+	check := this.GetString("remember")
+	if check == "on" {
+		//记住用户名
+		this.Ctx.SetCookie("userName", userName, time.Second*100, "/")
+	} else {
+		this.Ctx.SetCookie("userName", "", -1, "/")
+	}
+
+	this.SetSession("userName", userName)
+
+	this.Redirect("/showArticleOther", 302)
 	//this.Ctx.WriteString("登录成功")
 
 }

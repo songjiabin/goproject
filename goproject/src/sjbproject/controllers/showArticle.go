@@ -13,6 +13,10 @@ type ShowArticleController struct {
 	beego.Controller
 }
 
+func (this *ShowArticleController) Prepare() {
+	logs.Info("Prepare------------------>>>>>>")
+}
+
 //展示所有的文章类型
 func (this *ShowArticleController) ShowArticle() {
 	this.TplName = "indexOther.html"

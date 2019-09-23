@@ -1,13 +1,13 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego"
-	"liteblog/models"
 	"errors"
-	"liteblog/json"
+	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
-	"liteblog/syserror"
 	"github.com/satori/go.uuid"
+	"liteblog/json"
+	"liteblog/models"
+	"liteblog/syserror"
 )
 
 //定义session中的key值

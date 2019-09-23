@@ -32,7 +32,7 @@
     </div>
     <div class="pannel">
         <span class="sel_label">请选择文章分类：</span>
-        <form method="get" action="/showArticleOther" id="select">
+        <form method="get" action="/article/showArticleOther" id="select">
             <select name="select" id="select" class="sel_opt">
                 {{range .articleTypes}}
                     {{if compare .TypeName $.currentTypeName}}
@@ -59,22 +59,22 @@
             {{range .articles}}
                 <tr>
                     <td>{{.Title}}</td>
-                    <td><a href="/articleContent?id={{.Id}}">查看详情</a></td>
+                    <td><a href="/article/articleContent?id={{.Id}}">查看详情</a></td>
                     <td>{{.Time.Format "2006-01-02 15:04:05"}}</td>
                     <td>{{.Count}}</td>
-                    <td><a href="/deleteArticle?id={{.Id}}" class="dels">删除</a></td>
-                    <td><a href="/updateArticle?id={{.Id}}">编辑</a></td>
+                    <td><a href="/article/deleteArticle?id={{.Id}}" class="dels">删除</a></td>
+                    <td><a href="/article/updateArticle?id={{.Id}}">编辑</a></td>
                     <td>{{.ArticleType.TypeName}}</td>
                 </tr>
             {{end}}
         </table>
 
         <ul class="pagenation">
-            <li><a href="/showArticleOther?pageIndex=1&currentTypeName={{.currentTypeName}}">首页</a></li>
+            <li><a href="/article/showArticleOther?pageIndex=1&currentTypeName={{.currentTypeName}}">首页</a></li>
 
             {{if gt .pageIndex 1}}
                 <li>
-                    <a href="/showArticleOther?pageIndex={{.pageIndex | showPrePage }}&currentTypeName={{.currentTypeName}}">上一页 </a>
+                    <a href="/article/showArticleOther?pageIndex={{.pageIndex | showPrePage }}&currentTypeName={{.currentTypeName}}">上一页 </a>
                 </li>
             {{else}}
                 <li><a href="#">上一页 </a></li>
@@ -83,14 +83,14 @@
 
             {{if lt .pageIndex .totalPage }}
                 <li>
-                    <a href="/showArticleOther?pageIndex={{.pageIndex | showNextPage }}&currentTypeName={{.currentTypeName}}">下一页</a>
+                    <a href="/article/showArticleOther?pageIndex={{.pageIndex | showNextPage }}&currentTypeName={{.currentTypeName}}">下一页</a>
                 </li>
             {{else}}
                 <li><a href="#">下一页</a></li>
             {{end}}
 
 
-            <li><a href="/showArticleOther?pageIndex={{.totalPage}}&currentTypeName={{.currentTypeName}}">末页</a></li>
+            <li><a href="/article/showArticleOther?pageIndex={{.totalPage}}&currentTypeName={{.currentTypeName}}">末页</a></li>
             <li>共{{.count}}条记录/共{{.totalPage}}页/当前{{.pageIndex}}页</li>
         </ul>
     </div>

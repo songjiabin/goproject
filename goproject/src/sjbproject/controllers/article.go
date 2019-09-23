@@ -9,6 +9,7 @@ import (
 	"sjbproject/models"
 	"sjbproject/utils"
 	"strconv"
+	"strings"
 	"time"
 )
 
@@ -17,8 +18,8 @@ type ArticleController struct {
 }
 
 const pageSize int = 2 //每个页多少条数据
-var pageIndex = 1       //当前的页数
-var totalPage float64   //一共要显示的页数
+var pageIndex = 1      //当前的页数
+var totalPage float64  //一共要显示的页数
 
 //展示文章信息
 func (this *ArticleController) ShowArticle() {
@@ -27,13 +28,11 @@ func (this *ArticleController) ShowArticle() {
 	articles := []models.Article{};
 	newOrm := orm.NewOrm()
 
-
 	se := this.GetString("select")
 	if se == "" {
 		logs.Info("下拉框获取数据失败")
 		return
 	}
-
 
 	//查询所有的数目
 	count, _ := newOrm.QueryTable("Article").RelatedSel("ArticleType").Count()
@@ -60,8 +59,6 @@ func (this *ArticleController) ShowArticle() {
 	this.Data["totalPage"] = int(ceil) //一共多少页
 	this.Data["pageIndex"] = pageIndex //当前的页码数
 	this.Data["articles"] = articles
-
-
 
 	//查询所有的文章类型
 	articleTypes := []models.ArticleType{}
@@ -165,7 +162,7 @@ func (this *ArticleController) HandleAddArticle() {
 	//判断文件的大小
 	if header.Size > 1024*100 {
 		logs.Debug("文件太大了，不允许上传")
-		this.Redirect("/addArticle",302)
+		this.Redirect("/article/addArticle", 302)
 		return
 	}
 	//将图片的名字修改下  不能重名
@@ -194,6 +191,10 @@ func (this *ArticleController) HandleAddArticle() {
 		return
 	}
 
+	if strings.Contains(imgPath, ".") {
+		imgPath = imgPath[1:len(imgPath)]
+	}
+
 	//插入数据
 	article := models.Article{Content: content, Title: articleName, Img: imgPath}
 	article.ArticleType = &articleType
@@ -202,7 +203,7 @@ func (this *ArticleController) HandleAddArticle() {
 	utils.HandleError("插入article错误", e)
 
 	logs.Debug("插入成功")
-	this.Redirect("/showArticleOther", 302)
+	this.Redirect("/article/showArticleOther", 302)
 
 }
 
@@ -222,6 +223,20 @@ func (this *ArticleController) ShowArticleContent() {
 	}
 	article.Count += 1
 	newOrm.Update(&article)
+
+	//多对多插入数据
+	//获取多对多的操作对象
+	m2m := newOrm.QueryM2M(&article, "User")
+	//根据session获取用户
+	sessionUserName := this.GetSession("userName")
+	user := models.User{UserName: sessionUserName.(string)}
+	newOrm.Read(&user, "userName")
+	_, e = m2m.Add(&user)
+	if e != nil {
+		logs.Info("添加多对多的时候失败", e)
+		return
+	}
+
 	this.Data["article"] = article
 }
 
@@ -237,7 +252,7 @@ func (this *ArticleController) DeleteArticle() {
 		logs.Debug("删除失败", e)
 		return
 	}
-	this.Redirect("/showArticleOther", 302)
+	this.Redirect("/article/showArticleOther", 302)
 }
 
 //更新文章
@@ -316,7 +331,7 @@ func (this *ArticleController) HandleUpdateArticle() {
 		return
 	}
 	logs.Debug("更新文章成功")
-	this.Redirect("/showArticleOther", 302)
+	this.Redirect("/article/showArticleOther", 302)
 }
 
 //处理文章类型=
@@ -348,7 +363,7 @@ func (this *ArticleController) HandleArticleType() {
 		logs.Info("插入文章类型失败", e)
 		return
 	}
-	this.Redirect("/addArticleType", 302)
+	this.Redirect("/article/addArticleType", 302)
 }
 
 //删除类型
@@ -361,5 +376,5 @@ func (this *ArticleController) DeleteArticleType() {
 		logs.Info("删除类型错误", e)
 		return
 	}
-	this.Redirect("/addArticleType", 302)
+	this.Redirect("/article/addArticleType", 302)
 }

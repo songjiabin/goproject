@@ -16,6 +16,8 @@ type LoginController struct {
 	beego.Controller
 }
 
+
+// @route  ShowRegister  post:HandleReg
 func (this *RegisterController) ShowRegister() {
 	this.TplName = "register.html"
 }
@@ -93,7 +95,11 @@ func (this *LoginController) HandleLogin() {
 
 	this.SetSession("userName", userName)
 
-	this.Redirect("/showArticleOther", 302)
+	this.Redirect("/article/showArticleOther", 302)
 	//this.Ctx.WriteString("登录成功")
+
+
+
+
 
 }

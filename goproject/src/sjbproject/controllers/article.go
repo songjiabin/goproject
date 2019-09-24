@@ -237,7 +237,26 @@ func (this *ArticleController) ShowArticleContent() {
 		return
 	}
 
+	//查询多对多
+	//这个文章都被哪些用户看过
+	newOrm.LoadRelated(&article, "User")
 	this.Data["article"] = article
+
+	//查询该用户看过多少文章
+	newOrm.LoadRelated(&user, "Article")
+	for _, v := range user.Article {
+		logs.Info("该用户下所有的文章", v.Id, v.Title)
+	}
+
+	//查询所有的用户 根据文章
+	users := []models.User{}
+	newOrm.QueryTable("User"). //指定查询的表
+		Filter("Article__Article__Id", id). //字段名__表名__查询的字段
+		Distinct(). //去重
+		All(&users)
+	this.Data["article_users"] = users
+	logs.Info("用户--->", users)
+
 }
 
 //删除文章

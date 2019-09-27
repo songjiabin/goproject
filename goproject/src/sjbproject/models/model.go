@@ -1,10 +1,18 @@
 package models
 
 import (
+	"config"
 	"github.com/astaxie/beego/orm"
+	"github.com/gomodule/redigo/redis"
 	"time"
 )
 import _ "github.com/go-sql-driver/mysql"
+
+var (
+	//定义常量
+	RedisClient *redis.Pool //redis 连接池
+	REDIS_DB    int
+)
 
 //用户表
 type User struct {
@@ -38,4 +46,27 @@ func init() {
 	orm.RegisterDataBase("default", "mysql", "root:123root@A@tcp(192.144.238.85:3306)/mydb?charset=utf8&loc=Asia%2FShanghai")
 	orm.RegisterModel(new(User), new(Article), new(ArticleType))
 	orm.RunSyncdb("default", false, true)
+
+	//连接Redis
+	connReidis()
+
+}
+
+func connReidis() {
+	RedisClient = &redis.Pool{
+		MaxIdle:     16,                //最大的连接数量
+		MaxActive:   0,                 //接池最大连接数量,不确定可以用0（0表示自动定义），按需分配
+		IdleTimeout: 300 * time.Second, //超时时间 连接关闭时间 300秒 （300秒不使用自动关闭）
+		Dial: func() (conn redis.Conn, e error) {
+			con, err := redis.Dial(config.RedisConfig["type"], "192.144.238.85:6379")
+			if err != nil {
+				return nil, err
+			}
+
+			if _, errAuth := con.Do("auth", config.RedisConfig["auth"]); err != nil {
+				return nil, errAuth
+			}
+			return con, nil
+		},
+	}
 }

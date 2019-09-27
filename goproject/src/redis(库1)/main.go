@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/go-redis/redis"
 	"fmt"
+	"github.com/go-redis/redis"
 )
 
 func handlerError(err error, when string) {
@@ -29,14 +29,13 @@ func main() {
 		return
 	}
 
-
-
 	//获取key对应的值
-	val,e:=client.Get("name").Result()
-	if e!=nil{
+	val, e := client.Get("name").Result()
+	if e != nil {
 		fmt.Println(e)
 		return
 	}
 
 	fmt.Println(val)
+
 }

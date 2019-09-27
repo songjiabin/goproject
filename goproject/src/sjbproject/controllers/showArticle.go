@@ -1,9 +1,13 @@
 package controllers
 
 import (
+	"bytes"
+	"encoding/gob"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
+	"github.com/gomodule/redigo/redis"
+	"io"
 	"math"
 	"sjbproject/models"
 )
@@ -13,6 +17,7 @@ type ShowArticleController struct {
 	beego.Controller
 }
 
+//必执行的操作
 func (this *ShowArticleController) Prepare() {
 	logs.Info("Prepare------------------>>>>>>")
 }
@@ -35,13 +40,49 @@ func (this *ShowArticleController) ShowArticle() {
 //查询文章类型
 func queryArticleType(this *ShowArticleController, newOrm orm.Ormer) (isError bool) {
 	articleTypes := []models.ArticleType{}
-	_, err := newOrm.QueryTable("ArticleType").All(&articleTypes)
+
+	//获取连接池
+	rc := models.RedisClient.Get()
+	defer rc.Close()
+
+	//读取到的字节数组格式
+	b, err := redis.Bytes(rc.Do("get", "article_type"))
 	if err != nil {
-		isError = true
-		logs.Info("查询文章类型失败", err)
-		return
+		logs.Info("读取redis失败", err)
 	}
+	//将读取到的数据进行转换成实体
+	decoder := gob.NewDecoder(bytes.NewReader(b)) //解码器
+	err = decoder.Decode(&articleTypes)
+	if err != nil && err == io.EOF {
+		logs.Info("从数据库中读取数据.....")
+		_, err := newOrm.QueryTable("ArticleType").All(&articleTypes)
+		if err != nil {
+			isError = true
+			logs.Info("查询文章类型失败", err)
+			return
+		}
+		//定义存储数据的容器
+		var buffer bytes.Buffer
+
+		encoder := gob.NewEncoder(&buffer) //进行编码
+		encoder.Encode(articleTypes)
+		//将字节数据存储到redis 中
+		_, err = rc.Do("set", "article_type", buffer.Bytes())
+		if err != nil {
+			logs.Info("redis数据库操作错误", err)
+			return
+		}
+
+	} else if err != nil {
+		logs.Info("解析字节出错", err)
+	}
+	logs.Info(articleTypes)
+
+	//如果没有从redis中查询到数据，那么从数据库中查询
+
+	//赋值
 	this.Data["articleTypes"] = articleTypes
+
 	return
 }
 

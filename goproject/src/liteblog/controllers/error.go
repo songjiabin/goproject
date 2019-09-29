@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"liteblog/syserror"
 	"github.com/astaxie/beego/logs"
+	"liteblog/syserror"
 )
 
 type ErrorController struct {
@@ -11,6 +11,7 @@ type ErrorController struct {
 
 //处理404的错误
 func (c *ErrorController) Error404() {
+	logs.Info("---------errror--------------------")
 	c.TplName = "error/404.html"
 	if (c.IsAjax()) {
 		c.jsonerror(syserror.Error404{})

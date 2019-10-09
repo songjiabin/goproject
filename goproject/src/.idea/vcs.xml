@@ -6,14 +6,26 @@
     <mapping directory="$PROJECT_DIR$/github.com/andybalholm/cascadia" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/github.com/astaxie/beego" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/github.com/beego/bee" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/gin-contrib/sse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/gin-gonic/gin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/go-playground/locales" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/go-playground/universal-translator" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/github.com/go-redis/redis" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/github.com/go-sql-driver/mysql" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/golang/protobuf" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/github.com/gomodule/redigo" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/github.com/jinzhu/gorm" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/github.com/jinzhu/inflection" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/github.com/jmoiron/sqlx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/leodido/go-urn" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/mattn/go-isatty" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/github.com/satori/go.uuid" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/github.com/shiena/ansicolor" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/shirou/gopsutil" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github.com/ugorji/go" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/golang.org/x/net" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gopkg.in/go-playground/validator.v9" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gopkg.in/yaml.v2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/wmi" vcs="Git" />
   </component>
 </project>

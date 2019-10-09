@@ -49,13 +49,29 @@ func (this *UserControllers) HandleRegister() {
 		PassWord: user_pwd,
 		Email:    user_email,
 	}
-	user.InsertUser()
-
-
+	err := user.InsertUser()
+	if err != nil {
+		return
+	}
 }
 
 // @router /login  [get]
 //展示登录的界面
 func (this *UserControllers) ShowLogin() {
 	this.TplName = "login.html"
+}
+
+// @router /login [post]
+//处理登录的逻辑
+func (this *UserControllers) HandleLogin() {
+	username := this.GetString("username")
+	pwd := this.GetString("pwd")
+	if username == "" || pwd == "" {
+		this.Data["errmsg"] = "登录数据不完整，请重新输入！"
+		this.TplName = "login.html"
+		return
+	}
+
+
+
 }

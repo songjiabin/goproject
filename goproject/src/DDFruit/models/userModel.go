@@ -18,9 +18,21 @@ func (this *User) InsertUser() (err error) {
 	newOrm := orm.NewOrm()
 	_, err = newOrm.Insert(this)
 	if err != nil {
-		
+
 	} else {
 		err = nil
 	}
 	return
+}
+
+// 根据账号密码查询数据
+func (this *User) SelectUser(userName, psw string) (err error) {
+	newOrm := orm.NewOrm()
+	user := User{UserName: userName}
+	err = newOrm.Read(&user, "UserName")
+	if err != nil {
+
+		return
+	}
+	return err
 }

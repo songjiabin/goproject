@@ -18,6 +18,15 @@ func init() {
 
     beego.GlobalControllerRouter["DDFruit/controllers:UserControllers"] = append(beego.GlobalControllerRouter["DDFruit/controllers:UserControllers"],
         beego.ControllerComments{
+            Method: "HandleLogin",
+            Router: `/login`,
+            AllowHTTPMethods: []string{"post"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["DDFruit/controllers:UserControllers"] = append(beego.GlobalControllerRouter["DDFruit/controllers:UserControllers"],
+        beego.ControllerComments{
             Method: "ShowRegister",
             Router: `/register`,
             AllowHTTPMethods: []string{"get"},

@@ -3,12 +3,11 @@ package main
 import (
 	"errors"
 	"github.com/gin-gonic/gin"
+	"github.com/lexkong/log"
 	"github.com/spf13/pflag"
+	"github.com/spf13/viper"
 	"myapiserver/config"
 	"myapiserver/router"
-
-	"github.com/spf13/viper"
-	"log"
 	"net/http"
 	"time"
 )
@@ -19,12 +18,6 @@ var (
 )
 
 func main() {
-
-	funcName()
-
-}
-
-func funcName() {
 	//初始化配置 读取配置文件
 	//解析函数  将会在碰到第一个非flag命令行参数时停止
 	pflag.Parse()
@@ -32,6 +25,10 @@ func funcName() {
 	if err := config.Init(*cfg); err != nil {
 		panic(err)
 	}
+
+	// Set gin mode.
+	 gin.SetMode(viper.GetString("runmode"))
+
 	//Create the Gin engine.
 	g := gin.New()
 	// Set gin mode.
@@ -46,11 +43,12 @@ func funcName() {
 			log.Fatal("The router has no response, or it might took too long to start up.", err)
 		}
 		//路由器已成功部署
-		log.Print("The router has been deployed successfully.")
+		log.Infof("The router has been deployed successfully.")
 	}()
 	//监听端口 8080
-	log.Printf("Start to listening the incoming requests on http address: %s", viper.GetString("addr"))
-	log.Printf(http.ListenAndServe(viper.GetString("addr"), g).Error())
+	log.Infof("Start to listening the incoming requests on http address: %s", viper.GetString("addr"))
+	log.Info(http.ListenAndServe(viper.GetString("addr"), g).Error())
+
 }
 
 //验证请求
@@ -61,7 +59,7 @@ func pingServer() error {
 			return nil
 		}
 		//等待一秒钟
-		log.Printf("Waiting for the router, retry in 1 second.")
+		log.Info("Waiting for the router, retry in 1 second.")
 		time.Sleep(time.Second)
 	}
 

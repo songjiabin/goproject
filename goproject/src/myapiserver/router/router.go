@@ -2,6 +2,8 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
+	"myapiserver/handler/sd"
+	"myapiserver/handler/user"
 	"net/http"
 	"time"
 )
@@ -31,10 +33,15 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	group := g.Group("sd")
 
 	{
-		group.GET("/health", HealthCheck)
+		group.GET("/health", sd.HealthCheck)
 		//group.GET("/disk", sd.DiskCheck)
 		//group.GET("/cpu", sd.CPUCheck)
 		//group.GET("/ram", sd.RAMCheck)
+	}
+
+	group2 := g.Group("/v1/user")
+	{
+		group2.POST("", user.Create)
 	}
 
 	return g
@@ -74,10 +81,4 @@ func Secure(c *gin.Context) {
 
 	// Also consider adding Content-Security-Policy headers
 	// c.Header("Content-Security-Policy", "script-src 'self' https://cdnjs.cloudflare.com")
-}
-
-// HealthCheck shows `OK` as the ping-pong result.
-func HealthCheck(c *gin.Context) {
-	message := "OK"
-	c.String(http.StatusOK, "\n"+message)
 }

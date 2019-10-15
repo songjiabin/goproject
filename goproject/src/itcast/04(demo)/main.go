@@ -2,22 +2,23 @@ package main
 
 import "fmt"
 
+type Persons interface {
+	sayHello() string
+}
+
+type p struct {
+	name string
+}
+
+func (ps  p) sayHello() string {
+	return "2222"
+}
+
 func main() {
-
-	fmt.Println("1111")
-	test()
-	fmt.Println("222222")
-
+	var ps Persons
+	p := p{name: "dadf"}
+	p.sayHello()
+	ps = &p
+	fmt.Print(ps.sayHello())
 
 }
-
-func test()  {
-	if true {
-		return
-	}
-}
-
-
-
-
-

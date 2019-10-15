@@ -35,7 +35,7 @@ db:
 
 docker_db:
   name: db_apiserver
-    addr: 192.144.238.85:3306
-    username: root
-    password: 123root@A
+  addr: 192.144.238.85:3306
+  username: root
+  password: 123root@A
 

@@ -44,7 +44,7 @@ func (c *Config) initConfig() error {
 	viper.SetEnvKeyReplacer(replacer)
 
 	if err := viper.ReadInConfig(); err != nil { // viper解析配置文件
-		log.Infof("错误时", err)
+		log.Infof("错误是", err)
 		return err
 	}
 	return nil

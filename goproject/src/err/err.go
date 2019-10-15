@@ -16,3 +16,9 @@ func PrintErr(err error) {
 func Test()  {
 	fmt.Println("Test a good person")
 }
+
+
+
+
+
+

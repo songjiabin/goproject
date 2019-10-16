@@ -5,6 +5,7 @@ import (
 	"github.com/jinzhu/gorm"
 	"github.com/lexkong/log"
 	"github.com/spf13/viper"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 //数据库
@@ -63,13 +64,14 @@ addr:    地址
 name     是用哪个数据库
 */
 func openDB(username, password, addr, name string) *gorm.DB {
+	//root:123root@A@tcp(192.144.238.85:3306)/mydb?charset=utf8&loc=Asia%2FShanghai
 	config := fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=utf8&parseTime=%t&loc=%s",
 		username,
 		password,
 		addr,
 		name,
 		true,
-		"Asia/Shanghai")
+		"Asia%2FShanghai")
 
 	db, err := gorm.Open("mysql", config)
 	if err != nil {
@@ -89,7 +91,7 @@ func setupDB(db *gorm.DB) {
 	db.DB().SetMaxIdleConns(0) // 用于设置闲置的连接数.设置闲置的连接数则当开启的一个连接使用完成后可以放在池里等候下一次使用。
 }
 
-func (db *Database) close() {
+func (db *Database) Close() {
 	db.Self.Close()
 	db.Docker.Close()
 }

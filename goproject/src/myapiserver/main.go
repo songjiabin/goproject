@@ -7,6 +7,7 @@ import (
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 	"myapiserver/config"
+	"myapiserver/model"
 	"myapiserver/router"
 	"net/http"
 	"time"
@@ -26,8 +27,12 @@ func main() {
 		panic(err)
 	}
 
+	//初始化数据库操作
+	model.DB.Init()
+	defer model.DB.Close()
+
 	// Set gin mode.
-	 gin.SetMode(viper.GetString("runmode"))
+	gin.SetMode(viper.GetString("runmode"))
 
 	//Create the Gin engine.
 	g := gin.New()

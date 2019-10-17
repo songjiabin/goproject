@@ -41,9 +41,9 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 
 	u := g.Group("/v1/user")
 	{
-		u.POST("", user.Create_relase)     //创建用户
-		//u.POST("/:id", user.Delete) //删除用户
-		//u.POST("/:id", user.Update) //更新用户
+		u.POST("", user.Create_relase) //创建用户
+		u.POST("/delete/:id", user.Delete)    //删除用户
+		u.POST("/update/:id", user.Update)    //更新用户
 		//u.GET("", user.List)        //获取用户列表
 		//u.GET("/:username",user.Get)         //获取指定用户的详细信息
 	}

@@ -6,6 +6,7 @@ import (
 )
 
 type UserModel struct {
+	BaseModel
 	Username string `json:"username" gorm:"column:username;not null" binding:"required" validate:"min=1,max=32"`
 	Password string `json:"password" gorm:"column:password;not null" binding:"required" validate:"min=5,max=128"`
 }
@@ -20,7 +21,19 @@ func (user *UserModel) Create() error {
 	return DB.Self.Create(&user).Error
 }
 
-// 验证数据
+//删除数据
+func DeleteUser(id uint) error {
+	user := UserModel{}
+	user.Id = id
+	return DB.Self.Delete(&user).Error
+}
+
+//更新数据
+func UpdateUser(model *UserModel) error {
+	return DB.Self.Save(model).Error
+}
+
+// 验证数据  根据约束 validate
 func (u *UserModel) Validate() error {
 	validate := validator.New()
 	return validate.Struct(u)

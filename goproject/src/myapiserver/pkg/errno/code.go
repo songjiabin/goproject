@@ -7,6 +7,7 @@ var (
 	OK                  = &Errno{Code: 0, Message: "OK"}
 	InternalServerError = &Errno{Code: 10001, Message: "网络错误"}
 	ErrBind             = &Errno{Code: 10002, Message: "解析到实体失败"}
+	UnknownError        = &Errno{Code: 10003, Message: "未知错误"}
 
 	//验证失败类型的错误
 	ErrValidation = &Errno{Code: 20001, Message: "验证失败"}

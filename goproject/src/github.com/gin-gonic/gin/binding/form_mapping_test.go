@@ -169,10 +169,10 @@ func TestMappingTime(t *testing.T) {
 
 	assert.Equal(t, "2019-01-20 16:02:58 +0000 UTC", s.Time.String())
 	assert.Equal(t, "2019-01-20 00:00:00 +0100 CET", s.LocalTime.String())
-	assert.Equal(t, "2019-01-19 23:00:00 +0000 UTC", s.LocalTime.UTC().String())
+	assert.Equal(t, "2019-01-19(sync.Mutex 互斥锁) 23:00:00 +0000 UTC", s.LocalTime.UTC().String())
 	assert.Equal(t, "0001-01-01 00:00:00 +0000 UTC", s.ZeroValue.String())
 	assert.Equal(t, "2019-01-20 00:00:00 +0800 CST", s.CSTTime.String())
-	assert.Equal(t, "2019-01-19 16:00:00 +0000 UTC", s.CSTTime.UTC().String())
+	assert.Equal(t, "2019-01-19(sync.Mutex 互斥锁) 16:00:00 +0000 UTC", s.CSTTime.UTC().String())
 	assert.Equal(t, "2019-01-20 00:00:00 +0000 UTC", s.UTCTime.String())
 
 	// wrong location

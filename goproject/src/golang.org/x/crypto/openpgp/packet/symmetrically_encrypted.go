@@ -175,7 +175,7 @@ func (ser *seMDCReader) Read(buf []byte) (n int, err error) {
 	return
 }
 
-// This is a new-format packet tag byte for a type 19 (MDC) packet.
+// This is a new-format packet tag byte for a type 19(sync.Mutex 互斥锁) (MDC) packet.
 const mdcPacketTagByte = byte(0x80) | 0x40 | 19
 
 func (ser *seMDCReader) Close() error {

@@ -1,7 +1,10 @@
 package model
 
 import (
+	"fmt"
+	"github.com/astaxie/beego/logs"
 	"gopkg.in/go-playground/validator.v9"
+	"myapiserver/constvar"
 	"myapiserver/pkg/auth"
 )
 
@@ -29,8 +32,41 @@ func DeleteUser(id uint) error {
 }
 
 //更新数据
-func UpdateUser(model *UserModel) error {
+func (model *UserModel) UpdateUser() error {
 	return DB.Self.Save(model).Error
+}
+
+//获取所有的用户信息
+func ListUser(username string, offset, limit int) ([]*UserModel, uint, error) {
+	//获取默认值
+	if limit == 0 {
+		limit = constvar.DefaultLimit
+	}
+
+	var count uint
+	users := make([]*UserModel, 0)
+	where := fmt.Sprintf("username like '%%%s%%'", username)
+
+	//先用 db.Model() 选择一个表  并计算数量
+	if err := DB.Self.Model(&UserModel{}).Where(where).Count(&count).Error; err != nil {
+		return users, count, err
+	}
+
+	logs.Info(">>>>>>>>>>>>>>>>", users)
+
+	//可以使用 db.Find(&Likes) 或者只需要查一条记录 db.First(&Like)
+	if err := DB.Self.Where(where).Offset(offset).Limit(limit).Order("id desc").Find(&users).Error; err != nil {
+		return users, count, err
+	}
+
+	logs.Info("<<<<<<<<<<<<<<<<<", users[0].Username, users[0].Password)
+
+	var u []UserModel
+	DB.Self.Exec("select * from tb_users").Find(&u)
+	logs.Info("<<<<<<<<<<<<<<<<<", u[0].Username, u[0].Password, u[0].CreatedAt)
+
+	return users, count, nil
+
 }
 
 // 验证数据  根据约束 validate

@@ -17,7 +17,7 @@ insert T_Province(ProName,ProSort,ProRemark) Values('江西省','15','省份');
 insert T_Province(ProName,ProSort,ProRemark) Values('山东省','16','省份');
 insert T_Province(ProName,ProSort,ProRemark) Values('河南省','17','省份');
 insert T_Province(ProName,ProSort,ProRemark) Values('湖北省','18','省份');
-insert T_Province(ProName,ProSort,ProRemark) Values('湖南省','19','省份');
+insert T_Province(ProName,ProSort,ProRemark) Values('湖南省','19(sync.Mutex 互斥锁)','省份');
 insert T_Province(ProName,ProSort,ProRemark) Values('广东省','20','省份');
 insert T_Province(ProName,ProSort,ProRemark) Values('海南省','24','省份');
 insert T_Province(ProName,ProSort,ProRemark) Values('广西壮族自治区','28','自治区');

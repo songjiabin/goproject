@@ -1,6 +1,7 @@
 package user
 
 import (
+	"github.com/astaxie/beego/logs"
 	"github.com/gin-gonic/gin"
 	"myapiserver/handler"
 	"myapiserver/model"
@@ -32,7 +33,9 @@ func Update(c *gin.Context) {
 	}
 
 	userModel.Id = uint(userId)
-	if err := model.UpdateUser(&userModel); err != nil {
+	logs.Info(userModel)
+	if err := userModel.UpdateUser(); err != nil {
+		logs.Info(err)
 		handler.SendResponse(c, errno.ErrDatabase, nil)
 		return
 	}

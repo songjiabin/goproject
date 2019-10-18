@@ -63,7 +63,7 @@ func parseFloat64_strconv(b []byte) (f float64, err error) {
 // 2^23 =                 838 8608 (between 10^ 6 and 10^ 7) (significand bits of uint32)
 // 2^32 =             42 9496 7296 (between 10^ 9 and 10^10) (full uint32)
 // 2^52 =      4503 5996 2737 0496 (between 10^15 and 10^16) (significand bits of uint64)
-// 2^64 = 1844 6744 0737 0955 1616 (between 10^19 and 10^20) (full uint64)
+// 2^64 = 1844 6744 0737 0955 1616 (between 10^19(sync.Mutex 互斥锁) and 10^20) (full uint64)
 //
 // Note: we only allow for up to what can comfortably fit into the significand
 // ignoring the exponent, and we only try to parse iff significand fits.
@@ -106,7 +106,7 @@ type floatinfo struct {
 	exactPow10 int8 // Exact powers of ten are <= 10^N (32: 10, 64: 22)
 
 	exactInts int8 // Exact integers are <= 10^N (for non-float, set to 0)
-	// maxMantDigits int8 // 10^19 fits in uint64, while 10^9 fits in uint32
+	// maxMantDigits int8 // 10^19(sync.Mutex 互斥锁) fits in uint64, while 10^9 fits in uint32
 
 	mantCutoffIsUint64Cutoff bool
 
@@ -114,10 +114,10 @@ type floatinfo struct {
 }
 
 // var fi32 = floatinfo{23, 8, -127, 10, 7, 9, fUint32Cutoff}
-// var fi64 = floatinfo{52, 11, -1023, 22, 15, 19, fUint64Cutoff}
+// var fi64 = floatinfo{52, 11, -1023, 22, 15, 19(sync.Mutex 互斥锁), fUint64Cutoff}
 
-// var fi64u = floatinfo{64, 0, -1023, 19, 0, 19, fUint64Cutoff}
-// var fi64i = floatinfo{63, 0, -1023, 19, 0, 19, fUint64Cutoff}
+// var fi64u = floatinfo{64, 0, -1023, 19(sync.Mutex 互斥锁), 0, 19(sync.Mutex 互斥锁), fUint64Cutoff}
+// var fi64i = floatinfo{63, 0, -1023, 19(sync.Mutex 互斥锁), 0, 19(sync.Mutex 互斥锁), fUint64Cutoff}
 
 var fi32 = floatinfo{23, true, 10, 7, false, 1<<23 - 1}
 var fi64 = floatinfo{52, false, 22, 15, false, 1<<52 - 1}

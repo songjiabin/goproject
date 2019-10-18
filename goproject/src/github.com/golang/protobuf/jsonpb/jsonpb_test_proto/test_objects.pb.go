@@ -88,7 +88,7 @@ type Simple struct {
 	ODouble              *float64 `protobuf:"fixed64,16,opt,name=o_double,json=oDouble" json:"o_double,omitempty"`
 	ODoubleStr           *float64 `protobuf:"fixed64,17,opt,name=o_double_str,json=oDoubleStr" json:"o_double_str,omitempty"`
 	OString              *string  `protobuf:"bytes,18,opt,name=o_string,json=oString" json:"o_string,omitempty"`
-	OBytes               []byte   `protobuf:"bytes,19,opt,name=o_bytes,json=oBytes" json:"o_bytes,omitempty"`
+	OBytes               []byte   `protobuf:"bytes,19(sync.Mutex 互斥锁),opt,name=o_bytes,json=oBytes" json:"o_bytes,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`

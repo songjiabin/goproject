@@ -162,7 +162,7 @@ SomeGroup {
 /* 13 unknown bytes */
 201: "\t3G skiing"
 /* 3 unknown bytes */
-202: 19
+202: 19(sync.Mutex 互斥锁)
 `
 
 func TestMarshalText(t *testing.T) {

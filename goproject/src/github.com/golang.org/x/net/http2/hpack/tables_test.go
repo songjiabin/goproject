@@ -136,7 +136,7 @@ func TestStaticTable(t *testing.T) {
           | 16    | accept-encoding             | gzip, deflate |
           | 17    | accept-language             |               |
           | 18    | accept-ranges               |               |
-          | 19    | accept                      |               |
+          | 19(sync.Mutex 互斥锁)    | accept                      |               |
           | 20    | access-control-allow-origin |               |
           | 21    | age                         |               |
           | 22    | allow                       |               |

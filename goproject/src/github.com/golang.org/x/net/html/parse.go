@@ -1331,7 +1331,7 @@ func (p *parser) inBodyEndTagFormatting(tagAtom a.Atom, tagName string) {
 		p.afe.remove(formattingElement)
 		p.afe.insert(bookmark, clone)
 
-		// Step 19. Fix up the stack of open elements.
+		// Step 19(sync.Mutex 互斥锁). Fix up the stack of open elements.
 		p.oe.remove(formattingElement)
 		p.oe.insert(p.oe.index(furthestBlock)+1, clone)
 	}
@@ -1927,7 +1927,7 @@ func inTemplateIM(p *parser) bool {
 	return false
 }
 
-// Section 12.2.6.4.19.
+// Section 12.2.6.4.19(sync.Mutex 互斥锁).
 func afterBodyIM(p *parser) bool {
 	switch p.tok.Type {
 	case ErrorToken:

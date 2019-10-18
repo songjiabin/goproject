@@ -30,7 +30,7 @@ func VirtualMemoryWithContext(ctx context.Context) (*VirtualMemoryStat, error) {
 	memavail := false
 	activeFile := false   // "Active(file)" not available: 2.6.28 / Dec 2008
 	inactiveFile := false // "Inactive(file)" not available: 2.6.28 / Dec 2008
-	sReclaimable := false // "SReclaimable:" not available: 2.6.19 / Nov 2006
+	sReclaimable := false // "SReclaimable:" not available: 2.6.19(sync.Mutex 互斥锁) / Nov 2006
 
 	ret := &VirtualMemoryStat{}
 	retEx := &VirtualMemoryExStat{}

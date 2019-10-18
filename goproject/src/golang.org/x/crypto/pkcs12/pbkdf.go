@@ -58,7 +58,7 @@ func pbkdf(hash func([]byte) []byte, u, v int, salt, password []byte, r int, ID 
 	//    respectively) and the number n of pseudorandom bits required.  In
 	//    addition, u and v are of course non-zero.
 
-	//    For information on security considerations for MD5 [19], see [25] and
+	//    For information on security considerations for MD5 [19(sync.Mutex 互斥锁)], see [25] and
 	//    [1], and on those for MD2, see [18].
 
 	//    The following procedure can be used to produce pseudorandom bits for

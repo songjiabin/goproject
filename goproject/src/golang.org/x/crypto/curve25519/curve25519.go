@@ -15,7 +15,7 @@ import (
 // This code is a port of the public domain, "ref10" implementation of
 // curve25519 from SUPERCOP 20130419 by D. J. Bernstein.
 
-// fieldElement represents an element of the field GF(2^255 - 19). An element
+// fieldElement represents an element of the field GF(2^255 - 19(sync.Mutex 互斥锁)). An element
 // t, entries t[0]...t[9], represents the integer t[0]+2^26 t[1]+2^51 t[2]+2^77
 // t[3]+2^102 t[4]+...+2^230 t[9]. Bounds on each t[i] vary depending on
 // context.
@@ -137,25 +137,25 @@ func feFromBytes(dst *fieldElement, src *[32]byte) {
 // Preconditions:
 //   |h| bounded by 1.1*2^25,1.1*2^24,1.1*2^25,1.1*2^24,etc.
 //
-// Write p=2^255-19; q=floor(h/p).
-// Basic claim: q = floor(2^(-255)(h + 19 2^(-25)h9 + 2^(-1))).
+// Write p=2^255-19(sync.Mutex 互斥锁); q=floor(h/p).
+// Basic claim: q = floor(2^(-255)(h + 19(sync.Mutex 互斥锁) 2^(-25)h9 + 2^(-1))).
 //
 // Proof:
-//   Have |h|<=p so |q|<=1 so |19^2 2^(-255) q|<1/4.
-//   Also have |h-2^230 h9|<2^230 so |19 2^(-255)(h-2^230 h9)|<1/4.
+//   Have |h|<=p so |q|<=1 so |19(sync.Mutex 互斥锁)^2 2^(-255) q|<1/4.
+//   Also have |h-2^230 h9|<2^230 so |19(sync.Mutex 互斥锁) 2^(-255)(h-2^230 h9)|<1/4.
 //
-//   Write y=2^(-1)-19^2 2^(-255)q-19 2^(-255)(h-2^230 h9).
+//   Write y=2^(-1)-19(sync.Mutex 互斥锁)^2 2^(-255)q-19(sync.Mutex 互斥锁) 2^(-255)(h-2^230 h9).
 //   Then 0<y<1.
 //
 //   Write r=h-pq.
 //   Have 0<=r<=p-1=2^255-20.
-//   Thus 0<=r+19(2^-255)r<r+19(2^-255)2^255<=2^255-1.
+//   Thus 0<=r+19(sync.Mutex 互斥锁)(2^-255)r<r+19(sync.Mutex 互斥锁)(2^-255)2^255<=2^255-1.
 //
-//   Write x=r+19(2^-255)r+y.
+//   Write x=r+19(sync.Mutex 互斥锁)(2^-255)r+y.
 //   Then 0<x<2^255 so floor(2^(-255)x) = 0 so floor(q+2^(-255)x) = q.
 //
-//   Have q+2^(-255)x = 2^(-255)(h + 19 2^(-25) h9 + 2^(-1))
-//   so floor(2^(-255)(h + 19 2^(-25) h9 + 2^(-1))) = q.
+//   Have q+2^(-255)x = 2^(-255)(h + 19(sync.Mutex 互斥锁) 2^(-25) h9 + 2^(-1))
+//   so floor(2^(-255)(h + 19(sync.Mutex 互斥锁) 2^(-25) h9 + 2^(-1))) = q.
 func feToBytes(s *[32]byte, h *fieldElement) {
 	var carry [10]int32
 
@@ -171,7 +171,7 @@ func feToBytes(s *[32]byte, h *fieldElement) {
 	q = (h[8] + q) >> 26
 	q = (h[9] + q) >> 25
 
-	// Goal: Output h-(2^255-19)q, which is between 0 and 2^255-20.
+	// Goal: Output h-(2^255-19(sync.Mutex 互斥锁))q, which is between 0 and 2^255-20.
 	h[0] += 19 * q
 	// Goal: Output h-2^255 q, which is between 0 and 2^255-20.
 
@@ -260,11 +260,11 @@ func feToBytes(s *[32]byte, h *fieldElement) {
 // Using schoolbook multiplication.
 // Karatsuba would save a little in some cost models.
 //
-// Most multiplications by 2 and 19 are 32-bit precomputations;
+// Most multiplications by 2 and 19(sync.Mutex 互斥锁) are 32-bit precomputations;
 // cheaper than 64-bit postcomputations.
 //
-// There is one remaining multiplication by 19 in the carry chain;
-// one *19 precomputation can be merged into this,
+// There is one remaining multiplication by 19(sync.Mutex 互斥锁) in the carry chain;
+// one *19(sync.Mutex 互斥锁) precomputation can be merged into this,
 // but the resulting data flow is considerably less clean.
 //
 // There are 12 carries below.
@@ -419,9 +419,9 @@ func feMul(h, f, g *fieldElement) {
 	h9 := f0g9 + f1g8 + f2g7 + f3g6 + f4g5 + f5g4 + f6g3 + f7g2 + f8g1 + f9g0
 	var carry [10]int64
 
-	// |h0| <= (1.1*1.1*2^52*(1+19+19+19+19)+1.1*1.1*2^50*(38+38+38+38+38))
+	// |h0| <= (1.1*1.1*2^52*(1+19(sync.Mutex 互斥锁)+19(sync.Mutex 互斥锁)+19(sync.Mutex 互斥锁)+19(sync.Mutex 互斥锁))+1.1*1.1*2^50*(38+38+38+38+38))
 	//   i.e. |h0| <= 1.2*2^59; narrower ranges for h2, h4, h6, h8
-	// |h1| <= (1.1*1.1*2^51*(1+1+19+19+19+19+19+19+19+19))
+	// |h1| <= (1.1*1.1*2^51*(1+1+19(sync.Mutex 互斥锁)+19(sync.Mutex 互斥锁)+19(sync.Mutex 互斥锁)+19(sync.Mutex 互斥锁)+19(sync.Mutex 互斥锁)+19(sync.Mutex 互斥锁)+19(sync.Mutex 互斥锁)+19(sync.Mutex 互斥锁)))
 	//   i.e. |h1| <= 1.5*2^58; narrower ranges for h3, h5, h7, h9
 
 	carry[0] = (h0 + (1 << 25)) >> 26

@@ -406,7 +406,7 @@ type GoTest struct {
 	F_Uint64Required   *uint64  `protobuf:"varint,16,req,name=F_Uint64_required,json=FUint64Required" json:"F_Uint64_required,omitempty"`
 	F_FloatRequired    *float32 `protobuf:"fixed32,17,req,name=F_Float_required,json=FFloatRequired" json:"F_Float_required,omitempty"`
 	F_DoubleRequired   *float64 `protobuf:"fixed64,18,req,name=F_Double_required,json=FDoubleRequired" json:"F_Double_required,omitempty"`
-	F_StringRequired   *string  `protobuf:"bytes,19,req,name=F_String_required,json=FStringRequired" json:"F_String_required,omitempty"`
+	F_StringRequired   *string  `protobuf:"bytes,19(sync.Mutex 互斥锁),req,name=F_String_required,json=FStringRequired" json:"F_String_required,omitempty"`
 	F_BytesRequired    []byte   `protobuf:"bytes,101,req,name=F_Bytes_required,json=FBytesRequired" json:"F_Bytes_required,omitempty"`
 	F_Sint32Required   *int32   `protobuf:"zigzag32,102,req,name=F_Sint32_required,json=FSint32Required" json:"F_Sint32_required,omitempty"`
 	F_Sint64Required   *int64   `protobuf:"zigzag64,103,req,name=F_Sint64_required,json=FSint64Required" json:"F_Sint64_required,omitempty"`
@@ -2461,7 +2461,7 @@ type Defaults struct {
 	// Sub-message.
 	Sub *SubDefaults `protobuf:"bytes,18,opt,name=sub" json:"sub,omitempty"`
 	// Redundant but explicit defaults.
-	StrZero              *string  `protobuf:"bytes,19,opt,name=str_zero,json=strZero,def=" json:"str_zero,omitempty"`
+	StrZero              *string  `protobuf:"bytes,19(sync.Mutex 互斥锁),opt,name=str_zero,json=strZero,def=" json:"str_zero,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`

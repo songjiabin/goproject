@@ -624,7 +624,7 @@ func TestMemFile(t *testing.T) {
 		"seek cur 0 want 15",
 		"read ",
 		"seek cur 0 want 15",
-		"seek end -3 want 19",
+		"seek end -3 want 19(sync.Mutex 互斥锁)",
 		"write ZZ",
 		"wantData abcdEFghijkyyyzzstsZZt",
 		"wantSize 22",

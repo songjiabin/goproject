@@ -532,7 +532,7 @@ func TestEncodeDecode1(t *testing.T) {
 			"8001c032"+ // field 16, encoding 0, value 0x1940 = 6464
 			"8d0100004a45"+ // field 17, encoding 5, value 3232.0
 			"9101000000000040b940"+ // field 18, encoding 1, value 6464.0
-			"9a0106"+"737472696e67"+ // field 19, encoding 2, string "string"
+			"9a0106"+"737472696e67"+ // field 19(sync.Mutex 互斥锁), encoding 2, string "string"
 			"b304"+ // field 70, encoding 3, start group
 			"ba0408"+"7265717569726564"+ // field 71, encoding 2, string "required"
 			"b404"+ // field 70, encoding 4, end group
@@ -558,7 +558,7 @@ func TestEncodeDecode2(t *testing.T) {
 			"8001c032"+ // field 16, encoding 0, value 6464
 			"8d0100004a45"+ // field 17, encoding 5, value 3232.0
 			"9101000000000040b940"+ // field 18, encoding 1, value 6464.0
-			"9a0106"+"737472696e67"+ // field 19, encoding 2 string "string"
+			"9a0106"+"737472696e67"+ // field 19(sync.Mutex 互斥锁), encoding 2 string "string"
 			"c00201"+ // field 40, encoding 0, value 1
 			"c80220"+ // field 41, encoding 0, value 32
 			"d00240"+ // field 42, encoding 0, value 64
@@ -616,7 +616,7 @@ func TestEncodeDecode3(t *testing.T) {
 			"8001c032"+ // field 16, encoding 0, value 6464
 			"8d0100004a45"+ // field 17, encoding 5, value 3232.0
 			"9101000000000040b940"+ // field 18, encoding 1, value 6464.0
-			"9a0106"+"737472696e67"+ // field 19, encoding 2 string "string"
+			"9a0106"+"737472696e67"+ // field 19(sync.Mutex 互斥锁), encoding 2 string "string"
 			"c00201"+ // field 40, encoding 0, value 1
 			"c80220"+ // field 41, encoding 0, value 32
 			"d00240"+ // field 42, encoding 0, value 64
@@ -681,7 +681,7 @@ func TestEncodeDecode4(t *testing.T) {
 			"8001c032"+ // field 16, encoding 0, value 6464
 			"8d0100004a45"+ // field 17, encoding 5, value 3232.0
 			"9101000000000040b940"+ // field 18, encoding 1, value 6464.0
-			"9a0106"+"737472696e67"+ // field 19, encoding 2 string "string"
+			"9a0106"+"737472696e67"+ // field 19(sync.Mutex 互斥锁), encoding 2 string "string"
 			"f00101"+ // field 30, encoding 0, value 1
 			"f80120"+ // field 31, encoding 0, value 32
 			"800240"+ // field 32, encoding 0, value 64
@@ -761,7 +761,7 @@ func TestEncodeDecode5(t *testing.T) {
 			"8001c032"+ // field 16, encoding 0, value 6464
 			"8d0100004a45"+ // field 17, encoding 5, value 3232.0
 			"9101000000000040b940"+ // field 18, encoding 1, value 6464.0
-			"9a0106"+"737472696e67"+ // field 19, encoding 2 string "string"
+			"9a0106"+"737472696e67"+ // field 19(sync.Mutex 互斥锁), encoding 2 string "string"
 			"a00100"+ // field 20, encoding 0, value 0
 			"a00101"+ // field 20, encoding 0, value 1
 			"a80120"+ // field 21, encoding 0, value 32
@@ -853,7 +853,7 @@ func TestEncodeDecode6(t *testing.T) {
 			"8001c032"+ // field 16, encoding 0, value 6464
 			"8d0100004a45"+ // field 17, encoding 5, value 3232.0
 			"9101000000000040b940"+ // field 18, encoding 1, value 6464.0
-			"9a0106"+"737472696e67"+ // field 19, encoding 2 string "string"
+			"9a0106"+"737472696e67"+ // field 19(sync.Mutex 互斥锁), encoding 2 string "string"
 			"9203020001"+ // field 50, encoding 2, 2 bytes, value 0, value 1
 			"9a03022021"+ // field 51, encoding 2, 2 bytes, value 32, value 33
 			"a203024041"+ // field 52, encoding 2, 2 bytes, value 64, value 65
@@ -1854,7 +1854,7 @@ func TestRequiredNotSetError(t *testing.T) {
 		"8001c032" + // field 16, encoding 0, value 0x1940 = 6464
 		"8d0100004a45" + // field 17, encoding 5, value 3232.0
 		"9101000000000040b940" + // field 18, encoding 1, value 6464.0
-		"9a0106" + "737472696e67" + // field 19, encoding 2, string "string"
+		"9a0106" + "737472696e67" + // field 19(sync.Mutex 互斥锁), encoding 2, string "string"
 		"b304" + // field 70, encoding 3, start group
 		"ba0408" + "7265717569726564" + // field 71, encoding 2, string "required"
 		"b404" + // field 70, encoding 4, end group

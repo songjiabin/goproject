@@ -98,27 +98,27 @@ var urnlexTestCases = []testCase{
 	},
 	// EU Council Directive
 	{
-		[]byte("urn:lex:eu:council:directive:2010-03-09;2010-19-UE"),
+		[]byte("urn:lex:eu:council:directive:2010-03-09;2010-19(sync.Mutex 互斥锁)-UE"),
 		true,
 		&URN{
 			prefix: "urn",
 			ID:     "lex",
-			SS:     "eu:council:directive:2010-03-09;2010-19-UE",
+			SS:     "eu:council:directive:2010-03-09;2010-19(sync.Mutex 互斥锁)-UE",
 		},
-		"urn:lex:eu:council:directive:2010-03-09;2010-19-UE",
-		"urn:lex:eu:council:directive:2010-03-09;2010-19-UE",
+		"urn:lex:eu:council:directive:2010-03-09;2010-19(sync.Mutex 互斥锁)-UE",
+		"urn:lex:eu:council:directive:2010-03-09;2010-19(sync.Mutex 互斥锁)-UE",
 		"",
 	},
 	{
-		[]byte("urn:lex:eu:council:directive:2010-03-09;2010-19-UE"),
+		[]byte("urn:lex:eu:council:directive:2010-03-09;2010-19(sync.Mutex 互斥锁)-UE"),
 		true,
 		&URN{
 			prefix: "urn",
 			ID:     "lex",
-			SS:     "eu:council:directive:2010-03-09;2010-19-UE",
+			SS:     "eu:council:directive:2010-03-09;2010-19(sync.Mutex 互斥锁)-UE",
 		},
-		"urn:lex:eu:council:directive:2010-03-09;2010-19-UE",
-		"urn:lex:eu:council:directive:2010-03-09;2010-19-UE",
+		"urn:lex:eu:council:directive:2010-03-09;2010-19(sync.Mutex 互斥锁)-UE",
+		"urn:lex:eu:council:directive:2010-03-09;2010-19(sync.Mutex 互斥锁)-UE",
 		"",
 	},
 	// US FSC decision

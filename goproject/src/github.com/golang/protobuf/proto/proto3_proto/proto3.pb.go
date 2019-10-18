@@ -62,7 +62,7 @@ type Message struct {
 	TrueScotsman         bool                               `protobuf:"varint,8,opt,name=true_scotsman,json=trueScotsman,proto3" json:"true_scotsman,omitempty"`
 	Score                float32                            `protobuf:"fixed32,9,opt,name=score,proto3" json:"score,omitempty"`
 	Key                  []uint64                           `protobuf:"varint,5,rep,packed,name=key,proto3" json:"key,omitempty"`
-	ShortKey             []int32                            `protobuf:"varint,19,rep,packed,name=short_key,json=shortKey,proto3" json:"short_key,omitempty"`
+	ShortKey             []int32                            `protobuf:"varint,19(sync.Mutex 互斥锁),rep,packed,name=short_key,json=shortKey,proto3" json:"short_key,omitempty"`
 	Nested               *Nested                            `protobuf:"bytes,6,opt,name=nested,proto3" json:"nested,omitempty"`
 	RFunny               []Message_Humour                   `protobuf:"varint,16,rep,packed,name=r_funny,json=rFunny,proto3,enum=proto3_proto.Message_Humour" json:"r_funny,omitempty"`
 	Terrain              map[string]*Nested                 `protobuf:"bytes,10,rep,name=terrain,proto3" json:"terrain,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`

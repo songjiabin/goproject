@@ -16,3 +16,13 @@ CREATE TABLE tb_users(
    UNIQUE(username)
 );
 
+
+CREATE TABLE users(
+   id INTEGER PRIMARY KEY AUTO_INCREMENT,
+   name VARCHAR(200) NOT NULL,
+   PASSWORD VARCHAR(200) NOT NULL,
+   CreatedAt timestamp null default null,
+   UpdatedAt timestamp null default null,
+   DeletedAt timestamp null default null,
+   UNIQUE(name)
+);

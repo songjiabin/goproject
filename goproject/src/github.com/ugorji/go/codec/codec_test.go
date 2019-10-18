@@ -3278,8 +3278,8 @@ func TestJsonLargeInteger(t *testing.T) {
 		{"922337203685477580700e-2", true, true, math.MaxInt64, math.MaxInt64},                        // maxint64
 		{"9223372.036854775807E+12", true, true, math.MaxInt64, math.MaxInt64},                        // maxint64
 		{"9223372036854775807000000000000E-12", true, true, math.MaxInt64, math.MaxInt64},             // maxint64
-		{"0.9223372036854775807E+19", true, true, math.MaxInt64, math.MaxInt64},                       // maxint64
-		{"92233720368547758070000000000000000000E-19", true, true, math.MaxInt64, math.MaxInt64},      // maxint64
+		{"0.9223372036854775807E+19(sync.Mutex 互斥锁)", true, true, math.MaxInt64, math.MaxInt64},                       // maxint64
+		{"92233720368547758070000000000000000000E-19(sync.Mutex 互斥锁)", true, true, math.MaxInt64, math.MaxInt64},      // maxint64
 		{"0.000009223372036854775807E+24", true, true, math.MaxInt64, math.MaxInt64},                  // maxint64
 		{"9223372036854775807000000000000000000000000E-24", true, true, math.MaxInt64, math.MaxInt64}, // maxint64
 
@@ -3288,8 +3288,8 @@ func TestJsonLargeInteger(t *testing.T) {
 		{"-922337203685477580800E-2", true, false, math.MinInt64, 0},                        // minint64
 		{"-9223372.036854775808e+12", true, false, math.MinInt64, 0},                        // minint64
 		{"-9223372036854775808000000000000E-12", true, false, math.MinInt64, 0},             // minint64
-		{"-0.9223372036854775808e+19", true, false, math.MinInt64, 0},                       // minint64
-		{"-92233720368547758080000000000000000000E-19", true, false, math.MinInt64, 0},      // minint64
+		{"-0.9223372036854775808e+19(sync.Mutex 互斥锁)", true, false, math.MinInt64, 0},                       // minint64
+		{"-92233720368547758080000000000000000000E-19(sync.Mutex 互斥锁)", true, false, math.MinInt64, 0},      // minint64
 		{"-0.000009223372036854775808e+24", true, false, math.MinInt64, 0},                  // minint64
 		{"-9223372036854775808000000000000000000000000E-24", true, false, math.MinInt64, 0}, // minint64
 

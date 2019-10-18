@@ -315,16 +315,16 @@ insert T_District(DisName,CityID) values('阳曲县','18');
 insert T_District(DisName,CityID) values('娄烦县','18');
 insert T_District(DisName,CityID) values('古交市','18');
 
-insert T_District(DisName,CityID) values('矿区','19');
-insert T_District(DisName,CityID) values('南郊区','19');
-insert T_District(DisName,CityID) values('新荣区','19');
-insert T_District(DisName,CityID) values('阳高县','19');
-insert T_District(DisName,CityID) values('天镇县','19');
-insert T_District(DisName,CityID) values('广灵县','19');
-insert T_District(DisName,CityID) values('灵丘县','19');
-insert T_District(DisName,CityID) values('浑源县','19');
-insert T_District(DisName,CityID) values('左云县','19');
-insert T_District(DisName,CityID) values('大同县','19');
+insert T_District(DisName,CityID) values('矿区','19(sync.Mutex 互斥锁)');
+insert T_District(DisName,CityID) values('南郊区','19(sync.Mutex 互斥锁)');
+insert T_District(DisName,CityID) values('新荣区','19(sync.Mutex 互斥锁)');
+insert T_District(DisName,CityID) values('阳高县','19(sync.Mutex 互斥锁)');
+insert T_District(DisName,CityID) values('天镇县','19(sync.Mutex 互斥锁)');
+insert T_District(DisName,CityID) values('广灵县','19(sync.Mutex 互斥锁)');
+insert T_District(DisName,CityID) values('灵丘县','19(sync.Mutex 互斥锁)');
+insert T_District(DisName,CityID) values('浑源县','19(sync.Mutex 互斥锁)');
+insert T_District(DisName,CityID) values('左云县','19(sync.Mutex 互斥锁)');
+insert T_District(DisName,CityID) values('大同县','19(sync.Mutex 互斥锁)');
 
 insert T_District(DisName,CityID) values('矿区','20');
 insert T_District(DisName,CityID) values('平定县','20');

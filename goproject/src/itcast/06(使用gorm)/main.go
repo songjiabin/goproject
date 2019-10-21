@@ -10,7 +10,7 @@ import (
 
 func main() {
 	db, err := gorm.Open("mysql",
-		"root:123root@A@tcp(192.144.238.85:3306)/test?charset=utf8&loc=Asia%2FShanghai")
+		"root:123root@A@tcp(192.144.238.85:3306)/test?charset=utf8&parseTime=true&loc=Asia%2FShanghai")
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -21,15 +21,15 @@ func main() {
 	createAndAdd(db)
 }
 
-type myselfModel struct {
-	Id        int        `gorm:"primary_key;AUTO_INCREMENT;column:id" json:"-"` //主键
+type BaseModel struct {
+	Id        uint       `gorm:"primary_key;AUTO_INCREMENT;column:id" json:"-"` //主键
 	CreatedAt time.Time  `gorm:"column:createdAt" json:"-"`
 	UpdatedAt time.Time  `gorm:"column:updatedAt" json:"-"`
 	DeletedAt *time.Time `gorm:"column:deletedAt" sql:"index" json:"-"`
 }
 
 type User struct {
-	myselfModel
+	BaseModel
 	Name     string `gorm:"column:name;not null"`
 	Passwrod string `gorm:"column:password;not null"`
 }
@@ -41,15 +41,14 @@ func (UserModel *User) TableName() string {
 
 //创建表并添加数据
 func createAndAdd(db *gorm.DB) {
-	 db.AutoMigrate(&User{})
 
-	user := &User{Name: "蜡笔小新2"}
-
+	/*user := &User{Name: "蜡笔小新", Passwrod: "w3ewe"}
 	err := db.Create(user).Error
-	logs.Info(err)
+	logs.Info(err)*/
 
-	//u := []User{}
-	//db.Exec("select * from users").Find(&u)
-	//logs.Info(u[0].Id, u[0].Name, u[0].CreatedAt)
-
+	user := User{}
+	db.First(&user)
+	logs.Info("name-->", user.Name)
+	logs.Info("password-->", user.Passwrod)
+	logs.Info("createTime-->", user.CreatedAt.Format("2006-01-02 15:04:05"))
 }

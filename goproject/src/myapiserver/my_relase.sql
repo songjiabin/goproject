@@ -9,10 +9,10 @@ use db_apiserver;
 CREATE TABLE tb_users(
    id INTEGER PRIMARY KEY AUTO_INCREMENT,
    username VARCHAR(200) NOT NULL,
-   PASSWORD VARCHAR(200) NOT NULL,
-   CreatedAt timestamp null default null,
-   UpdatedAt timestamp null default null,
-   DeletedAt timestamp null default null,
+   password VARCHAR(200) NOT NULL,
+   createdAt timestamp null default null,
+   updatedAt timestamp null default null,
+   deletedAt timestamp null default null,
    UNIQUE(username)
 );
 
@@ -20,9 +20,9 @@ CREATE TABLE tb_users(
 CREATE TABLE users(
    id INTEGER PRIMARY KEY AUTO_INCREMENT,
    name VARCHAR(200) NOT NULL,
-   PASSWORD VARCHAR(200) NOT NULL,
-   CreatedAt timestamp null default null,
-   UpdatedAt timestamp null default null,
-   DeletedAt timestamp null default null,
+   password VARCHAR(200) NOT NULL,
+   createdAt timestamp null default null,
+   updatedAt timestamp null default null,
+   deletedAt timestamp null default null,
    UNIQUE(name)
 );

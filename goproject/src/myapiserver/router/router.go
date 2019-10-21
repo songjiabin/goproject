@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"myapiserver/handler/sd"
 	"myapiserver/handler/user"
+	"myapiserver/router/middleware"
 	"net/http"
 	"time"
 )
@@ -40,13 +41,20 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	}
 
 	u := g.Group("/v1/user")
+	//验证token
+	u.Use(middleware.AuthMiddleware)
 	{
-		u.POST("", user.Create_relase) //创建用户
-		u.POST("/delete/:id", user.Delete)    //删除用户
-		u.POST("/update/:id", user.Update)    //更新用户
-		u.GET("", user.List)        //获取用户列表
-		//u.GET("/:username",user.Get)         //获取指定用户的详细信息
+
+		u.POST("", user.Create_relase)     //创建用户
+		u.POST("/delete/:id", user.Delete) //删除用户
+		u.POST("/update/:id", user.Update) //更新用户
+		u.GET("", user.List)               //获取用户列表
+		u.GET("/:username", user.GetUser)  //获取指定用户的详细信息
 	}
+
+
+	g.POST("/login", user.Login)  //登录
+
 
 	return g
 }

@@ -69,6 +69,13 @@ func ListUser(username string, offset, limit int) ([]*UserModel, uint, error) {
 
 }
 
+//从数据库获取user
+func GetUser(username string) (*UserModel, error) {
+	u := &UserModel{}
+	result := DB.Self.Where("username = ?", username).First(&u)
+	return u, result.Error
+}
+
 // 验证数据  根据约束 validate
 func (u *UserModel) Validate() error {
 	validate := validator.New()

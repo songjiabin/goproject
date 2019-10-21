@@ -9,6 +9,7 @@ import (
 	"myapiserver/config"
 	"myapiserver/model"
 	"myapiserver/router"
+	"myapiserver/router/middleware"
 	"net/http"
 	"time"
 )
@@ -41,7 +42,10 @@ func main() {
 	gin.SetMode(viper.GetString("runmode"))
 	// gin middlewares
 	middlewares := []gin.HandlerFunc{}
-	router.Load(g, middlewares...)
+	//添加全局的中间件
+	middlewares = append(middlewares, middleware.Logging, middleware.RequestId)
+	router.Load(g, middleware.Logging,
+		middleware.RequestId)
 	go func() {
 		if err := pingServer(); err != nil {
 			// 路由器无响应，或者启动时间可能太长。

@@ -6,8 +6,8 @@ max_ping_count: 10           # pingServer函数try的次数     # pingServer函�
 
 # 是否打印grom错误日志
 gormlog: false
-# token 秘钥  Rtg8BPKNEf2mB4mgvKONGPZZQSaJWNLijxR42qRgq0iBb5
-jwt_secret: Rtg8BPKNEf2mB4mgvKONGPZZQSaJWNLijxR42qRgq0iBb5
+# token 秘钥
+jwt_secret: 123456
 log:
   # 输出位置，有2个可选项：file,stdout。
   #选择file会将日志记录到logger_file指定的日志文件中，

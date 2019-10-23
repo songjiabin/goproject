@@ -52,9 +52,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		u.GET("/:username", user.GetUser)  //获取指定用户的详细信息
 	}
 
-
-	g.POST("/login", user.Login)  //登录
-
+	g.POST("/login", user.Login) //登录
 
 	return g
 }

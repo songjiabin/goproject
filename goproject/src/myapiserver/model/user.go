@@ -25,7 +25,7 @@ func (user *UserModel) Create() error {
 }
 
 //删除数据
-func DeleteUser(id uint) error {
+func DeleteUser(id uint64) error {
 	user := UserModel{}
 	user.Id = id
 	return DB.Self.Delete(&user).Error

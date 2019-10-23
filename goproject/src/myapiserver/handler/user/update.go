@@ -32,7 +32,7 @@ func Update(c *gin.Context) {
 		return
 	}
 
-	userModel.Id = uint(userId)
+	userModel.Id = uint64(userId)
 	logs.Info(userModel)
 	if err := userModel.UpdateUser(); err != nil {
 		logs.Info(err)

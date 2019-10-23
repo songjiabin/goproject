@@ -2,17 +2,15 @@ package service
 
 import (
 	"fmt"
-	"myapiserver/model"
-	"myapiserver/util"
-
 	"sync"
+
+	"apiserver/model"
+	"apiserver/util"
 )
 
-//查询所有的userList
-func Listuser(name string, offset, limit int) ([]*model.UserInfo, uint, error) {
-
-	userInfos := make([]*model.UserInfo, 0)
-	users, count, err := model.ListUser(name, offset, limit)
+func ListUser(username string, offset, limit int) ([]*model.UserInfo, uint64, error) {
+	infos := make([]*model.UserInfo, 0)
+	users, count, err := model.ListUser(username, offset, limit)
 	if err != nil {
 		return nil, count, err
 	}
@@ -23,7 +21,6 @@ func Listuser(name string, offset, limit int) ([]*model.UserInfo, uint, error) {
 	}
 
 	wg := sync.WaitGroup{}
-
 	userList := model.UserList{
 		Lock:  new(sync.Mutex),
 		IdMap: make(map[uint64]*model.UserInfo, len(users)),
@@ -32,17 +29,18 @@ func Listuser(name string, offset, limit int) ([]*model.UserInfo, uint, error) {
 	errChan := make(chan error, 1)
 	finished := make(chan bool, 1)
 
+	// Improve query efficiency in parallel
 	for _, u := range users {
 		wg.Add(1)
 		go func(u *model.UserModel) {
 			defer wg.Done()
+
 			shortId, err := util.GenShortId()
 			if err != nil {
-				//写入错误
 				errChan <- err
 				return
 			}
-			//添加锁
+
 			userList.Lock.Lock()
 			defer userList.Lock.Unlock()
 			userList.IdMap[u.Id] = &model.UserInfo{
@@ -54,7 +52,6 @@ func Listuser(name string, offset, limit int) ([]*model.UserInfo, uint, error) {
 				UpdatedAt: u.UpdatedAt.Format("2006-01-02 15:04:05"),
 			}
 		}(u)
-
 	}
 
 	go func() {
@@ -69,8 +66,8 @@ func Listuser(name string, offset, limit int) ([]*model.UserInfo, uint, error) {
 	}
 
 	for _, id := range ids {
-		userInfos = append(userInfos, userList.IdMap[id])
+		infos = append(infos, userList.IdMap[id])
 	}
 
-	return userInfos, count, nil
+	return infos, count, nil
 }

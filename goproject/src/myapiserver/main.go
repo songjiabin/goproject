@@ -16,13 +16,16 @@ import (
 
 var (
 	//命令行参数
-	cfg = pflag.StringP("config", "c", "", "apiserver config file path.")
+	cfg    = pflag.StringP("config", "c", "", "apiserver config file path.")
+	verson = pflag.BoolP("version", "v", false, "show version info.")
 )
 
 func main() {
 	//初始化配置 读取配置文件
 	//解析函数  将会在碰到第一个非flag命令行参数时停止
 	pflag.Parse()
+
+
 	// init config
 	if err := config.Init(*cfg); err != nil {
 		panic(err)
@@ -54,6 +57,17 @@ func main() {
 		//路由器已成功部署
 		log.Infof("The router has been deployed successfully.")
 	}()
+
+	//判断是否使用https
+	cert := viper.GetString("tls.cert")
+	key := viper.GetString("tls.key")
+	if cert != "" && key != "" {
+		go func() {
+			log.Infof("Start to listening the incoming requests on https address: %s", viper.GetString("tls.addr"))
+			log.Info(http.ListenAndServeTLS(viper.GetString("tls.addr"), cert, key, g).Error())
+		}()
+	}
+
 	//监听端口 8080
 	log.Infof("Start to listening the incoming requests on http address: %s", viper.GetString("addr"))
 	log.Info(http.ListenAndServe(viper.GetString("addr"), g).Error())
@@ -67,6 +81,7 @@ func pingServer() error {
 		if err == nil && resp.StatusCode == 200 {
 			return nil
 		}
+
 		//等待一秒钟
 		log.Info("Waiting for the router, retry in 1 second.")
 		time.Sleep(time.Second)

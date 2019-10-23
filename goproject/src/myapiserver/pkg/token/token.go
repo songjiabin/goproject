@@ -16,7 +16,7 @@ var (
 )
 
 type Context struct {
-	ID       uint
+	ID       uint64
 	Username string
 }
 
@@ -44,7 +44,7 @@ func ParseRequest(c *gin.Context) (*Context, error) {
 
 	header := c.Request.Header.Get("Authorization")
 
-	logs.Info("header",header)
+	logs.Info("header", header)
 
 	// Load the jwt secret from config
 	secret := viper.GetString("jwt_secret")
@@ -55,6 +55,7 @@ func ParseRequest(c *gin.Context) (*Context, error) {
 
 	var t string
 	// Parse the header to get the token part.
+	//将获取的token进行格式化处理
 	fmt.Sscanf(header, "Bearer %s", &t)
 	return Parse(t, secret)
 }
@@ -73,7 +74,7 @@ func Parse(tokenString string, secret string) (*Context, error) {
 
 		// Read the token if it's valid.
 	} else if claims, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
-		ctx.ID = uint(claims["id"].(float64))
+		ctx.ID = uint64(claims["id"].(float64))
 		ctx.Username = claims["username"].(string)
 		return ctx, nil
 

@@ -17,7 +17,7 @@ func Delete(c *gin.Context) {
 		return
 	}
 
-	if err := model.DeleteUser(uint(userId)); err != nil {
+	if err := model.DeleteUser(uint64(userId)); err != nil {
 		handler.SendResponse(c, errno.ErrDatabase, nil)
 		return
 	}

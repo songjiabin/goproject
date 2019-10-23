@@ -6,12 +6,12 @@ import (
 	"github.com/astaxie/beego/logs"
 	"github.com/gin-gonic/gin"
 	"github.com/lexkong/log"
+	"github.com/willf/pad"
 	"io/ioutil"
 	"myapiserver/handler"
 	"myapiserver/pkg/errno"
 	"regexp"
 	"time"
-	"github.com/willf/pad"
 )
 
 type bodyLogWriter struct {

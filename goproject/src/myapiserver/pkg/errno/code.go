@@ -15,7 +15,7 @@ var (
 	ErrToken      = &Errno{Code: 20003, Message: "签署JSON网络令牌时发生错误"}
 
 	// 用户类型的 errors
-	ErrUserNotFound      = &Errno{Code: 20102, Message: "userName不能为空"}
+	ErrUserNotFound      = &Errno{Code: 20102, Message: "userName没有查询到"}
 	ErrEncrypt           = &Errno{Code: 20101, Message: "加密用户密码时发生错误"}
 	ErrTokenInvalid      = &Errno{Code: 20103, Message: "Token失效"}
 	ErrPasswordIncorrect = &Errno{Code: 20104, Message: "密码错误"}

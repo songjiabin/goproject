@@ -42,3 +42,10 @@ docker_db:
   username: root
   password: 123root@A
 
+tls:
+  addr: :8081
+  cert: conf/server.crt  #自签发的数字证书
+  key: conf/server.key   # 私钥文
+
+
+

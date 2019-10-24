@@ -3,6 +3,7 @@ package model
 import (
 	"fmt"
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/lexkong/log"
 	"github.com/spf13/viper"
 )
@@ -18,7 +19,7 @@ var DB *Database
 func (db *Database) Init() {
 	db = &Database{
 		Self:   getSelfDB(),
-		Docker: nil,
+		Docker: getDockerDB(),
 	}
 }
 
@@ -45,12 +46,15 @@ func openDB(username, password, addr, name string) *gorm.DB {
 		username,
 		password,
 		addr,
+		name,
 		true,
-		"local",
+		"Local",
 	)
+	fmt.Println("config----->", config)
 	db, err := gorm.Open("mysql", config)
 	if err != nil {
 		log.Errorf(err, "Database connection failed. Database name: %s", name)
+		//fmt.Println("错误是:", err)
 	}
 	return db
 }

@@ -2,6 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 func Load(g *gin.Engine) *gin.Engine {
@@ -12,7 +13,9 @@ func Load(g *gin.Engine) *gin.Engine {
 	g.Use(gin.Recovery())
 	group := g.Group("/v1/user")
 	{
-		group.POST("", nil)
+		group.POST("", func(context *gin.Context) {
+			context.String(http.StatusOK,"songjiabin")
+		})
 	}
 	return g
 }

@@ -1,0 +1,14 @@
+#配置文件信息
+
+db:
+  name: db_apiserver        # 数据库的名称
+  addr: 192.144.238.85:3306 # 数据库的连接信息
+  username: root            # 用户名
+  password: 123root@A       # 密码
+
+
+docker:
+  name: db_apiserver        # 数据库的名称
+  addr: 192.144.238.85:3306 # 数据库的连接信息
+  username: root            # 用户名
+  password: 123root@A       # 密码

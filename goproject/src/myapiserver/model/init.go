@@ -73,6 +73,7 @@ func openDB(username, password, addr, name string) *gorm.DB {
 		name,
 		true,
 		"Local") //   Asia%2FShanghai  Local
+		fmt.Println("config----->",config)
 
 	db, err := gorm.Open("mysql", config)
 	if err != nil {

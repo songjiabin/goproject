@@ -25,7 +25,6 @@ func main() {
 	//解析函数  将会在碰到第一个非flag命令行参数时停止
 	pflag.Parse()
 
-
 	// init config
 	if err := config.Init(*cfg); err != nil {
 		panic(err)

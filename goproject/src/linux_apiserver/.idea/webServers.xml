@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="86116613-8569-4e7c-8fee-fabcdcff7cb6" name="dev" url="http://192.144.238.85">
+      <webServer id="ec7b3cd0-ddb2-4979-8b21-82eee59ce7e9" name="腾讯云" url="http://192.144.238.85">
         <fileTransfer host="192.144.238.85" port="22" rootFolder="/home/go/src/linux_apiserver" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />

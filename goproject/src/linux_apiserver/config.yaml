@@ -1,8 +1,8 @@
 #配置文件信息
 runmode: debug                 # 开发模式, debug, release, test
 max_ping_count: 10      #启动自连接时候的自动连接次数
-url:  http://127.0.0.1:2525   # pingServer函数请求的API服务器的ip:port
-port: :2525                   # 端口
+url:  http://127.0.0.1:2528   # pingServer函数请求的API服务器的ip:port
+port: :2528                   # 端口
 
 
 

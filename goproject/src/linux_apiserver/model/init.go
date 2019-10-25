@@ -50,7 +50,7 @@ func openDB(username, password, addr, name string) *gorm.DB {
 		true,
 		"Local",
 	)
-	fmt.Println("config----->", config)
+
 	db, err := gorm.Open("mysql", config)
 	if err != nil {
 		log.Errorf(err, "Database connection failed. Database name: %s", name)

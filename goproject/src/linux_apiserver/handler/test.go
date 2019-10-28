@@ -9,3 +9,4 @@ import (
 func Test(c *gin.Context) {
 	c.String(http.StatusOK, "连接成功")
 }
+

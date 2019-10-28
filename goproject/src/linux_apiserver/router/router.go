@@ -3,7 +3,7 @@ package router
 import (
 	"github.com/gin-gonic/gin"
 	"linux_apiserver/handler"
-	"net/http"
+	"linux_apiserver/handler/user"
 )
 
 func Load(g *gin.Engine) *gin.Engine {
@@ -17,9 +17,7 @@ func Load(g *gin.Engine) *gin.Engine {
 	g.GET("/test", handler.Test)
 	group := g.Group("/v1/user")
 	{
-		group.POST("", func(context *gin.Context) {
-			context.String(http.StatusOK, "songjiabin")
-		})
+		group.POST("", user.Create)
 	}
 	return g
 }

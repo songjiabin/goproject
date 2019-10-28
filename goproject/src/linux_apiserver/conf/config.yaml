@@ -11,14 +11,14 @@ port: :2525                   # 端口
 #数据库
 db:
   name: db_apiserver        # 数据库的名称
-  addr: 192.144.238.85:3306 # 数据库的连接信息
+  addr: 47.95.5.232:3306 # 数据库的连接信息
   username: root            # 用户名
   password: 123root@A       # 密码
 
 #docker方式的数据库连接
 docker:
   name: db_apiserver        # 数据库的名称
-  addr: 192.144.238.85:3306 # 数据库的连接信息
+  addr: 47.95.5.232:3306 # 数据库的连接信息
   username: root            # 用户名
   password: 123root@A       # 密码
 

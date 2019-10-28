@@ -38,7 +38,7 @@ func main() {
 			log.Fatal("程序退出了...", err)
 		}
 	}()
-	log.Infof("正在连接数据库，端口是：%s", viper.GetString("port"))
+	log.Infof("正在连接，端口是：%s", viper.GetString("port"))
 	log.Info(http.ListenAndServe(viper.GetString("port"), engine).Error())
 }
 

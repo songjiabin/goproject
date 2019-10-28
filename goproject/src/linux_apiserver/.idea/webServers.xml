@@ -10,6 +10,14 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="0ad375a3-46be-4469-88a0-59eaa6ba76c6" name="阿里云" url="http://47.95.5.232">
+        <fileTransfer host="47.95.5.232" port="22" rootFolder="/home/gopath/src/linux_apiserver" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

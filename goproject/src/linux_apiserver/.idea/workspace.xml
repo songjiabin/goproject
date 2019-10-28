@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4bce316-490e-4b04-893d-96b1e2146c4b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../itcast/01(go基础)/21(http)/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/linux_apiserver.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../github.com/pelletier/go-toml" beforeDir="false" afterPath="$PROJECT_DIR$/../github.com/pelletier/go-toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/conf/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/init.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myapiserver/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../myapiserver/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

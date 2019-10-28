@@ -19,7 +19,6 @@ var (
  )
 
 func main() {
-
 	//设置配置文件的读取
 	pflag.Parse()
 	if err := conf.Init(*cfg); err != nil {
@@ -43,6 +42,7 @@ func main() {
 	log.Info(http.ListenAndServe(viper.GetString("port"), engine).Error())
 }
 
+//配置自连接
 func pingServer() error {
 	for i := 0; i < viper.GetInt("max_ping_count"); i++ {
 		resp, err := http.Get(viper.GetString("url") + "/test")

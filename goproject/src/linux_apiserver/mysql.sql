@@ -1,7 +1,7 @@
 
 
 
-CREATE DATABASE IF not EXISTS db_apiserver;
+CREATE DATABASE IF not EXISTS db_apiserver charset=utf8;
 
 use db_apiserver;
 

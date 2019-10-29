@@ -27,6 +27,7 @@ func main() {
 
 	//连接数据库
 	model.DB.Init()
+	defer model.DB.Close()
 	//new engine
 	engine := gin.New()
 	gin.SetMode(viper.GetString("runmode"))

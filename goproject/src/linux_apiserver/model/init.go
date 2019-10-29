@@ -17,7 +17,7 @@ var DB *Database
 
 //初始化数据库的一些连接
 func (db *Database) Init() {
-	db = &Database{
+	DB = &Database{
 		Self:   getSelfDB(),
 		Docker: getDockerDB(),
 	}
@@ -55,6 +55,13 @@ func openDB(username, password, addr, name string) *gorm.DB {
 	if err != nil {
 		log.Errorf(err, "Database connection failed. Database name: %s", name)
 		//fmt.Println("错误是:", err)
+	} else {
+		log.Infof("连接数据库成功 %s", "mysql")
 	}
 	return db
+}
+
+func (db *Database) Close() {
+	db.Self.Close()
+	db.Docker.Close()
 }

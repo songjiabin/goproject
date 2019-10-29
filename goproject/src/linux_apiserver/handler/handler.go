@@ -12,6 +12,7 @@ type Response struct {
 	Data    interface{} `json:"data"`
 }
 
+
 //处理请求
 func SendResponse(c *gin.Context, err error, data interface{}) {
 	code, message := errno.DecodeErr(err)

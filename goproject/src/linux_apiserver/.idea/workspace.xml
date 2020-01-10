@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4bce316-490e-4b04-893d-96b1e2146c4b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../itcast/01(go基础)/22/dmeo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../itcast/07(使用gorm2)/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/user/delete.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/encrypt.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../github.com/pelletier/go-toml" beforeDir="false" afterPath="$PROJECT_DIR$/../github.com/pelletier/go-toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/user/create.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user/create.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/base.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/base.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/init.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/user/delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/user/delete.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/mysql.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myapiserver/.idea/myapiserver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../myapiserver/.idea/myapiserver.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +54,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../myapiserver" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">

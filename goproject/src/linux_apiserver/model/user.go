@@ -22,6 +22,13 @@ func CreateUser(user *User) error {
 	return DB.Self.Create(user).Error
 }
 
+//删除用户
+func DeleteUser(id int) error {
+	u := User{}
+	u.Id = id
+	return DB.Self.Delete(&u).Error
+}
+
 // 验证数据  根据约束 validate
 func (u *User) Validate() error {
 	validate := validator.New()

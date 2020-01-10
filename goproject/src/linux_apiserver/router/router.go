@@ -18,7 +18,7 @@ func Load(g *gin.Engine) *gin.Engine {
 	group := g.Group("/v1/user")
 	{
 		group.POST("", user.Create)
-		group.POST("",user.Delete)
+		group.POST("/delete", user.Delete)
 	}
 	return g
 }
